@@ -7,26 +7,32 @@
     <style>
         :root { --primary: #00a859; --dark: #111827; --text: #374151; --light-bg: #f9fafb; }
         * { box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: var(--text); max-width: 800px; margin: 0 auto; padding: 0; background-color: #fff; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: var(--text); max-width: 1000px; margin: 0 auto; padding: 0; background-color: #fff; }
         
-        header { padding: 40px 20px; text-align: left; border-bottom: 1px solid #edf2f7; }
-        h1 { font-size: 2.2em; color: var(--dark); line-height: 1.2; margin-bottom: 10px; letter-spacing: -0.02em; }
-        .sub-header { font-size: 1.1em; color: #6b7280; max-width: 600px; }
+        /* TILLBAKA TILL SVART HEADER */
+        header { background: var(--dark); color: white; padding: 60px 20px; text-align: center; }
+        header h1 { font-size: 2.8em; margin-bottom: 15px; line-height: 1.1; color: white; }
+        header p { font-size: 1.1em; opacity: 0.9; max-width: 700px; margin: 0 auto; }
 
-        .container { padding: 20px; }
+        .container { padding: 40px 20px; max-width: 800px; margin: 0 auto; }
         .post-content { margin-bottom: 60px; }
-        h2 { font-size: 1.6em; color: var(--dark); margin-top: 45px; margin-bottom: 15px; }
+        
+        h2 { font-size: 1.7em; color: var(--dark); margin-top: 45px; margin-bottom: 15px; border-bottom: 2px solid var(--primary); display: inline-block; padding-bottom: 5px; }
         h3 { font-size: 1.3em; color: var(--dark); margin-top: 30px; }
         p { margin-bottom: 20px; font-size: 1.1em; }
 
-        .ownership-text { 
-            font-size: 1.15em; 
+        /* SAMMANHÄNGANDE ANALYS-STIL */
+        .analysis-intro { 
+            font-size: 1.2em; 
             color: var(--dark); 
-            border-left: 4px solid var(--primary); 
-            padding-left: 20px; 
-            margin: 30px 0;
-            font-weight: 500;
+            background: var(--light-bg);
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 5px solid var(--primary);
+            margin: 20px 0 40px 0;
+            line-height: 1.5;
         }
+        .analysis-intro strong { color: var(--dark); font-weight: 800; }
 
         .pillar-grid, .myth-grid, .compare-grid { 
             display: grid; grid-template-columns: 1fr; gap: 15px; margin: 25px 0; 
@@ -35,57 +41,44 @@
             .pillar-grid, .myth-grid, .compare-grid { grid-template-columns: 1fr 1fr; }
         }
 
-        .card { background: var(--light-bg); padding: 25px; border-radius: 12px; border: 1px solid #e5e7eb; }
+        .card { background: white; padding: 25px; border-radius: 12px; border: 1px solid #e5e7eb; transition: 0.3s; }
+        .card:hover { border-color: var(--primary); transform: translateY(-2px); }
         .card strong { color: var(--dark); display: block; margin-bottom: 8px; font-size: 1.1em; }
 
-        /* MAILERLITE PRESENTATION */
         .tool-intro { background: #f0fdf4; padding: 30px; border-radius: 16px; border: 1px solid #d1fae5; margin: 40px 0; }
         .tool-tag { background: var(--primary); color: white; padding: 4px 12px; border-radius: 50px; font-size: 0.8em; font-weight: bold; text-transform: uppercase; }
 
-        .cta-section { background: var(--dark); padding: 45px 25px; border-radius: 20px; text-align: center; color: white; margin: 50px 0; }
+        .cta-section { background: var(--dark); padding: 50px 30px; border-radius: 20px; text-align: center; color: white; margin: 50px 0; }
         .btn { 
-            display: inline-block; 
-            background: var(--primary); 
-            color: white; 
-            padding: 18px 35px; 
-            text-decoration: none; 
-            border-radius: 100px; 
-            font-weight: 700; 
-            font-size: 1.15em; 
-            width: 100%; 
-            max-width: 320px;
-            transition: 0.2s;
-            box-shadow: 0 4px 12px rgba(0, 168, 89, 0.3);
-            margin-top: 20px;
+            display: inline-block; background: var(--primary); color: white; padding: 20px 40px; text-decoration: none; border-radius: 100px; font-weight: 700; font-size: 1.2em; width: 100%; max-width: 350px; transition: 0.2s; box-shadow: 0 5px 15px rgba(0, 168, 89, 0.4); margin-top: 20px;
         }
-        .btn:hover { background: #059669; transform: translateY(-2px); }
+        .btn:hover { background: #059669; transform: scale(1.03); }
 
         .resource-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 25px; }
         .resource-link { 
-            text-decoration: none; color: var(--dark); padding: 20px; border: 1px solid #eee; border-radius: 12px; font-size: 0.95em; font-weight: 600; text-align: center; background: white; transition: 0.2s;
+            text-decoration: none; color: var(--dark); padding: 20px; border: 1px solid #eee; border-radius: 12px; font-size: 1em; font-weight: 600; text-align: center; background: white; transition: 0.2s;
         }
         .resource-link:hover { border-color: var(--primary); background: var(--light-bg); }
 
-        .about-section { margin-top: 60px; padding: 40px 25px; background: #fafafa; border-radius: 16px; text-align: center; }
-        .disclosure { font-size: 0.85em; color: #9ca3af; text-align: center; margin-top: 50px; padding: 0 20px; line-height: 1.5; }
-        footer { padding: 40px 20px; text-align: center; color: #9ca3af; font-size: 0.9em; }
+        .about-section { margin-top: 60px; padding: 40px 25px; background: var(--light-bg); border-radius: 16px; text-align: center; border: 1px dashed #ccc; }
+        .disclosure { font-size: 0.85em; color: #9ca3af; text-align: center; margin: 50px 0; padding: 0 20px; line-height: 1.5; }
+        footer { padding: 40px 20px; text-align: center; color: #9ca3af; font-size: 0.9em; border-top: 1px solid #eee; }
     </style>
 </head>
 <body>
 
 <header>
     <h1>SaaslyHubs.</h1>
-    <p class="sub-header">Simple, realistic business strategies for the modern entrepreneur.</p>
+    <p>Simple, realistic business strategies for the modern entrepreneur.</p>
 </header>
 
 <div class="container">
     
     <article class="post-content">
-        <h2>The Reality of Growing a Business in 2026</h2>
-        <p>Email marketing works—that’s a fact. But most small businesses struggle because of <strong>"Analysis Paralysis"</strong>—trying to make everything perfect before they even start.</p>
-
-        <div class="ownership-text">
-            Social media algorithms are like <strong>rented land</strong>—the rules change, and you can be evicted at any time. Email marketing gives you direct ownership, repeat sales, and consistent communication without begging for likes or reach.
+        <h2>The Reality of Growing in 2026</h2>
+        
+        <div class="analysis-intro">
+            Most small businesses struggle because of <strong>"Analysis Paralysis"</strong>—trying to make everything perfect before they even start. The truth is that social media algorithms are <strong>rented land</strong>; the rules change, and you can be evicted at any time. Email marketing gives you <strong>direct ownership</strong>, repeat sales, and consistent communication without begging for likes or reach.
         </div>
 
         <div class="compare-grid">
@@ -110,18 +103,18 @@
         <div class="tool-intro">
             <span class="tool-tag">Our Recommended Tool</span>
             <h3>Why we use MailerLite</h3>
-            <p>To run this system, you need a platform that is powerful but easy to master. We’ve tested dozens, and <strong>MailerLite</strong> is our top choice for small businesses.</p>
-            <ul style="font-size: 1.05em; padding-left: 20px; color: var(--dark);">
-                <li><strong>Free Forever:</strong> Up to 1,000 subscribers and 12,000 emails/month for $0.</li>
-                <li><strong>Built-in Hubs:</strong> Create beautiful landing pages without hiring a developer.</li>
-                <li><strong>Simplicity:</strong> If you can use Canva, you can build professional emails here.</li>
+            <p>To run this system, you need a platform that is powerful but easy to master. <strong>MailerLite</strong> is our top choice for small businesses.</p>
+            <ul style="font-size: 1.05em; padding-left: 20px; color: var(--dark); margin-top: 10px;">
+                <li><strong>Free Forever:</strong> Up to 1,000 subscribers for $0.</li>
+                <li><strong>Built-in Hubs:</strong> Create professional landing pages fast.</li>
+                <li><strong>No Tech Headache:</strong> Simple drag-and-drop interface.</li>
             </ul>
         </div>
 
         <div class="cta-section">
-            <h3 style="margin-top: 0; color: white;">Ready to build your audience?</h3>
-            <p style="opacity: 0.9;">Start your $0 build today and join 1M+ businesses on MailerLite.</p>
-            <a href="https://www.mailerlite.com/?linkId=lp_170762&sourceId=deborah-panchillo&tenantId=mailerlite" class="btn">Start Your Free Build Now →</a>
+            <h3 style="margin-top: 0; color: white; font-size: 1.6em;">Ready to build your audience?</h3>
+            <p style="opacity: 0.9; margin-bottom: 25px;">Launch your professional Capture Hub for free today.</p>
+            <a href="https://www.mailerlite.com/?linkId=lp_170762&sourceId=deborah-panchillo&tenantId=mailerlite" class="btn">Start Your $0 Build Now →</a>
         </div>
 
         <div class="about-section">
@@ -137,7 +130,7 @@
     </article>
 
     <div class="disclosure">
-        <strong>Affiliate Disclosure:</strong> Some of the links on this page are affiliate links. If you sign up through them, I may receive a small commission at no extra cost to you. I only recommend tools I use and trust.
+        <strong>Affiliate Disclosure:</strong> Some of the links on this page are affiliate links. If you sign up through them, I may receive a small commission at no extra cost to you.
     </div>
 
     <footer>

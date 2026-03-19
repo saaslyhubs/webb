@@ -3,133 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Business Systems | SaaslyHubs</title>
+    <title>Simple Email Marketing for Small Businesses | SaaslyHubs</title>
     <style>
-        :root { --primary: #00a859; --dark: #1a1a1a; --bg: #ffffff; --light: #fdfdfd; --text: #333; }
-        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.7; color: var(--text); margin: 0; background: var(--bg); }
+        :root { --primary: #00a859; --dark: #1a1a1a; --light-bg: #f4f7f6; }
+        body { font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif; line-height: 1.7; color: #333; max-width: 1000px; margin: 0 auto; padding: 0; background-color: white; }
         
-        /* HEADER */
-        header { background: var(--dark); color: white; padding: 100px 20px; text-align: center; }
-        h1 { font-size: 3.5em; margin-bottom: 15px; line-height: 1.1; font-weight: 800; }
-        header p { font-size: 1.3em; opacity: 0.9; max-width: 650px; margin: 0 auto 40px auto; font-weight: 300; }
+        header { background: var(--dark); color: white; padding: 80px 20px; text-align: center; }
+        h1 { font-size: 3em; margin-bottom: 15px; line-height: 1.1; }
+        header p { font-size: 1.2em; opacity: 0.9; max-width: 600px; margin: 0 auto; }
+        
+        .container { padding: 60px 20px; max-width: 850px; margin: 0 auto; }
+        
+        /* HUB CARDS STYLE */
+        .hub-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 40px 0; }
+        .hub-card { text-decoration: none; color: inherit; padding: 30px; border: 1px solid #eee; border-radius: 15px; transition: 0.3s; background: #fdfdfd; text-align: center; }
+        .hub-card:hover { transform: translateY(-5px); border-color: var(--primary); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .hub-card h3 { margin: 10px 0; color: var(--dark); }
 
-        /* THE HUB SECTION - TWO CARDS */
-        .hub-section { padding: 80px 20px; background: var(--light); text-align: center; border-bottom: 1px solid #eee; }
-        .hub-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; max-width: 1000px; margin: 0 auto; }
+        .intro-box { background: var(--light-bg); padding: 40px; border-radius: 15px; border-left: 8px solid var(--primary); margin: 40px 0; }
+        h2 { border-bottom: 3px solid var(--primary); display: inline-block; margin-top: 50px; padding-bottom: 8px; font-size: 1.8em; }
         
-        .card { background: white; padding: 50px; border-radius: 25px; border: 1px solid #e2e8f0; text-decoration: none; color: inherit; transition: 0.4s ease; display: flex; flex-direction: column; align-items: center; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-        .card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.08); border-color: var(--primary); }
-        .card i { font-size: 3.5em; margin-bottom: 25px; }
-        .card h3 { font-size: 1.8em; margin: 15px 0; color: var(--dark); font-weight: 700; }
-        .card p { color: #555; font-size: 1em; margin-bottom: 30px; max-width: 300px; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin: 40px 0; }
+        @media (max-width: 600px) { .grid, .hub-grid { grid-template-columns: 1fr; } }
         
-        .btn-card { display: inline-block; background: var(--primary); color: white; padding: 15px 35px; border-radius: 50px; font-weight: bold; font-size: 0.95em; transition: 0.3s; text-decoration: none; }
-        .card:hover .btn-card { background: #008f4c; box-shadow: 0 8px 15px rgba(0,168,89,0.2); }
+        .card { background: white; padding: 25px; border: 1px solid #eee; border-radius: 12px; }
+        .card strong { color: var(--primary); font-size: 1.2em; display: block; margin-bottom: 10px; }
 
-        /* CONTENT SECTION */
-        .content { max-width: 900px; margin: 0 auto; padding: 100px 20px; }
-        .intro-box { background: var(--light); padding: 50px; border-radius: 25px; border-left: 8px solid var(--primary); margin-bottom: 60px; box-shadow: 0 5px 15px rgba(0,0,0,0.02); }
-        .intro-box p { font-size: 1.25em; margin: 0; line-height: 1.6; color: var(--dark); }
+        .cta-section { background: #f0faf4; padding: 60px 20px; text-align: center; border-radius: 20px; margin: 60px 0; border: 1px solid #e0f2e9; }
+        .btn { display: inline-block; background: var(--primary); color: white; padding: 20px 45px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 1.2em; box-shadow: 0 10px 20px rgba(0,168,89,0.2); transition: 0.3s; }
         
-        h2 { font-size: 2.5em; color: var(--dark); margin-top: 80px; margin-bottom: 20px; font-weight: 800; }
-        
-        /* COMPARISON TABLE */
-        .comparison { width: 100%; border-collapse: collapse; margin: 40px 0; border-radius: 15px; overflow: hidden; border: 1px solid #eee; box-shadow: 0 10px 20px rgba(0,0,0,0.03); }
-        .comparison th { background: var(--dark); color: white; padding: 20px; text-align: left; font-weight: 600; }
-        .comparison td { padding: 20px; border-bottom: 1px solid #eee; background: white; }
-        .bad { color: #c53030; font-weight: bold; }
-        .good { color: var(--primary); font-weight: bold; }
-
-        /* FOOTER */
-        footer { background: var(--dark); padding: 80px 20px; color: #ccc; text-align: center; font-size: 0.95em; margin-top: 100px; }
-        .footer-content { max-width: 800px; margin: 0 auto; }
-        .footer-content h4 { color: white; font-size: 1.2em; margin-bottom: 15px; }
+        footer { font-size: 0.9em; color: #666; text-align: center; padding: 60px 20px; border-top: 1px solid #eee; margin-top: 80px; }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>The $0 Business Launchpad ✅</h1>
-    <p>Stop overcomplicating your tech. We help small businesses launch professional, automated systems without the high costs or technical overwhelm.</p>
+    <h1>Simple Email Marketing <br>for Small Businesses ✅</h1>
+    <p>Stop Relying Only on Social Media to Grow Your Business!</p>
 </header>
 
-<section class="hub-section">
-    <div class="hub-container">
-        
-        <a href="blueprint.html" class="card">
-            <div>🚀</div>
-            <h3>The $0 Strategy</h3>
-            <p>Why you should skip the expensive website and launch with a simple, high-converting "Hub" instead.</p>
-            <span class="btn-card">Read the Strategy →</span>
+<div class="container">
+    
+    <div class="hub-grid">
+        <a href="blueprint.html" class="hub-card">
+            <div style="font-size: 2em;">🚀</div>
+            <h3>The $0 Blueprint</h3>
+            <p style="font-size: 0.9em; color: #666;">Why you should skip the expensive website.</p>
+            <span style="color: var(--primary); font-weight: bold;">Read Strategy &rarr;</span>
         </a>
-
-        <a href="guide.html" class="card">
-            <div>⚙️</div>
-            <h3>Free Setup Guide</h3>
-            <p>A complete, step-by-step tutorial on how to set up MailerLite and automate your business for free.</p>
-            <span class="btn-card">Start Building →</span>
+        <a href="guide.html" class="hub-card">
+            <div style="font-size: 2em;">⚙️</div>
+            <h3>Setup Guide</h3>
+            <p style="font-size: 0.9em; color: #666;">Step-by-step MailerLite tutorial.</p>
+            <span style="color: var(--primary); font-weight: bold;">Start Building &rarr;</span>
         </a>
-
     </div>
-</section>
 
-<div class="content">
     <div class="intro-box">
-        <p><strong>The problem?</strong> Most business owners fail not because they lack skill, but because they spend too much time on tools and not enough on their customers. We believe technology should work for you.</p>
+        <p><strong>The problem?</strong> You don’t own your audience on social media — and visibility can change overnight. Email marketing gives you direct access, repeat sales, and consistent communication without depending on algorithms.</p>
     </div>
 
-    <h2>Why the traditional way is broken</h2>
-    
-    <table class="comparison">
-        <tr>
-            <th>Traditional Setup (Old Way)</th>
-            <th>The $0 Launchpad (New Way)</th>
-        </tr>
-        <tr>
-            <td><span class="bad">✕</span> 20,000+ SEK Website Cost</td>
-            <td><span class="good">✓</span> 0 SEK (using MailerLite & Canva)</td>
-        </tr>
-        <tr>
-            <td><span class="bad">✕</span> 3-6 Months of Building Time</td>
-            <td><span class="good">✓</span> Ready in 15 Minutes</td>
-        </tr>
-        <tr>
-            <td><span class="bad">✕</span> Complex, confusing Tech</td>
-            <td><span class="good">✓</span> Drag-and-drop Simplicity</td>
-        </tr>
-        <tr style="background: #eef9f3;">
-            <td colspan="2" style="padding: 40px; text-align: center; border-bottom: none;">
-                <p style="font-size: 1.2em; color: var(--dark); margin-bottom: 20px; margin-top: 0;"><strong>Ready to launch with the $0 Strategy?</strong></p>
-                <a href="https://www.mailerlite.com/?linkId=lp_170762&sourceId=deborah-panchillo&tenantId=mailerlite" class="btn-card" style="padding: 18px 45px; font-size: 1.1em; display: inline-block;">Create Your Free Account →</a>
-                <p style="margin-top: 15px; font-size: 0.9em; opacity: 0.7;">(No credit card required • Free up to 1,000 subscribers)</p>
-            </td>
-        </tr>
-    </table>
+    <h2>Why Small Businesses Struggle</h2>
+    <p>Most owners fail with email not because they lack content, but because they choose tools that are too complex. You need to focus on the basics:</p>
+    <ul style="list-style-type: '👉 '; padding-left: 20px; font-size: 1.1em; line-height: 2;">
+        <li>Collect email addresses easily</li>
+        <li>Send professional-looking campaigns</li>
+        <li>Stay consistent without spending hours</li>
+    </ul>
 
-    <h2>Our Core Philosophy</h2>
-    <p>We've stripped away the fluff to give you a lean, professional setup that actually grows your audience. We focus on two things only: <strong>Capturing leads</strong> and <strong>Automating value</strong>.</p>
-    
-    <div style="background: var(--dark); color: white; padding: 50px; border-radius: 25px; text-align: center; margin-top: 60px;">
-        <h2 style="color: white; margin-top: 0;">Start Your Journey Today</h2>
-        <p style="opacity: 0.8; margin-bottom: 30px;">Don't let tech hold you back from growing your business.</p>
-        <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-            <a href="https://www.mailerlite.com/?linkId=lp_170762&sourceId=deborah-panchillo&tenantId=mailerlite" class="btn-card" style="background: white; color: var(--dark);">Claim Your Free Tool →</a>
-            <a href="guide.html" style="color: white; padding: 15px; text-decoration: underline;">See the guide first</a>
-        </div>
+    <div class="cta-section">
+        <h3>💌 Ready to start your list?</h3>
+        <p style="margin-bottom: 30px; font-size: 1.1em;">MailerLite is our top recommendation for simplicity and growth.</p>
+        <a href="https://www.mailerlite.com/?linkId=lp_170762&sourceId=deborah-panchillo&tenantId=mailerliteK" class="btn">Start Your Simple Setup →</a>
     </div>
+
+    <h2>What it Looks Like in Practice</h2>
+    <div class="grid">
+        <div class="card"><strong>1. The Offer</strong>Give a reason to join (a discount, guide, or update).</div>
+        <div class="card"><strong>2. The Form</strong>Collect emails on your site or a simple landing page.</div>
+        <div class="card"><strong>3. The Email</strong>Send helpful, consistent updates to your fans.</div>
+        <div class="card"><strong>4. The Sale</strong>Introduce products naturally over time.</div>
+    </div>
+
+    <div class="cta-section" style="background: var(--dark); color: white; border: none;">
+        <h3 style="color: white;">🚀 Ready to Grow Your Business?</h3>
+        <p style="opacity: 0.8; margin-bottom: 30px;">No credit card required • Free up to 1,000 subscribers</p>
+        <a href="https://www.mailerlite.com/?linkId=lp_170762&sourceId=deborah-panchillo&tenantId=mailerlite" class="btn">Create Your Free Account!</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 SaaslyHubs • <a href="hello@saaslyhubs.com" style="color: #666;">Contact</a></p>
+        <p style="font-size: 0.8em; opacity: 0.7;">Affiliate Disclosure: Some links on this page are affiliate links. If you make a purchase, we may receive a commission at no extra cost to you.</p>
+    </footer>
 </div>
-
-<footer>
-    <div class="footer-content">
-        <h4>About SaaslyHubs</h4>
-        <p>Technology should empower your business, not overwhelm it. We test and recommend the most user-friendly SaaS tools on the market.</p>
-        <p><strong>Contact:</strong> hello@saaslyhubs.com</p>
-        <p style="margin-top: 30px; font-size: 0.8em; opacity: 0.7;">
-            Affiliate Disclosure: Some links on this page are affiliate links. If you make a purchase, we may receive a commission at no extra cost to you.
-        </p>
-        <p>&copy; 2026 SaaslyHubs</p>
-    </div>
-</footer>
 
 </body>
 </html>
+

@@ -6,10 +6,19 @@
     <title>Simple Email Marketing for Small Businesses | SaaslyHubs</title>
     <style>
         :root { --primary: #00a859; --dark: #1a1a1a; --light-bg: #f4f7f6; }
-        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.7; color: #333; max-width: 850px; margin: 0 auto; padding: 0; background-color: white; }
+        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.7; color: #333; max-width: 1000px; margin: 0 auto; padding: 0; background-color: white; }
+        
         header { background: var(--dark); color: white; padding: 60px 20px; text-align: center; }
-        .container { padding: 40px 20px; }
         h1 { font-size: 2.8em; margin-bottom: 10px; line-height: 1.2; }
+        
+        /* HUB SECTION STYLE */
+        .hub-section { padding: 60px 20px; background: #fff; text-align: center; border-bottom: 1px solid #eee; }
+        .hub-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; max-width: 1000px; margin: 30px auto 0 auto; }
+        .hub-card { text-decoration: none; color: inherit; padding: 30px; border: 1px solid #eee; border-radius: 15px; transition: 0.3s; background: #fdfdfd; display: block; }
+        .hub-card:hover { transform: translateY(-5px); border-color: var(--primary); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .hub-card h3 { margin: 10px 0; font-size: 1.2em; color: var(--dark); border: none !important; }
+
+        .container { padding: 40px 20px; max-width: 850px; margin: 0 auto; }
         h2 { border-bottom: 2px solid var(--primary); display: inline-block; margin-top: 40px; padding-bottom: 5px; }
         .intro-box { background: var(--light-bg); padding: 30px; border-radius: 10px; border-left: 6px solid var(--primary); margin: 30px 0; }
         .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 30px 0; }
@@ -30,10 +39,38 @@
     
     <nav style="margin-top: 25px;">
         <a href="guide.html" style="color: white; border: 2px solid var(--primary); padding: 10px 25px; text-decoration: none; border-radius: 25px; font-weight: bold; transition: 0.3s;">
-           Go to Free Setup Guide →
+            Go to Free Setup Guide →
         </a>
     </nav>
 </header>
+
+<section class="hub-section">
+    <h2 style="border:none; margin-top:0;">Your Small Business Launchpad</h2>
+    <p style="color: #666; max-width: 600px; margin: 0 auto; font-size: 1.1em;">Everything you need to launch and grow your business in 2026.</p>
+
+    <div class="hub-grid">
+        <a href="blueprint.html" class="hub-card">
+            <div style="font-size: 2em; margin-bottom: 10px;">🚀</div>
+            <h3>The $0 Blueprint</h3>
+            <p style="font-size: 0.85em; color: #666;">Skip the expensive website and launch faster.</p>
+            <span style="color: var(--primary); font-weight: bold; font-size: 0.9em;">Start Here &rarr;</span>
+        </a>
+
+        <a href="ideas.html" class="hub-card">
+            <div style="font-size: 2em; margin-bottom: 10px;">💡</div>
+            <h3>Freebie Ideas</h3>
+            <p style="font-size: 0.85em; color: #666;">10 digital products to capture customer leads.</p>
+            <span style="color: var(--primary); font-weight: bold; font-size: 0.9em;">Get Inspired &rarr;</span>
+        </a>
+
+        <a href="guide.html" class="hub-card">
+            <div style="font-size: 2em; margin-bottom: 10px;">⚙️</div>
+            <h3>Setup Guide</h3>
+            <p style="font-size: 0.85em; color: #666;">Step-by-step MailerLite tutorial for beginners.</p>
+            <span style="color: var(--primary); font-weight: bold; font-size: 0.9em;">Get Tools &rarr;</span>
+        </a>
+    </div>
+</section>
 
 <div class="container">
     <div class="intro-box">
@@ -57,7 +94,6 @@
     </div>
 
     <h2>What it Looks Like in Practice</h2>
-    <p>A successful setup doesn't have to be a project. It's a simple loop:</p>
     <div class="grid">
         <div class="card"><strong>1. The Offer</strong><br>Give a reason to join (a discount, guide, or update).</div>
         <div class="card"><strong>2. The Form</strong><br>Collect emails on your site or a simple landing page.</div>
@@ -66,27 +102,25 @@
     </div>
 
     <h2>Why MailerLite?</h2>
-    <p>It's built for clarity. You get a drag-and-drop editor, easy automation, and a dashboard that actually makes sense for a beginner. <strong>Best part?</strong> It's free up to 1,000 subscribers.</p>
+    <p>It's built for clarity. You get a drag-and-drop editor, easy automation, and a dashboard that actually makes sense. <strong>Best part?</strong> It's free up to 1,000 subscribers.</p>
 
     <div class="cta-section" style="background: var(--dark); color: white;">
         <h3 style="color: white;">🚀 Ready to Grow Your Business?</h3>
         <p>No credit card required • Cancel anytime • Full access to features</p>
         <a href="https://www.mailerlite.com/?linkId=lp_170762&sourceId=deborah-panchillo&tenantId=mailerlite" class="btn">Create Your Free Account!</a>
-        <p style="margin-top: 15px; font-size: 0.9em;">Join over 1 million businesses growing with MailerLite</p>
     </div>
-
-    <h2>Frequently Asked Questions</h2>
-    <div class="faq"><strong>Is it really free?</strong><br>Yes, up to 1,000 subscribers and 12,000 emails/month.</div>
-    <div class="faq"><strong>Do I need technical skills?</strong><br>No. If you can use Facebook or Word, you can use this.</div>
-    <div class="faq"><strong>Can I cancel later?</strong><br>Yes, there are no contracts or hidden fees.</div>
 
     <footer>
         <div style="margin-bottom: 30px; text-align: left; background: #f9f9f9; padding: 20px; border-radius: 8px;">
             <h4 style="margin-top: 0; color: #1a1a1a;">About SaaslyHubs</h4>
-            <p>We believe that technology should empower your business, not overwhelm it. SaaslyHubs is a dedicated space where we test and recommend the most user-friendly SaaS tools on the market, helping you save time and focus on what you do best.</p>
+            <p>We believe that technology should empower your business, not overwhelm it. SaaslyHubs is a dedicated space where we test and recommend the most user-friendly SaaS tools.</p>
             <p><strong>Contact:</strong> hello@saaslyhubs.com</p>
         </div>
 
-        <p><strong>Affiliate Disclosure:</strong> SaaslyHubs is an independent site. Some links on this page are affiliate links. If you click and make a purchase, we may receive a small commission at no extra cost to you. This helps us keep the site running and free of annoying ads.</p>
+        <p><strong>Affiliate Disclosure:</strong> SaaslyHubs is an independent site. Some links on this page are affiliate links. If you click and make a purchase, we may receive a small commission at no extra cost to you.</p>
         <p>&copy; 2026 SaaslyHubs</p>
     </footer>
+</div>
+
+</body>
+</html>

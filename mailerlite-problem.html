@@ -3,36 +3,56 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Stop Losing Leads | SaaslyHubs</title>
+<title>Your Customers Are Waiting | SaaslyHubs</title>
 
 <style>
-:root { --primary: #00a859; --dark: #111827; --text: #374151; --light-bg: #f9fafb; }
-body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; margin: 0; color: var(--text); }
+:root { 
+    --primary: #00a859; 
+    --dark: #111827; 
+    --text: #374151; 
+    --light-bg: #f9fafb; 
+}
+body { 
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+    margin: 0; 
+    color: var(--text); 
+    background: var(--light-bg);
+}
 
-header { background: var(--dark); color: white; padding: 80px 20px; text-align: center; }
-header h1 { font-size: 2.8em; line-height: 1.1; margin-bottom: 20px; }
-header p { opacity: 0.9; max-width: 600px; margin: 0 auto; }
+header { 
+    background: var(--dark); 
+    color: white; 
+    padding: 80px 20px; 
+    text-align: center; 
+}
+header h1 { 
+    font-size: 2.5em; 
+    line-height: 1.2; 
+    margin-bottom: 20px; 
+}
+header p { 
+    opacity: 0.9; 
+    max-width: 600px; 
+    margin: 0 auto; 
+    font-size: 1.1em;
+}
 
-.container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
+.container { 
+    max-width: 800px; 
+    margin: 0 auto; 
+    padding: 40px 20px; 
+}
 
-.problem-box {
-    background: #fff5f5;
-    border-left: 5px solid #ef4444;
+.problem-box, .solution-box {
     padding: 25px;
     border-radius: 12px;
     margin: 30px 0;
 }
-
-.solution-box {
-    background: #eef9f3;
-    border-left: 5px solid var(--primary);
-    padding: 25px;
-    border-radius: 12px;
-    margin: 30px 0;
-}
+.problem-box { background: #fff5f5; border-left: 5px solid #ef4444; }
+.solution-box { background: #eef9f3; border-left: 5px solid var(--primary); }
 
 .steps { margin: 40px 0; }
-.step { margin-bottom: 20px; }
+.step { margin-bottom: 20px; font-size: 1.05em; }
 
 .cta {
     background: var(--dark);
@@ -52,6 +72,16 @@ header p { opacity: 0.9; max-width: 600px; margin: 0 auto; }
     text-decoration: none;
     font-weight: bold;
     margin-top: 20px;
+    font-size: 1.1em;
+}
+
+/* RESPONSIVITET */
+@media (max-width: 600px) {
+    header h1 { font-size: 2em; }
+    header p { font-size: 1em; }
+    .container { padding: 20px 15px; }
+    .cta { padding: 40px 15px; }
+    .btn { padding: 20px 30px; font-size: 1.2em; width: 100%; text-align: center; }
 }
 </style>
 </head>
@@ -59,49 +89,41 @@ header p { opacity: 0.9; max-width: 600px; margin: 0 auto; }
 <body>
 
 <header>
-    <h1>Stop Losing Customers<br>While You Wait for a Website</h1>
-    <p>Every day without a simple system in place = lost leads, lost sales, and lost momentum.</p>
+    <h1>Your Customers Are Waiting — Are You Losing Them?</h1>
+    <p>Small businesses lose leads every day… but you can capture them in under 24 hours.</p>
 </header>
 
 <div class="container">
 
     <div class="problem-box">
-        <h2>The Hidden Problem</h2>
-        <p>Most small businesses think they need a “perfect website” before they can start getting customers.</p>
-        <p><strong>Reality?</strong> While you're waiting, people are ready to buy — and you have no way to capture them.</p>
-        <p>You’re losing leads every single day.</p>
-    </div>
-
-    <div class="problem-box">
-        <h2>What This Looks Like</h2>
+        <h2>The Problem</h2>
         <ul>
-            <li>People ask about your service… then disappear</li>
+            <li>Leads ask about your service… then disappear</li>
             <li>You rely only on Instagram or Pinterest DMs</li>
             <li>No follow-up → no second chance to sell</li>
-            <li>No system → everything is manual</li>
+            <li>Everything manual → wasted time and lost customers</li>
         </ul>
+        <p><strong>Truth:</strong> You don’t need a perfect website to start getting customers.</p>
     </div>
 
     <div class="solution-box">
-        <h2>The Simple Fix</h2>
-        <p>You don’t need a full website.</p>
-        <p>You just need a <strong>simple page that captures leads</strong> and a system that follows up automatically.</p>
-        <p>This can be done in under 24 hours — for free.</p>
+        <h2>The Simple Solution</h2>
+        <p>Create a <strong>simple landing page</strong> and an automatic follow-up system.</p>
+        <p>Collect leads and start selling <strong>before your full website is ready</strong>.</p>
+        <p>All this can be done in <strong>under 24 hours</strong>, without tech skills or expensive developers.</p>
     </div>
 
     <div class="steps">
         <h2>How It Works</h2>
-
         <div class="step"><strong>1.</strong> Create a simple landing page</div>
-        <div class="step"><strong>2.</strong> Add a form to capture leads</div>
+        <div class="step"><strong>2.</strong> Add a lead capture form</div>
         <div class="step"><strong>3.</strong> Automatically follow up via email</div>
-
-        <p><strong>That’s it.</strong> No tech skills. No expensive developers.</p>
+        <p><strong>Result:</strong> Leads get captured instead of disappearing, and you can start selling immediately.</p>
     </div>
 
     <div class="cta">
         <h2>Start Capturing Leads Today</h2>
-        <p>Stop waiting. Start building your customer list now.</p>
+        <p>Don’t wait. Build your customer list now.</p>
         <a href="https://www.mailerlite.com/?linkId=lp_170762&sourceId=deborah-panchillo&tenantId=mailerlite" class="btn">Create Your Free System →</a>
     </div>
 

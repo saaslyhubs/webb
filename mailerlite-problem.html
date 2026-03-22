@@ -11,6 +11,8 @@
     --dark: #111827; 
     --text: #374151; 
     --light-bg: #f9fafb; 
+    --footer-bg: #1f2937;
+    --footer-text: #d1d5db;
 }
 body { 
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
@@ -24,6 +26,12 @@ header {
     color: white; 
     padding: 80px 20px; 
     text-align: center; 
+}
+.header-fomo {
+    font-size: 1em;
+    color: #ef4444;
+    margin-bottom: 10px;
+    opacity: 0.9;
 }
 header h1 { 
     font-size: 2.5em; 
@@ -43,13 +51,14 @@ header p {
     padding: 40px 20px; 
 }
 
-.problem-box, .solution-box {
+.problem-box, .solution-box, .social-proof-box {
     padding: 25px;
     border-radius: 12px;
     margin: 30px 0;
 }
 .problem-box { background: #fff5f5; border-left: 5px solid #ef4444; }
 .solution-box { background: #eef9f3; border-left: 5px solid var(--primary); }
+.social-proof-box { background: #e5e7eb; border-left: 5px solid #6b7280; }
 
 .steps { margin: 40px 0; }
 .step { margin-bottom: 20px; font-size: 1.05em; }
@@ -75,13 +84,26 @@ header p {
     font-size: 1.1em;
 }
 
+.footer {
+    background: var(--footer-bg);
+    color: var(--footer-text);
+    text-align: center;
+    padding: 40px 20px 20px 20px;
+    font-size: 0.95em;
+    line-height: 1.5;
+    margin-top: 50px;
+    border-radius: 12px;
+}
+
 /* RESPONSIVITET */
 @media (max-width: 600px) {
+    .header-fomo { font-size: 0.9em; }
     header h1 { font-size: 2em; }
     header p { font-size: 1em; }
     .container { padding: 20px 15px; }
     .cta { padding: 40px 15px; }
     .btn { padding: 20px 30px; font-size: 1.2em; width: 100%; text-align: center; }
+    .footer { font-size: 0.9em; padding: 30px 15px 15px 15px; }
 }
 </style>
 </head>
@@ -89,6 +111,7 @@ header p {
 <body>
 
 <header>
+    <div class="header-fomo">Every day you wait, potential customers disappear.</div>
     <h1>Your Customers Are Waiting — Are You Losing Them?</h1>
     <p>Small businesses lose leads every day… but you can capture them in under 24 hours.</p>
 </header>
@@ -111,20 +134,38 @@ header p {
         <p>Create a <strong>simple landing page</strong> and an automatic follow-up system.</p>
         <p>Collect leads and start selling <strong>before your full website is ready</strong>.</p>
         <p>All this can be done in <strong>under 24 hours</strong>, without tech skills or expensive developers.</p>
+        <ul>
+            <li>✅ First lead in under 1 hour</li>
+            <li>✅ Automate follow-ups in 5 minutes</li>
+            <li>✅ No tech skills required — start selling immediately</li>
+        </ul>
     </div>
 
     <div class="steps">
         <h2>How It Works</h2>
-        <div class="step"><strong>1.</strong> Create a simple landing page</div>
-        <div class="step"><strong>2.</strong> Add a lead capture form</div>
-        <div class="step"><strong>3.</strong> Automatically follow up via email</div>
-        <p><strong>Result:</strong> Leads get captured instead of disappearing, and you can start selling immediately.</p>
+        <div class="step"><strong>1.</strong> Create a simple landing page → capture your first inquiry today</div>
+        <div class="step"><strong>2.</strong> Add a lead capture form → start building your list instantly</div>
+        <div class="step"><strong>3.</strong> Automatically follow up via email → never lose a lead again</div>
+    </div>
+
+    <div class="social-proof-box">
+        <h2>See What’s Possible</h2>
+        <p>Anna, a small boutique owner, captured her first lead within hours using this system.</p>
+        <p>Most small business owners wait weeks for a website — you can start capturing leads today.</p>
     </div>
 
     <div class="cta">
         <h2>Start Capturing Leads Today</h2>
         <p>Don’t wait. Build your customer list now.</p>
         <a href="https://www.mailerlite.com/?linkId=lp_170762&sourceId=deborah-panchillo&tenantId=mailerlite" class="btn">Create Your Free System →</a>
+        <p style="margin-top:10px; font-size:0.9em; opacity:0.8;">It only takes 5 minutes to set up your first lead page.</p>
+    </div>
+
+    <div class="footer">
+        <h3>About Us</h3>
+        <p>We believe business owners shouldn't be held hostage by expensive agencies. Our mission is to provide the "SaaS Blueprints" you need to launch faster, spend less, and actually own your customer relationships.</p>
+        <p><strong>Affiliate Disclosure:</strong> Some of the links on this page are affiliate links. If you sign up through them, I may receive a small commission at no extra cost to you.</p>
+        <p>© 2026 SaaslyHubs • Helping small businesses build smarter.</p>
     </div>
 
 </div>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stop Losing Leads | SaaslyHubs</title>
+
+<style>
+:root { --primary: #00a859; --dark: #111827; --text: #374151; --light-bg: #f9fafb; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; margin: 0; color: var(--text); }
+
+header { background: var(--dark); color: white; padding: 80px 20px; text-align: center; }
+header h1 { font-size: 2.8em; line-height: 1.1; margin-bottom: 20px; }
+header p { opacity: 0.9; max-width: 600px; margin: 0 auto; }
+
+.container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
+
+.problem-box {
+    background: #fff5f5;
+    border-left: 5px solid #ef4444;
+    padding: 25px;
+    border-radius: 12px;
+    margin: 30px 0;
+}
+
+.solution-box {
+    background: #eef9f3;
+    border-left: 5px solid var(--primary);
+    padding: 25px;
+    border-radius: 12px;
+    margin: 30px 0;
+}
+
+.steps { margin: 40px 0; }
+.step { margin-bottom: 20px; }
+
+.cta {
+    background: var(--dark);
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+    border-radius: 20px;
+    margin-top: 50px;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    padding: 18px 40px;
+    border-radius: 100px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Stop Losing Customers<br>While You Wait for a Website</h1>
+    <p>Every day without a simple system in place = lost leads, lost sales, and lost momentum.</p>
+</header>
+
+<div class="container">
+
+    <div class="problem-box">
+        <h2>The Hidden Problem</h2>
+        <p>Most small businesses think they need a “perfect website” before they can start getting customers.</p>
+        <p><strong>Reality?</strong> While you're waiting, people are ready to buy — and you have no way to capture them.</p>
+        <p>You’re losing leads every single day.</p>
+    </div>
+
+    <div class="problem-box">
+        <h2>What This Looks Like</h2>
+        <ul>
+            <li>People ask about your service… then disappear</li>
+            <li>You rely only on Instagram or Pinterest DMs</li>
+            <li>No follow-up → no second chance to sell</li>
+            <li>No system → everything is manual</li>
+        </ul>
+    </div>
+
+    <div class="solution-box">
+        <h2>The Simple Fix</h2>
+        <p>You don’t need a full website.</p>
+        <p>You just need a <strong>simple page that captures leads</strong> and a system that follows up automatically.</p>
+        <p>This can be done in under 24 hours — for free.</p>
+    </div>
+
+    <div class="steps">
+        <h2>How It Works</h2>
+
+        <div class="step"><strong>1.</strong> Create a simple landing page</div>
+        <div class="step"><strong>2.</strong> Add a form to capture leads</div>
+        <div class="step"><strong>3.</strong> Automatically follow up via email</div>
+
+        <p><strong>That’s it.</strong> No tech skills. No expensive developers.</p>
+    </div>
+
+    <div class="cta">
+        <h2>Start Capturing Leads Today</h2>
+        <p>Stop waiting. Start building your customer list now.</p>
+        <a href="https://www.mailerlite.com/?linkId=lp_170762&sourceId=deborah-panchillo&tenantId=mailerlite" class="btn">Create Your Free System →</a>
+    </div>
+
+</div>
+
+</body>
+</html>

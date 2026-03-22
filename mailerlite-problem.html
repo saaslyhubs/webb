@@ -11,8 +11,7 @@
     --dark: #111827; 
     --text: #374151; 
     --light-bg: #f9fafb; 
-    --footer-bg: #1f2937;
-    --footer-text: #d1d5db;
+    --light-grey: #f3f4f6;
 }
 body { 
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
@@ -33,35 +32,38 @@ header {
     margin-bottom: 10px;
     opacity: 0.9;
 }
-header h1 { 
-    font-size: 2.5em; 
-    line-height: 1.2; 
-    margin-bottom: 20px; 
-}
-header p { 
-    opacity: 0.9; 
-    max-width: 600px; 
-    margin: 0 auto; 
-    font-size: 1.1em;
-}
+header h1 { font-size: 2.5em; line-height: 1.2; margin-bottom: 20px; }
+header p { opacity: 0.9; max-width: 600px; margin: 0 auto; font-size: 1.1em; }
+.hero-cta { margin-top: 25px; }
 
-.container { 
-    max-width: 800px; 
-    margin: 0 auto; 
-    padding: 40px 20px; 
-}
+.container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
 
-.problem-box, .solution-box, .social-proof-box {
+.problem-box, .solution-box {
     padding: 25px;
     border-radius: 12px;
     margin: 30px 0;
 }
 .problem-box { background: #fff5f5; border-left: 5px solid #ef4444; }
 .solution-box { background: #eef9f3; border-left: 5px solid var(--primary); }
-.social-proof-box { background: #e5e7eb; border-left: 5px solid #6b7280; }
 
 .steps { margin: 40px 0; }
 .step { margin-bottom: 20px; font-size: 1.05em; }
+
+.social-proofs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 40px 0;
+}
+
+.testimonial {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    flex: 1 1 45%;
+    min-width: 250px;
+}
 
 .cta {
     background: var(--dark);
@@ -84,15 +86,14 @@ header p {
     font-size: 1.1em;
 }
 
-.footer {
-    background: var(--footer-bg);
-    color: var(--footer-text);
-    text-align: center;
-    padding: 40px 20px 20px 20px;
-    font-size: 0.95em;
-    line-height: 1.5;
-    margin-top: 50px;
+.about-us {
+    background: var(--light-grey);
+    padding: 30px 20px;
     border-radius: 12px;
+    margin: 50px 0 30px 0;
+    text-align: center;
+    font-size: 1em;
+    line-height: 1.5;
 }
 
 /* RESPONSIVITET */
@@ -103,7 +104,7 @@ header p {
     .container { padding: 20px 15px; }
     .cta { padding: 40px 15px; }
     .btn { padding: 20px 30px; font-size: 1.2em; width: 100%; text-align: center; }
-    .footer { font-size: 0.9em; padding: 30px 15px 15px 15px; }
+    .social-proofs { flex-direction: column; }
 }
 </style>
 </head>
@@ -114,6 +115,10 @@ header p {
     <div class="header-fomo">Every day you wait, potential customers disappear.</div>
     <h1>Your Customers Are Waiting — Are You Losing Them?</h1>
     <p>Small businesses lose leads every day… but you can capture them in under 24 hours.</p>
+    <!-- Hero CTA -->
+    <div class="hero-cta">
+        <a href="https://www.mailerlite.com/?linkId=lp_170762&sourceId=deborah-panchillo&tenantId=mailerlite" class="btn">Get Your First Lead Now →</a>
+    </div>
 </header>
 
 <div class="container">
@@ -148,12 +153,19 @@ header p {
         <div class="step"><strong>3.</strong> Automatically follow up via email → never lose a lead again</div>
     </div>
 
-    <div class="social-proof-box">
-        <h2>See What’s Possible</h2>
-        <p>Anna, a small boutique owner, captured her first lead within hours using this system.</p>
-        <p>Most small business owners wait weeks for a website — you can start capturing leads today.</p>
+    <!-- Social Proof -->
+    <div class="social-proofs">
+        <div class="testimonial">
+            <p>Anna, a small boutique owner, captured her first lead within hours using this system.</p>
+            <a href="https://www.mailerlite.com/?linkId=lp_170762&sourceId=deborah-panchillo&tenantId=mailerlite" class="btn" style="margin-top:15px;">Start Your System →</a> <!-- CTA mellan testimonials -->
+        </div>
+        <div class="testimonial">
+            <p>Most small business owners wait weeks for a website — you can start capturing leads today.</p>
+            <a href="https://www.mailerlite.com/?linkId=lp_170762&sourceId=deborah-panchillo&tenantId=mailerlite" class="btn" style="margin-top:15px;">Start Your System →</a>
+        </div>
     </div>
 
+    <!-- Main CTA -->
     <div class="cta">
         <h2>Start Capturing Leads Today</h2>
         <p>Don’t wait. Build your customer list now.</p>
@@ -161,8 +173,8 @@ header p {
         <p style="margin-top:10px; font-size:0.9em; opacity:0.8;">It only takes 5 minutes to set up your first lead page.</p>
     </div>
 
-    <div class="footer">
-        <h3>About Us</h3>
+    <!-- About Us -->
+    <div class="about-us">
         <p>We believe business owners shouldn't be held hostage by expensive agencies. Our mission is to provide the "SaaS Blueprints" you need to launch faster, spend less, and actually own your customer relationships.</p>
         <p><strong>Affiliate Disclosure:</strong> Some of the links on this page are affiliate links. If you sign up through them, I may receive a small commission at no extra cost to you.</p>
         <p>© 2026 SaaslyHubs • Helping small businesses build smarter.</p>

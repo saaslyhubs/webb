@@ -23,8 +23,9 @@ body {
 header { 
     background: var(--dark); 
     color: white; 
-    padding: 80px 20px; 
+    padding: 60px 20px; 
     text-align: center; 
+    position: relative;
 }
 .header-fomo {
     font-size: 1em;
@@ -32,25 +33,26 @@ header {
     margin-bottom: 10px;
     opacity: 0.9;
 }
-header h1 { font-size: 2.5em; line-height: 1.2; margin-bottom: 20px; }
-header p { opacity: 0.9; max-width: 600px; margin: 0 auto; font-size: 1.1em; }
-.hero-cta { margin-top: 25px; }
+header h1 { font-size: 2.2em; line-height: 1.2; margin-bottom: 15px; }
+header p { opacity: 0.9; max-width: 550px; margin: 0 auto; font-size: 1em; }
+.hero-cta { margin-top: 20px; }
 
-.container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
+.container { max-width: 800px; margin: 0 auto; padding: 30px 20px; }
 
 .problem-box, .solution-box {
-    padding: 25px;
+    padding: 20px;
     border-radius: 12px;
-    margin: 30px 0;
+    margin: 25px 0;
 }
 .problem-box { background: #fff5f5; border-left: 5px solid #ef4444; }
 .solution-box { background: #eef9f3; border-left: 5px solid var(--primary); }
 
-.steps { margin: 40px 0; }
-.step { margin-bottom: 20px; font-size: 1.05em; }
+.steps { margin: 35px 0; }
+.step { margin-bottom: 15px; font-size: 1.05em; display: flex; align-items: flex-start; gap: 10px; }
+.step-circle { width: 28px; height: 28px; background: var(--primary); border-radius: 50%; color: white; display: flex; justify-content: center; align-items: center; font-weight: bold; flex-shrink: 0; }
 
 .experiences {
-    margin: 40px 0;
+    margin: 35px 0;
 }
 .experience-cards {
     display: flex;
@@ -59,7 +61,7 @@ header p { opacity: 0.9; max-width: 600px; margin: 0 auto; font-size: 1.1em; }
 }
 .experience {
     background: white;
-    padding: 25px;
+    padding: 20px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     flex: 1 1 45%;
@@ -73,10 +75,10 @@ header p { opacity: 0.9; max-width: 600px; margin: 0 auto; font-size: 1.1em; }
 .cta {
     background: var(--dark);
     color: white;
-    padding: 50px 20px;
+    padding: 45px 20px;
     text-align: center;
     border-radius: 20px;
-    margin-top: 50px;
+    margin-top: 40px;
 }
 
 .btn {
@@ -93,9 +95,9 @@ header p { opacity: 0.9; max-width: 600px; margin: 0 auto; font-size: 1.1em; }
 
 .about-us {
     background: var(--light-grey);
-    padding: 30px 20px;
+    padding: 25px 20px;
     border-radius: 12px;
-    margin: 50px 0 10px 0;
+    margin: 40px 0 10px 0;
     text-align: center;
     font-size: 1em;
     line-height: 1.5;
@@ -109,14 +111,14 @@ header p { opacity: 0.9; max-width: 600px; margin: 0 auto; font-size: 1.1em; }
     line-height: 1.4;
 }
 
-/* RESPONSIVITET */
+/* RESPONSIVE */
 @media (max-width: 600px) {
     .header-fomo { font-size: 0.9em; }
-    header h1 { font-size: 2em; }
-    header p { font-size: 1em; }
+    header h1 { font-size: 1.8em; }
+    header p { font-size: 0.95em; }
     .container { padding: 20px 15px; }
-    .cta { padding: 40px 15px; }
-    .btn { padding: 20px 30px; font-size: 1.2em; width: 100%; text-align: center; }
+    .cta { padding: 35px 15px; }
+    .btn { padding: 18px 25px; font-size: 1.1em; width: 100%; text-align: center; }
     .experience-cards { flex-direction: column; }
     .experience .btn { width: 100%; }
 }
@@ -127,11 +129,10 @@ header p { opacity: 0.9; max-width: 600px; margin: 0 auto; font-size: 1.1em; }
 
 <header>
     <div class="header-fomo">Every day you wait, potential customers disappear.</div>
-    <h1>Your Customers Are Waiting — Are You Losing Them?</h1>
-    <p>Small businesses lose leads every day… but you can capture them in under 24 hours.</p>
-    <!-- Hero CTA -->
+    <h1>Get Your First Customer in Under 1 Hour — No Perfect Website Needed</h1>
+    <p>Small businesses lose leads every day. You can capture your first lead immediately.</p>
     <div class="hero-cta">
-        <a href="https://www.mailerlite.com/?linkId=lp_170762&sourceId=deborah-panchillo&tenantId=mailerlite" class="btn">Get Your First Lead Now →</a>
+        <a href="https://www.mailerlite.com/?linkId=lp_170762&sourceId=deborah-panchillo&tenantId=mailerlite" class="btn">Get Your First Lead →</a>
     </div>
 </header>
 
@@ -140,40 +141,36 @@ header p { opacity: 0.9; max-width: 600px; margin: 0 auto; font-size: 1.1em; }
     <div class="problem-box">
         <h2>The Problem</h2>
         <ul>
-            <li>Leads ask about your service… then disappear</li>
-            <li>You rely only on Instagram or Pinterest DMs</li>
+            <li>Leads ask → but then disappear</li>
+            <li>Relying on Instagram/Pinterest DMs → you miss customers</li>
             <li>No follow-up → no second chance to sell</li>
-            <li>Everything manual → wasted time and lost customers</li>
+            <li>Everything manual → wasted time & lost customers</li>
         </ul>
         <p><strong>Truth:</strong> You don’t need a perfect website to start getting customers.</p>
     </div>
 
     <div class="solution-box">
-        <h2>The Simple Solution</h2>
-        <p>Create a <strong>simple landing page</strong> and an automatic follow-up system.</p>
-        <p>Collect leads and start selling <strong>before your full website is ready</strong>.</p>
-        <p>All this can be done in <strong>under 24 hours</strong>, without tech skills or expensive developers.</p>
+        <h2>The Solution</h2>
         <ul>
-            <li>✅ First lead in under 1 hour</li>
+            <li>✅ Get your first lead in under 1 hour</li>
             <li>✅ Automate follow-ups in 5 minutes</li>
             <li>✅ No tech skills required — start selling immediately</li>
         </ul>
+        <p>Create a simple landing page and automated follow-up system — ready in under 24 hours.</p>
     </div>
 
     <div class="steps">
         <h2>How It Works</h2>
-        <div class="step"><strong>1.</strong> Create a simple landing page → capture your first inquiry today</div>
-        <div class="step"><strong>2.</strong> Add a lead capture form → start building your list instantly</div>
-        <div class="step"><strong>3.</strong> Automatically follow up via email → never lose a lead again</div>
+        <div class="step"><div class="step-circle">1</div>Create a simple landing page → capture your first inquiry today</div>
+        <div class="step"><div class="step-circle">2</div>Add a lead capture form → start building your list instantly</div>
+        <div class="step"><div class="step-circle">3</div>Automatically follow up via email → never lose a lead again</div>
     </div>
 
-    <!-- Experiences Section -->
     <div class="experiences">
         <h2>Success Stories</h2>
-        <p>Imagine the results small business owners can achieve with a simple lead system:</p>
         <div class="experience-cards">
             <div class="experience">
-                <p>Anna, a small boutique owner, captured her first lead in just hours using a simple landing page.</p>
+                <p>Anna, a small boutique owner, got her first lead in just hours using a simple landing page.</p>
                 <a href="https://www.mailerlite.com/?linkId=lp_170762&sourceId=deborah-panchillo&tenantId=mailerlite" class="btn">Start →</a>
             </div>
             <div class="experience">
@@ -183,22 +180,19 @@ header p { opacity: 0.9; max-width: 600px; margin: 0 auto; font-size: 1.1em; }
         </div>
     </div>
 
-    <!-- Main CTA -->
     <div class="cta">
         <h2>Start Capturing Leads Today</h2>
-        <p>Don’t wait. Build your customer list now.</p>
-        <a href="https://www.mailerlite.com/?linkId=lp_170762&sourceId=deborah-panchillo&tenantId=mailerlite" class="btn">Create Your Free System →</a>
+        <p>Stop losing customers. Build your list now.</p>
+        <a href="https://www.mailerlite.com/?linkId=lp_170762&sourceId=deborah-panchillo&tenantId=mailerlite" class="btn">Get Your First Lead →</a>
         <p style="margin-top:10px; font-size:0.9em; opacity:0.8;">It only takes 5 minutes to set up your first lead page.</p>
     </div>
 
-    <!-- About Us -->
     <div class="about-us">
-        <p>We believe business owners shouldn't be held hostage by expensive agencies. Our mission is to provide the "SaaS Blueprints" you need to launch faster, spend less, and actually own your customer relationships.</p>
+        <p>We help business owners get leads fast without expensive agencies. Our mission: launch faster, spend less, and own your customer relationships.</p>
     </div>
 
-    <!-- Small Footer -->
     <div class="footer-small">
-        <p>Affiliate Disclosure: Some of the links on this page are affiliate links. If you sign up through them, I may receive a small commission at no extra cost to you.</p>
+        <p>Affiliate Disclosure: Some links are affiliate links. I may receive a commission at no extra cost to you.</p>
         <p>© 2026 SaaslyHubs • Helping small businesses build smarter.</p>
     </div>
 

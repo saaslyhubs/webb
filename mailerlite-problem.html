@@ -52,13 +52,11 @@ header p { opacity: 0.9; max-width: 600px; margin: 0 auto; font-size: 1.1em; }
 .experiences {
     margin: 40px 0;
 }
-
 .experience-cards {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
 }
-
 .experience {
     background: white;
     padding: 25px;
@@ -66,6 +64,10 @@ header p { opacity: 0.9; max-width: 600px; margin: 0 auto; font-size: 1.1em; }
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     flex: 1 1 45%;
     min-width: 250px;
+}
+.experience .btn {
+    padding: 12px 25px;
+    font-size: 0.95em;
 }
 
 .cta {
@@ -93,10 +95,18 @@ header p { opacity: 0.9; max-width: 600px; margin: 0 auto; font-size: 1.1em; }
     background: var(--light-grey);
     padding: 30px 20px;
     border-radius: 12px;
-    margin: 50px 0 30px 0;
+    margin: 50px 0 10px 0;
     text-align: center;
     font-size: 1em;
     line-height: 1.5;
+}
+
+.footer-small {
+    text-align: center;
+    font-size: 0.8em;
+    color: #6b7280;
+    margin-bottom: 50px;
+    line-height: 1.4;
 }
 
 /* RESPONSIVITET */
@@ -108,6 +118,7 @@ header p { opacity: 0.9; max-width: 600px; margin: 0 auto; font-size: 1.1em; }
     .cta { padding: 40px 15px; }
     .btn { padding: 20px 30px; font-size: 1.2em; width: 100%; text-align: center; }
     .experience-cards { flex-direction: column; }
+    .experience .btn { width: 100%; }
 }
 </style>
 </head>
@@ -163,11 +174,11 @@ header p { opacity: 0.9; max-width: 600px; margin: 0 auto; font-size: 1.1em; }
         <div class="experience-cards">
             <div class="experience">
                 <p>Anna, a small boutique owner, captured her first lead in just hours using a simple landing page.</p>
-                <a href="https://www.mailerlite.com/?linkId=lp_170762&sourceId=deborah-panchillo&tenantId=mailerlite" class="btn" style="margin-top:15px;">Start Your System →</a>
+                <a href="https://www.mailerlite.com/?linkId=lp_170762&sourceId=deborah-panchillo&tenantId=mailerlite" class="btn">Start →</a>
             </div>
             <div class="experience">
                 <p>Mark, a freelance designer, started automating follow-ups and quickly increased inquiries from potential clients.</p>
-                <a href="https://www.mailerlite.com/?linkId=lp_170762&sourceId=deborah-panchillo&tenantId=mailerlite" class="btn" style="margin-top:15px;">Start Your System →</a>
+                <a href="https://www.mailerlite.com/?linkId=lp_170762&sourceId=deborah-panchillo&tenantId=mailerlite" class="btn">Start →</a>
             </div>
         </div>
     </div>
@@ -183,14 +194,15 @@ header p { opacity: 0.9; max-width: 600px; margin: 0 auto; font-size: 1.1em; }
     <!-- About Us -->
     <div class="about-us">
         <p>We believe business owners shouldn't be held hostage by expensive agencies. Our mission is to provide the "SaaS Blueprints" you need to launch faster, spend less, and actually own your customer relationships.</p>
-        <p><strong>Affiliate Disclosure:</strong> Some of the links on this page are affiliate links. If you sign up through them, I may receive a small commission at no extra cost to you.</p>
+    </div>
+
+    <!-- Small Footer -->
+    <div class="footer-small">
+        <p>Affiliate Disclosure: Some of the links on this page are affiliate links. If you sign up through them, I may receive a small commission at no extra cost to you.</p>
         <p>© 2026 SaaslyHubs • Helping small businesses build smarter.</p>
     </div>
 
 </div>
-
-</body>
-</html>
 
 </body>
 </html>

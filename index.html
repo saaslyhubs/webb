@@ -7,7 +7,7 @@
 
 <style>
 :root { --primary: #00a859; --dark: #111827; --text: #374151; --light-bg: #f9fafb; }
-* { box-sizing: border-box; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -21,78 +21,97 @@ body {
 header {
     background: var(--dark);
     color: white;
-    padding: 80px 20px;
+    padding: 70px 20px 50px 20px;
     text-align: center;
 }
 
 header h1 {
-    font-size: 2.8em;
+    font-size: 2.6em;
     margin-bottom: 15px;
     line-height: 1.2;
     font-weight: 800;
 }
 
 header p {
-    font-size: 1.2em;
+    font-size: 1.15em;
     opacity: 0.9;
     max-width: 600px;
-    margin: 0 auto;
+    margin: 0 auto 25px;
     color: #9ca3af;
 }
 
 .header-cta {
-    margin-top: 30px;
     display: inline-block;
     background: var(--primary);
     color: white;
-    padding: 18px 40px;
+    padding: 16px 35px;
     border-radius: 100px;
     font-weight: 700;
-    font-size: 1.1em;
+    font-size: 1.05em;
     text-decoration: none;
+    transition: 0.2s;
 }
 
-.container {
-    padding: 40px 20px;
-    max-width: 800px;
-    margin: 0 auto;
-}
+.header-cta:hover { background: #059669; transform: scale(1.02); }
 
-.analysis-intro {
+.container { padding: 40px 20px; max-width: 800px; margin: 0 auto; }
+
+.mini-guide {
     font-size: 1.1em;
     background: var(--light-bg);
-    padding: 25px;
+    padding: 25px 20px;
     border-radius: 15px;
     border-left: 5px solid var(--primary);
     margin: 30px 0;
+    line-height: 1.5;
 }
 
-h2 {
-    font-size: 1.6em;
-    color: var(--dark);
-    margin-top: 40px;
+h2 { font-size: 1.6em; color: var(--dark); margin-top: 40px; margin-bottom: 15px; }
+
+p { margin-bottom: 20px; }
+
+.step-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin: 25px 0;
 }
+
+@media (min-width: 640px) { .step-grid { grid-template-columns: 1fr 1fr; } }
+
+.step-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    transition: 0.3s;
+}
+.step-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+.step-card strong { display: block; margin-bottom: 8px; font-size: 1.05em; color: var(--dark); }
 
 .cta-section {
     background: var(--dark);
-    padding: 50px 30px;
+    padding: 40px 20px;
     border-radius: 20px;
     text-align: center;
     color: white;
-    margin: 50px 0;
+    margin: 40px 0;
 }
 
 .btn {
     display: inline-block;
     background: var(--primary);
     color: white;
-    padding: 18px 35px;
+    padding: 16px 35px;
     text-decoration: none;
     border-radius: 100px;
     font-weight: 700;
-    font-size: 1.1em;
+    font-size: 1.05em;
     margin-top: 20px;
+    transition: 0.2s;
 }
+
+.btn:hover { background: #059669; transform: scale(1.02); }
 
 .tool-intro {
     background: #f0fdf4;
@@ -101,8 +120,26 @@ h2 {
     margin: 40px 0;
 }
 
+.about-section {
+    margin-top: 60px;
+    padding: 35px 25px;
+    background: var(--light-bg);
+    border-radius: 16px;
+    text-align: center;
+    border: 1px dashed #ccc;
+}
+
+.disclosure {
+    font-size: 0.85em;
+    color: #9ca3af;
+    text-align: center;
+    margin: 30px 0;
+    padding: 0 20px;
+    line-height: 1.5;
+}
+
 footer {
-    padding: 40px 20px;
+    padding: 30px 20px;
     text-align: center;
     color: #9ca3af;
     font-size: 0.9em;
@@ -115,49 +152,79 @@ footer {
 
 <header>
     <h1>Start Your Email List in 10 Minutes — For Free</h1>
-    <p>No website. No tech skills. Just a simple way to capture leads and grow your business.</p>
+    <p>No website. No tech skills. Capture leads and grow your small business today.</p>
     <a href="https://www.mailerlite.com/?linkId=lp_170762&sourceId=deborah-panchillo&tenantId=mailerlite" class="header-cta">Start Free (No Credit Card) →</a>
 </header>
 
 <div class="container">
 
-    <!-- MINI GUIDE (CRITICAL) -->
-    <div class="analysis-intro">
-        <strong>Get started in minutes:</strong><br><br>
-        1. Create your free account<br>
+    <!-- MINI GUIDE -->
+    <div class="mini-guide">
+        <strong>Quick Start Guide:</strong><br><br>
+        1. Sign up for your free account<br>
         2. Choose a landing page template<br>
-        3. Add your offer (discount or freebie)<br>
-        4. Start collecting emails today<br><br>
-        👉 No website needed. No upfront cost.
+        3. Add your offer (discount, guide, or freebie)<br>
+        4. Launch and start collecting leads today<br><br>
+        👉 No website needed. Takes less than 10 minutes.
     </div>
 
-    <h2>Why Email Marketing Still Wins</h2>
-    <p>Social media is rented. Algorithms change. Reach disappears.</p>
-    <p>Email gives you direct access to your audience — whenever you want.</p>
+    <!-- WHY EMAIL MARKETING WORKS -->
+    <h2>Why Email Marketing Works for Small Businesses</h2>
+    <p>Social media is rented land—algorithms change and reach disappears. Email gives you direct access to your audience whenever you want, building repeat sales and predictable growth.</p>
+    <p>Thousands of small businesses rely on email marketing to grow consistently without paying for ads.</p>
 
-    <!-- CTA -->
-    <div class="cta-section">
-        <h3>Start building your audience today</h3>
-        <p>No credit card required. Takes less than 10 minutes.</p>
+    <!-- SUBTLE CTA -->
+    <div style="text-align:center; margin:25px 0;">
         <a href="https://www.mailerlite.com/?linkId=lp_170762&sourceId=deborah-panchillo&tenantId=mailerlite" class="btn">Start Free Now →</a>
     </div>
 
-    <!-- TOOL SECTION -->
+    <!-- STEP-BY-STEP GUIDE -->
+    <h2>Step-by-Step: Your First Capture Hub</h2>
+    <div class="step-grid">
+        <div class="step-card">
+            <strong>Step 1: Create Your Account</strong>
+            <p>Sign up for MailerLite’s free plan—no credit card needed.</p>
+        </div>
+        <div class="step-card">
+            <strong>Step 2: Pick a Template</strong>
+            <p>Choose from ready-made landing page templates designed to convert.</p>
+        </div>
+        <div class="step-card">
+            <strong>Step 3: Add Your Offer</strong>
+            <p>Provide a freebie, discount, or guide to entice subscribers.</p>
+        </div>
+        <div class="step-card">
+            <strong>Step 4: Launch & Collect Leads</strong>
+            <p>Publish your page and start collecting emails immediately.</p>
+        </div>
+    </div>
+
+    <!-- TOOL INTRO -->
     <div class="tool-intro">
         <h3>Why MailerLite?</h3>
-        <p>This is one of the easiest ways for small businesses to start email marketing.</p>
         <ul>
-            <li><strong>Free plan:</strong> Up to 1,000 subscribers</li>
-            <li><strong>Landing pages included:</strong> No website needed</li>
-            <li><strong>Simple setup:</strong> Launch in minutes</li>
+            <li><strong>Free forever:</strong> Up to 1,000 subscribers.</li>
+            <li><strong>Landing pages included:</strong> No website needed.</li>
+            <li><strong>Simple drag-and-drop:</strong> Launch in minutes.</li>
         </ul>
     </div>
 
     <!-- FINAL CTA -->
     <div class="cta-section">
-        <h3>Ready to get started?</h3>
-        <p>Build your first landing page today — completely free.</p>
-        <a href="https://www.mailerlite.com/?linkId=lp_170762&sourceId=deborah-panchillo&tenantId=mailerlite" class="btn">Start Free →</a>
+        <h3>Ready to Launch Your First Capture Hub?</h3>
+        <p>Start your small business growth journey today.</p>
+        <a href="https://www.mailerlite.com/?linkId=lp_170762&sourceId=deborah-panchillo&tenantId=mailerlite" class="btn">Start Free Now →</a>
+    </div>
+
+    <!-- ABOUT US -->
+    <div class="about-section">
+        <h4>👋 About SaaslyHubs</h4>
+        <p>We help small businesses build smarter without relying on expensive agencies. Our mission is to provide simple, actionable tools that allow you to own your audience and grow sustainably.</p>
+    </div>
+
+    <!-- AFFILIATE DISCLOSURE -->
+    <div class="disclosure">
+        <strong>Affiliate Disclosure:</strong> Some links on this page are affiliate links. If you sign up through them, we may receive a small commission at no extra cost to you.
     </div>
 
 </div>

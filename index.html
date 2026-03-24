@@ -1,145 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SaaslyHubs | Simple Business Growth Strategies</title>
-    <style>
-        :root { --primary: #00a859; --dark: #111827; --text: #374151; --light-bg: #f9fafb; }
-        * { box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: var(--text); max-width: 1000px; margin: 0 auto; padding: 0; background-color: #fff; }
-        
-        header { background: var(--dark); color: white; padding: 80px 20px; text-align: center; }
-        header h1 { font-size: 3.2em; margin-bottom: 20px; line-height: 1.1; color: white; font-weight: 800; letter-spacing: -0.03em; }
-        header p { font-size: 1.2em; opacity: 0.9; max-width: 700px; margin: 0 auto; font-weight: 400; color: #9ca3af; }
-        .header-cta { margin-top: 30px; display: inline-block; background: var(--primary); color: white; padding: 18px 40px; border-radius: 100px; font-weight: 700; font-size: 1.1em; text-decoration: none; transition: 0.2s; }
-        .header-cta:hover { background: #059669; transform: scale(1.03); }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SaaslyHubs | Start Your Email List</title>
 
-        .container { padding: 40px 20px; max-width: 800px; margin: 0 auto; }
-        .post-content { margin-bottom: 60px; }
-        
-        h2 { font-size: 1.7em; color: var(--dark); margin-top: 45px; margin-bottom: 15px; border-bottom: 2px solid var(--primary); display: inline-block; padding-bottom: 5px; }
-        p { margin-bottom: 20px; font-size: 1.1em; }
+<style>
+:root { --primary: #00a859; --dark: #111827; --text: #374151; --light-bg: #f9fafb; }
+* { box-sizing: border-box; }
 
-        .analysis-intro { 
-            font-size: 1.2em; 
-            color: var(--dark); 
-            background: var(--light-bg);
-            padding: 30px;
-            border-radius: 15px;
-            border-left: 5px solid var(--primary);
-            margin: 20px 0 40px 0;
-            line-height: 1.5;
-        }
-        .analysis-intro strong { font-weight: 800; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #fff;
+}
 
-        .compare-grid { display: grid; grid-template-columns: 1fr; gap: 15px; margin: 25px 0; }
-        @media (min-width: 640px) { .compare-grid { grid-template-columns: 1fr 1fr; } }
+header {
+    background: var(--dark);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
 
-        .card { background: white; padding: 25px; border-radius: 12px; border: 1px solid #e5e7eb; transition: 0.3s; }
-        .card:hover { border-color: var(--primary); transform: translateY(-2px); }
-        .card strong { color: var(--dark); display: block; margin-bottom: 8px; font-size: 1.1em; }
+header h1 {
+    font-size: 2.8em;
+    margin-bottom: 15px;
+    line-height: 1.2;
+    font-weight: 800;
+}
 
-        .tool-intro { background: #f0fdf4; padding: 30px; border-radius: 16px; border: 1px solid #d1fae5; margin: 40px 0; }
-        .tool-tag { background: var(--primary); color: white; padding: 4px 12px; border-radius: 50px; font-size: 0.8em; font-weight: bold; text-transform: uppercase; }
+header p {
+    font-size: 1.2em;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+    color: #9ca3af;
+}
 
-        .cta-section { background: var(--dark); padding: 50px 30px; border-radius: 20px; text-align: center; color: white; margin: 50px 0; }
-        .btn { 
-            display: inline-block; background: var(--primary); color: white; padding: 20px 40px; text-decoration: none; border-radius: 100px; font-weight: 700; font-size: 1.2em; width: 100%; max-width: 350px; transition: 0.2s; box-shadow: 0 5px 15px rgba(0, 168, 89, 0.4); margin-top: 20px;
-        }
-        .btn:hover { background: #059669; transform: scale(1.03); }
+.header-cta {
+    margin-top: 30px;
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    padding: 18px 40px;
+    border-radius: 100px;
+    font-weight: 700;
+    font-size: 1.1em;
+    text-decoration: none;
+}
 
-        .resource-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 25px; }
-        .resource-link { text-decoration: none; color: var(--dark); padding: 20px; border: 1px solid #eee; border-radius: 12px; font-size: 1em; font-weight: 600; text-align: center; background: white; transition: 0.2s; }
-        .resource-link:hover { border-color: var(--primary); background: var(--light-bg); }
+.container {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
 
-        .about-section { margin-top: 60px; padding: 40px 25px; background: var(--light-bg); border-radius: 16px; text-align: center; border: 1px dashed #ccc; }
-        .disclosure { font-size: 0.85em; color: #9ca3af; text-align: center; margin: 50px 0; padding: 0 20px; line-height: 1.5; }
-        footer { padding: 40px 20px; text-align: center; color: #9ca3af; font-size: 0.9em; border-top: 1px solid #eee; }
+.analysis-intro {
+    font-size: 1.1em;
+    background: var(--light-bg);
+    padding: 25px;
+    border-radius: 15px;
+    border-left: 5px solid var(--primary);
+    margin: 30px 0;
+}
 
-        @media (max-width: 768px) { .compare-grid { grid-template-columns: 1fr; } .resource-grid { grid-template-columns: 1fr; } }
-    </style>
+h2 {
+    font-size: 1.6em;
+    color: var(--dark);
+    margin-top: 40px;
+}
+
+.cta-section {
+    background: var(--dark);
+    padding: 50px 30px;
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+    margin: 50px 0;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    padding: 18px 35px;
+    text-decoration: none;
+    border-radius: 100px;
+    font-weight: 700;
+    font-size: 1.1em;
+    margin-top: 20px;
+}
+
+.tool-intro {
+    background: #f0fdf4;
+    padding: 30px;
+    border-radius: 16px;
+    margin: 40px 0;
+}
+
+footer {
+    padding: 40px 20px;
+    text-align: center;
+    color: #9ca3af;
+    font-size: 0.9em;
+    border-top: 1px solid #eee;
+}
+</style>
 </head>
+
 <body>
 
 <header>
-    <h1>The $0 Growth Engine for <br>Small Businesses ✅</h1>
-    <p>Stop Relying Only on Social Media. Own Your Audience and Build a Reliable System to Scale Your Revenue.</p>
-    <a href="https://www.mailerlite.com/?linkId=lp_170762&sourceId=deborah-panchillo&tenantId=mailerlite" class="header-cta">Start Your $0 Build Now →</a>
+    <h1>Start Your Email List in 10 Minutes — For Free</h1>
+    <p>No website. No tech skills. Just a simple way to capture leads and grow your business.</p>
+    <a href="https://www.mailerlite.com/?linkId=lp_170762&sourceId=deborah-panchillo&tenantId=mailerlite" class="header-cta">Start Free (No Credit Card) →</a>
 </header>
 
 <div class="container">
-    
-    <article class="post-content">
-        <h2>The Reality of Growing in 2026</h2>
-        
-        <div class="analysis-intro">
-            Most small businesses struggle because of <strong>"Analysis Paralysis"</strong>—trying to make everything perfect before they even start. Social media algorithms are <strong>rented land</strong>; the rules change, and you can be evicted at any time. Email marketing gives you <strong>direct ownership</strong>, repeat sales, and consistent communication without begging for likes or reach.
-        </div>
 
-        <div class="compare-grid">
-            <div class="card" style="border-top: 4px solid #ef4444;">
-                <strong>The "Website Trap"</strong>
-                <p style="font-size: 0.95em; margin: 0;">Spending $2,000+ on a site before you have a single lead is a strategic mistake that delays your revenue.</p>
-            </div>
-            <div class="card" style="border-top: 4px solid var(--primary);">
-                <strong>The "Capture Hub"</strong>
-                <p style="font-size: 0.95em; margin: 0;">Launch a professional landing page in under 24 hours for $0. Build the fancy site later with the money you’ve already made.</p>
-            </div>
-        </div>
-
-        <h2>Building Your Hub: The 4 Pillars</h2>
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 25px 0;">
-            <div class="card"><strong>1. High-Value Offer</strong><p style="font-size: 0.9em; margin:0;">Give them a reason to join (Discount or Guide).</p></div>
-            <div class="card"><strong>2. The Capture Hub</strong><p style="font-size: 0.9em; margin:0;">A distraction-free page built for conversions.</p></div>
-            <div class="card"><strong>3. Value Over Noise</strong><p style="font-size: 0.9em; margin:0;">Be the helpful expert, not just a storefront.</p></div>
-            <div class="card"><strong>4. Natural Growth</strong><p style="font-size: 0.9em; margin:0;">Trust-based sales that feel like a conversation.</p></div>
-        </div>
-
-        <!-- Ny CTA efter pelarna -->
-        <div class="cta-section">
-            <h3 style="margin-top: 0; color: white; font-size: 1.5em;">Get Started with Your Free Capture Hub</h3>
-            <p style="opacity: 0.9; margin-bottom: 25px;">Build your audience today without overcomplicating the tech.</p>
-            <a href="https://www.mailerlite.com/?linkId=lp_170762&sourceId=deborah-panchillo&tenantId=mailerlite" class="btn">Start Now →</a>
-        </div>
-
-        <div class="tool-intro">
-            <span class="tool-tag">Our Recommended Tool</span>
-            <h3>Why we use MailerLite</h3>
-            <p>To run this system, you need a platform that is powerful but easy to master. <strong>MailerLite</strong> is our top choice for small businesses.</p>
-            <ul style="font-size: 1.05em; padding-left: 20px; color: var(--dark); margin-top: 10px;">
-                <li><strong>Free Forever:</strong> Up to 1,000 subscribers for $0.</li>
-                <li><strong>Built-in Hubs:</strong> Create professional landing pages fast.</li>
-                <li><strong>No Tech Headache:</strong> Simple drag-and-drop interface.</li>
-            </ul>
-        </div>
-
-        <div class="cta-section">
-            <h3 style="margin-top: 0; color: white; font-size: 1.6em;">Ready to build your audience?</h3>
-            <p style="opacity: 0.9; margin-bottom: 25px;">Launch your professional Capture Hub for free today.</p>
-            <a href="https://www.mailerlite.com/?linkId=lp_170762&sourceId=deborah-panchillo&tenantId=mailerlite" class="btn">Start Your $0 Build Now →</a>
-        </div>
-
-        <div class="about-section">
-            <h4>👋 Why SaaslyHubs?</h4>
-            <p style="font-size: 1em; color: #4b5563; max-width: 600px; margin: 0 auto;">We believe business owners shouldn't be held hostage by expensive agencies. Our mission is to provide the "SaaS Blueprints" you need to launch faster, spend less, and actually own your customer relationships.</p>
-        </div>
-
-        <h2>Featured Resources</h2>
-        <div class="resource-grid">
-            <a href="blueprint.html" class="resource-link">🚀 The $0 Strategy</a>
-            <a href="guide.html" class="resource-link">⚙️ Step-by-Step Setup</a>
-        </div>
-    </article>
-
-    <div class="disclosure">
-        <strong>Affiliate Disclosure:</strong> Some of the links on this page are affiliate links. If you sign up through them, I may receive a small commission at no extra cost to you.
+    <!-- MINI GUIDE (CRITICAL) -->
+    <div class="analysis-intro">
+        <strong>Get started in minutes:</strong><br><br>
+        1. Create your free account<br>
+        2. Choose a landing page template<br>
+        3. Add your offer (discount or freebie)<br>
+        4. Start collecting emails today<br><br>
+        👉 No website needed. No upfront cost.
     </div>
 
-    <footer>
-        &copy; 2026 SaaslyHubs • Helping small businesses build smarter.
-    </footer>
+    <h2>Why Email Marketing Still Wins</h2>
+    <p>Social media is rented. Algorithms change. Reach disappears.</p>
+    <p>Email gives you direct access to your audience — whenever you want.</p>
+
+    <!-- CTA -->
+    <div class="cta-section">
+        <h3>Start building your audience today</h3>
+        <p>No credit card required. Takes less than 10 minutes.</p>
+        <a href="https://www.mailerlite.com/?linkId=lp_170762&sourceId=deborah-panchillo&tenantId=mailerlite" class="btn">Start Free Now →</a>
+    </div>
+
+    <!-- TOOL SECTION -->
+    <div class="tool-intro">
+        <h3>Why MailerLite?</h3>
+        <p>This is one of the easiest ways for small businesses to start email marketing.</p>
+        <ul>
+            <li><strong>Free plan:</strong> Up to 1,000 subscribers</li>
+            <li><strong>Landing pages included:</strong> No website needed</li>
+            <li><strong>Simple setup:</strong> Launch in minutes</li>
+        </ul>
+    </div>
+
+    <!-- FINAL CTA -->
+    <div class="cta-section">
+        <h3>Ready to get started?</h3>
+        <p>Build your first landing page today — completely free.</p>
+        <a href="https://www.mailerlite.com/?linkId=lp_170762&sourceId=deborah-panchillo&tenantId=mailerlite" class="btn">Start Free →</a>
+    </div>
+
 </div>
+
+<footer>
+    &copy; 2026 SaaslyHubs • Helping small businesses grow smarter.
+</footer>
 
 </body>
 </html>

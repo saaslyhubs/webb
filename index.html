@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SaaslyHubs | Grow Your Business with Email</title>
+    <title>SaaslyHubs | Build Your Digital Hub</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
@@ -26,13 +26,14 @@
             -webkit-font-smoothing: antialiased;
         }
 
+        /* --- LOGO: BLACK & BLUE --- */
         .logo-bar {
             background: white;
             padding: 20px;
             text-align: center;
             border-bottom: 1px solid #e2e8f0;
         }
-        .logo-text { font-weight: 800; font-size: 1.5rem; letter-spacing: -0.5px; color: #000; }
+        .logo-text { font-weight: 800; font-size: 1.5rem; letter-spacing: -0.5px; color: #000; text-transform: uppercase; }
         .logo-hubs { color: var(--blue); }
 
         .main-wrapper {
@@ -59,7 +60,7 @@
         }
 
         h1 {
-            font-size: clamp(2.5rem, 5vw, 3.8rem);
+            font-size: clamp(2.3rem, 5vw, 3.5rem);
             line-height: 1.05;
             margin-bottom: 20px;
             font-weight: 800;
@@ -77,22 +78,6 @@
             padding-left: 20px;
         }
 
-        .feature-list { list-style: none; margin: 30px 0; }
-        .feature-list li {
-            font-size: 1.1rem;
-            margin-bottom: 25px;
-            display: flex;
-            align-items: start;
-        }
-        .feature-list li b { color: var(--dark); display: block; margin-bottom: 4px; font-weight: 700; }
-        .feature-list li::before {
-            content: "→";
-            color: var(--primary);
-            font-weight: bold;
-            margin-right: 15px;
-            font-size: 1.2rem;
-        }
-
         .highlight-box {
             background: #fff;
             padding: 30px;
@@ -102,32 +87,54 @@
             margin: 40px 0;
         }
 
-        /* --- OPT-IN CARD --- */
+        .feature-list { list-style: none; margin-top: 15px; }
+        .feature-list li {
+            font-size: 1.05rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: start;
+        }
+        .feature-list li b { color: var(--dark); display: block; font-weight: 700; }
+        .feature-list li::before {
+            content: "→";
+            color: var(--primary);
+            font-weight: bold;
+            margin-right: 12px;
+        }
+
+        /* --- OPT-IN CARD & MINI MOCKUP --- */
         .optin-side { position: sticky; top: 40px; }
 
         .optin-card {
             background: white;
-            padding: 40px;
+            padding: 40px 30px;
             border-radius: 24px;
             box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.15);
             border: 1px solid #e2e8f0;
             text-align: center;
         }
 
-        /* JUSTERAD FÖR 1000x1500 BILD */
         .mockup-container {
-            margin: 0 auto 30px;
-            max-width: 280px; /* Gör bilden mindre och mer balanserad */
-            display: block;
+            margin: 0 auto 20px;
+            perspective: 1000px; /* Ger djup åt bilden */
         }
 
         .mockup-img {
-            width: 100%;
+            width: 140px; /* Denna bredd gör bilden till en snygg "mini" preview */
             height: auto;
-            border-radius: 12px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15); /* Snygg skugga direkt på bilden */
-            display: block;
+            border-radius: 4px;
+            /* Lägger till en liten 3D-effekt och skugga */
+            transform: rotateY(-5deg) rotateX(5deg);
+            box-shadow: 10px 10px 25px rgba(0,0,0,0.15);
+            display: inline-block;
+            transition: transform 0.3s ease;
         }
+        
+        .mockup-img:hover {
+            transform: rotateY(0deg) rotateX(0deg) scale(1.05);
+        }
+
+        .optin-card h3 { font-size: 1.4rem; margin-bottom: 10px; font-weight: 700; }
 
         /* MAILERLITE CLEANUP */
         .ml-form-embedHeader, .ml-brand, .ml-form-embedFooter, .ml-form-embedBody p { 
@@ -139,7 +146,6 @@
         @media (max-width: 900px) {
             .main-wrapper { grid-template-columns: 1fr; gap: 40px; }
             .optin-side { position: relative; top: 0; }
-            .mockup-container { max-width: 220px; }
         }
     </style>
 </head>
@@ -173,16 +179,16 @@
         <div class="optin-side">
             <div class="optin-card">
                 <div class="mockup-container">
-                    <img src="Get Leads Today Without a Website.png" alt="Get Leads Today Without a Website.png" class="Get Leads Today Without a Website.png">
+                    <img src="Get Leads Today Without a Website.png" alt="Freebie Guide Preview" class="mockup-img">
                 </div>
                 
                 <h3>Get Your Free Guide</h3>
-                <p style="color: var(--slate); font-size: 0.95rem; margin-bottom: 20px;">Enter your email to receive the "Digital Hub" blueprint.</p>
+                <p style="color: var(--slate); font-size: 0.9rem; margin-bottom: 25px;">Join 1,000+ business owners building their digital hub.</p>
                 
                 <div class="ml-embedded" data-form="gP8Gf6"></div>
 
                 <div class="legal" style="font-size: 0.7rem; color: #94a3b8; margin-top: 15px;">
-                    No complex funnels. Unsubscribe anytime.
+                    No complex funnels. No spam. Unsubscribe anytime.
                 </div>
             </div>
         </div>

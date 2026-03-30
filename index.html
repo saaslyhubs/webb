@@ -26,7 +26,6 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* --- LOGO STYLING --- */
         .logo-bar {
             background: white;
             padding: 20px;
@@ -115,22 +114,19 @@
             text-align: center;
         }
 
-        /* UPPDATERAD BILD-CONTAINER */
+        /* JUSTERAD FÖR 1000x1500 BILD */
         .mockup-container {
-            background: var(--bg);
-            border-radius: 16px; /* Behåller rundade hörn */
-            margin-bottom: 25px;
-            overflow: hidden; /* Viktigt: döljer bild som går utanför de rundade hörnen */
-            display: flex;
-            aspect-ratio: 16 / 9; /* Valfritt: sätter en standardproportion för behållaren */
+            margin: 0 auto 30px;
+            max-width: 280px; /* Gör bilden mindre och mer balanserad */
+            display: block;
         }
 
-        /* UPPDATERAD BILD-STYLING */
         .mockup-img {
             width: 100%;
-            height: 100%;
-            object-fit: cover; /* Fyller hela behållaren, skalar proportionellt, kan beskära vid behov */
-            object-position: center; /* Centrerar bilden i behållaren */
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15); /* Snygg skugga direkt på bilden */
+            display: block;
         }
 
         /* MAILERLITE CLEANUP */
@@ -143,6 +139,7 @@
         @media (max-width: 900px) {
             .main-wrapper { grid-template-columns: 1fr; gap: 40px; }
             .optin-side { position: relative; top: 0; }
+            .mockup-container { max-width: 220px; }
         }
     </style>
 </head>
@@ -176,7 +173,7 @@
         <div class="optin-side">
             <div class="optin-card">
                 <div class="mockup-container">
-                    <img src="Get Leads Today Without a Website.png">
+                    <img src="https://via.placeholder.com/1000x1500" alt="Freebie Preview" class="Get Leads Today Without a Website.png">
                 </div>
                 
                 <h3>Get Your Free Guide</h3>

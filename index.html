@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SaaslyHubs | Stop Chasing Leads</title>
+    <title>SaaslyHubs | Build Your Digital Hub</title>
     
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
     <style>
         :root { 
             --primary: #065f46; 
             --dark: #0f172a; 
             --slate: #64748b;
+            --bg: #f8fafc;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -20,116 +21,163 @@
             font-family: 'Inter', sans-serif;
             line-height: 1.6;
             color: var(--dark);
-            background-color: #ffffff;
+            background-color: var(--bg);
             -webkit-font-smoothing: antialiased;
         }
 
-        /* --- HEADER --- */
-        header {
-            background: var(--dark);
-            color: white;
-            padding: 100px 20px 140px;
+        .logo-bar {
+            background: white;
+            padding: 20px;
             text-align: center;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .logo-text { font-weight: 800; font-size: 1.2rem; color: var(--dark); letter-spacing: -0.5px; }
+
+        .main-wrapper {
+            max-width: 1100px;
+            margin: 60px auto 100px;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 60px;
+            align-items: start;
         }
 
+        .pitch-side { padding-top: 10px; }
+        
         .badge {
             background: rgba(16, 185, 129, 0.1);
             color: #10b981;
-            border: 1px solid #10b981;
-            padding: 8px 20px;
+            padding: 8px 16px;
             border-radius: 50px;
             font-size: 0.85rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1.2px;
-            margin-bottom: 24px;
+            font-weight: 600;
             display: inline-block;
+            margin-bottom: 20px;
         }
 
         h1 {
-            font-size: clamp(2.5rem, 5vw, 3.5rem);
-            line-height: 1.1;
-            margin-bottom: 20px;
+            font-size: clamp(2.5rem, 5vw, 3.8rem);
+            line-height: 1.05;
+            margin-bottom: 24px;
             font-weight: 800;
             letter-spacing: -2px;
         }
 
-        .hero-p {
-            font-size: 1.25rem;
-            color: #94a3b8;
-            max-width: 600px;
-            margin: 0 auto;
+        .hero-p { font-size: 1.2rem; color: var(--slate); margin-bottom: 40px; }
+
+        h2 { font-size: 1.8rem; margin: 40px 0 20px; letter-spacing: -0.5px; }
+
+        .feature-list { list-style: none; margin: 30px 0; }
+        .feature-list li {
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: start;
+        }
+        .feature-list li b { color: var(--dark); display: block; margin-bottom: 4px; font-weight: 700; }
+        .feature-list li::before {
+            content: "→";
+            color: var(--primary);
+            font-weight: bold;
+            margin-right: 15px;
+            font-size: 1.2rem;
         }
 
-        /* --- OPT-IN BOX --- */
-        .container {
-            max-width: 700px;
-            margin: -80px auto 60px;
-            padding: 0 20px;
+        .highlight-box {
+            background: #fff;
+            padding: 30px;
+            border-radius: 16px;
+            border-left: 5px solid var(--primary);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            margin: 40px 0;
         }
+
+        .optin-side { position: sticky; top: 40px; }
 
         .optin-card {
             background: white;
-            padding: 50px 40px;
+            padding: 40px;
             border-radius: 24px;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
-            border: 1px solid #f1f5f9;
+            box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.15);
+            border: 1px solid #e2e8f0;
             text-align: center;
         }
 
-        /* --- THE INVISIBLE HACK --- */
-        /* Döljer MailerLites rubriker och loggor */
-        .ml-form-embedHeader, 
-        .ml-form-embedBody h4, 
-        .ml-form-embedBody p,
-        .ml-form-embedFooter,
-        .ml-brand {
-            display: none !important;
-            visibility: hidden !important;
-            height: 0 !important;
+        /* HÄR ÄR DIN BILD-CONTAINER */
+        .mockup-container {
+            background: var(--bg);
+            padding: 20px;
+            border-radius: 16px;
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: center;
+        }
+        .mockup-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
 
-        .ml-form-embedContainer .ml-form-embedWrapper {
-            background-color: transparent !important;
-            border: none !important;
-            box-shadow: none !important;
-        }
+        .optin-card h3 { font-size: 1.6rem; margin-bottom: 10px; font-weight: 700; }
 
-        .legal {
-            font-size: 0.75rem;
-            color: #94a3b8;
-            margin-top: 30px;
-            text-align: center;
-        }
+        /* MAILERLITE INVISIBLE HACK */
+        .ml-form-embedHeader, .ml-brand, .ml-form-embedFooter, .ml-form-embedBody p { display: none !important; }
+        .ml-form-embedWrapper { background: transparent !important; border: none !important; }
 
-        footer {
-            text-align: center;
-            padding: 60px 20px;
-            color: #cbd5e1;
+        footer { text-align: center; padding: 60px 20px; color: #cbd5e1; border-top: 1px solid #e2e8f0; margin-top: 100px; }
+
+        @media (max-width: 900px) {
+            .main-wrapper { grid-template-columns: 1fr; gap: 40px; }
+            .optin-side { position: relative; top: 0; }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <span class="badge">Free Resource</span>
-        <h1>Stop Chasing Leads.<br>Start Automating.</h1>
-        <p class="hero-p">The 5-step checklist to turn your website into a 24/7 sales machine.</p>
-    </header>
-
-    <div class="container">
-        <div class="optin-card">
-            <h2>Get the Checklist & Templates</h2>
-            <p style="color: var(--slate); margin-bottom: 30px;">Enter your email to receive the automation guide instantly.</p>
-            
-            <div class="ml-embedded" data-form="REPLACE_THIS_WITH_YOUR_FORM_ID"></div>
-
-        </div>
-        
-        <div class="legal">
-            By subscribing, you agree to receive our automation guide. No spam. Unsubscribe at any time.
-        </div>
+    <div class="logo-bar">
+        <span class="logo-text">SAASLYHUBS</span>
     </div>
+
+    <main class="main-wrapper">
+        
+        <div class="pitch-side">
+            <span class="badge">Free Growth Resource</span>
+            <h1>Stop Renting Your Audience. Start Owning It.</h1>
+            <p class="hero-p">Don't rely on algorithms. Build a direct line to your customers without technical overwhelm.</p>
+            
+            <div class="highlight-box">
+                <strong>Inside the Guide:</strong>
+                <ul class="feature-list">
+                    <li><b>The 5-Step Strategy:</b> Your complete blueprint for building a high-converting digital "Hub."</li>
+                    <li><b>Plug-and-Play Templates:</b> 3 ready-to-use email templates (just copy, paste, and customize).</li>
+                    <li><b>The Traffic Valve:</b> My proven method for driving free, targeted leads from Pinterest 24/7.</li>
+                </ul>
+            </div>
+
+            <h2>Why Email Marketing?</h2>
+            <p>Most small businesses depend entirely on social media. The problem? You don't own your audience. Email marketing gives you direct access, repeat sales, and consistent communication without depending on algorithms.</p>
+        </div>
+
+        <div class="optin-side">
+            <div class="optin-card">
+                <div class="mockup-container">
+                    <img src="https://media.istockphoto.com/id/1151608971/vector/clipboard-with-checklist-icon-flat-design-vector-illustration.jpg?s=612x612&w=0&k=20&c=27uU7717t0yA3O5Y-f655O8-hY8_wE-2Xm96mB64I08=" alt="Freebie Preview" class="mockup-img">
+                </div>
+                
+                <h3>Get Your Free Guide</h3>
+                <p style="color: var(--slate); font-size: 0.95rem; margin-bottom: 30px;">Enter your email to receive the "Digital Hub" blueprint instantly.</p>
+                
+                <div class="ml-embedded" data-form="REPLACE_THIS_WITH_YOUR_FORM_ID"></div>
+
+                <div class="legal">
+                    No complex funnels. No technical skills required. Unsubscribe anytime.
+                </div>
+            </div>
+        </div>
+
+    </main>
 
     <footer>
         &copy; 2026 SaaslyHubs.

@@ -119,15 +119,16 @@
             perspective: 1000px; /* Ger djup åt bilden */
         }
 
-        .mockup-img {
-            width: 140px; /* Denna bredd gör bilden till en snygg "mini" preview */
-            height: auto;
-            border-radius: 4px;
-            /* Lägger till en liten 3D-effekt och skugga */
-            transform: rotateY(-5deg) rotateX(5deg);
-            box-shadow: 10px 10px 25px rgba(0,0,0,0.15);
-            display: inline-block;
-            transition: transform 0.3s ease;
+    
+           .mockup-img {
+    width: 140px;
+    height: auto;
+    border-radius: 4px;
+    transform: rotateY(-5deg) rotateX(5deg);
+    /* Detta trick tar bort vit bakgrund digitalt */
+    mix-blend-mode: multiply; 
+    display: inline-block;
+
         }
         
         .mockup-img:hover {

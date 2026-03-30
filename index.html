@@ -11,6 +11,7 @@
         :root { 
             --primary: #065f46; 
             --dark: #0f172a; 
+            --blue: #007bff; /* Din nya blå färg för "Hubs" */
             --slate: #64748b;
             --bg: #f8fafc;
         }
@@ -25,13 +26,15 @@
             -webkit-font-smoothing: antialiased;
         }
 
+        /* --- LOGO STYLING --- */
         .logo-bar {
             background: white;
             padding: 20px;
             text-align: center;
             border-bottom: 1px solid #e2e8f0;
         }
-        .logo-text { font-weight: 800; font-size: 1.2rem; color: var(--dark); letter-spacing: -0.5px; }
+        .logo-text { font-weight: 800; font-size: 1.5rem; letter-spacing: -0.5px; color: #000; }
+        .logo-hubs { color: var(--blue); }
 
         .main-wrapper {
             max-width: 1100px;
@@ -66,8 +69,6 @@
 
         .hero-p { font-size: 1.2rem; color: var(--slate); margin-bottom: 40px; }
 
-        h2 { font-size: 1.8rem; margin: 40px 0 20px; letter-spacing: -0.5px; }
-
         .feature-list { list-style: none; margin: 30px 0; }
         .feature-list li {
             font-size: 1.1rem;
@@ -93,6 +94,7 @@
             margin: 40px 0;
         }
 
+        /* --- OPT-IN CARD --- */
         .optin-side { position: sticky; top: 40px; }
 
         .optin-card {
@@ -102,29 +104,25 @@
             box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.15);
             border: 1px solid #e2e8f0;
             text-align: center;
+            min-height: 400px; /* Säkerställer att boxen syns */
         }
 
-        /* HÄR ÄR DIN BILD-CONTAINER */
         .mockup-container {
             background: var(--bg);
             padding: 20px;
             border-radius: 16px;
             margin-bottom: 25px;
-            display: flex;
-            justify-content: center;
         }
         .mockup-img {
             max-width: 100%;
             height: auto;
             border-radius: 8px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
 
-        .optin-card h3 { font-size: 1.6rem; margin-bottom: 10px; font-weight: 700; }
-
-        /* MAILERLITE INVISIBLE HACK */
-        .ml-form-embedHeader, .ml-brand, .ml-form-embedFooter, .ml-form-embedBody p { display: none !important; }
-        .ml-form-embedWrapper { background: transparent !important; border: none !important; }
+        /* MAILERLITE CLEANUP - Döljer skräpet men lämnar fälten */
+        .ml-form-embedHeader, .ml-brand, .ml-form-embedFooter, .ml-form-embedBody p { 
+            display: none !important; 
+        }
 
         footer { text-align: center; padding: 60px 20px; color: #cbd5e1; border-top: 1px solid #e2e8f0; margin-top: 100px; }
 
@@ -137,7 +135,7 @@
 <body>
 
     <div class="logo-bar">
-        <span class="logo-text">SAASLYHUBS</span>
+        <span class="logo-text">SAASLY<span class="logo-hubs">HUBS</span></span>
     </div>
 
     <main class="main-wrapper">
@@ -155,9 +153,6 @@
                     <li><b>The Traffic Valve:</b> My proven method for driving free, targeted leads from Pinterest 24/7.</li>
                 </ul>
             </div>
-
-            <h2>Why Email Marketing?</h2>
-            <p>Most small businesses depend entirely on social media. The problem? You don't own your audience. Email marketing gives you direct access, repeat sales, and consistent communication without depending on algorithms.</p>
         </div>
 
         <div class="optin-side">
@@ -167,12 +162,12 @@
                 </div>
                 
                 <h3>Get Your Free Guide</h3>
-                <p style="color: var(--slate); font-size: 0.95rem; margin-bottom: 30px;">Enter your email to receive the "Digital Hub" blueprint instantly.</p>
+                <p style="color: var(--slate); font-size: 0.95rem; margin-bottom: 20px;">Enter your email to receive the "Digital Hub" blueprint.</p>
                 
                 <div class="ml-embedded" data-form="REPLACE_THIS_WITH_YOUR_FORM_ID"></div>
 
-                <div class="legal">
-                    No complex funnels. No technical skills required. Unsubscribe anytime.
+                <div class="legal" style="font-size: 0.7rem; color: #94a3b8; margin-top: 15px;">
+                    No complex funnels. Unsubscribe anytime.
                 </div>
             </div>
         </div>
@@ -180,7 +175,7 @@
     </main>
 
     <footer>
-        &copy; 2026 SaaslyHubs.
+        &copy; 2026 SAASLYHUBS.
     </footer>
 
     REPLACE_THIS_WITH_YOUR_JAVASCRIPT_SNIPPET

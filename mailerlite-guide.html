@@ -4,142 +4,205 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Get Leads in 24h | SaaslyHubs</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
     <style>
         :root { 
-            --primary: #007f43; 
-            --secondary: #00a859; 
-            --accent: #007bff; /* Logo Blue */
-            --logo-black: #000000; /* Saasly Black */
+            --primary: #065f46; 
             --dark: #0f172a; 
-            --light-bg: #f8fafc; 
-        }
-        
-        body { font-family: 'Inter', -apple-system, sans-serif; line-height: 1.6; color: #334155; max-width: 100%; margin: 0; padding: 0; background-color: #fff; }
-        
-        header { 
-            background: #ffffff; 
-            color: var(--dark); 
-            padding: 40px 20px 60px; 
-            text-align: center; 
-            border-bottom: 1px solid #eee;
+            --blue: #007bff; 
+            --slate: #64748b;
+            --bg: #f8fafc;
         }
 
-        .nav-back { margin-bottom: 25px; }
-        .nav-back a { color: #64748b; text-decoration: none; font-size: 0.8em; border: 1px solid #e2e8f0; padding: 6px 12px; border-radius: 50px; transition: 0.3s; }
-        .nav-back a:hover { background: var(--light-bg); color: var(--dark); }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
 
-        .logo { font-size: 2.2em; font-weight: 900; margin-bottom: 15px; letter-spacing: -1.5px; color: var(--logo-black); text-decoration: none; }
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--bg);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* --- LOGO BAR --- */
+        .logo-bar {
+            background: white;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .logo-text { font-weight: 800; font-size: 1.5rem; letter-spacing: -0.5px; color: #000; }
+        .logo-hubs { color: var(--blue); }
+
+        .main-wrapper {
+            max-width: 1100px;
+            margin: 60px auto 100px;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .pitch-side { padding-top: 10px; }
         
-        .hero-title { font-size: 2.8em; font-weight: 800; margin: 15px 0; line-height: 1.1; letter-spacing: -1px; color: var(--dark); }
-        .hero-sub { font-size: 1.1em; color: #64748b; max-width: 600px; margin: 0 auto 30px; }
+        .badge {
+            background: rgba(16, 185, 129, 0.1);
+            color: #10b981;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
 
-        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+        h1 {
+            font-size: clamp(2.3rem, 5vw, 3.5rem);
+            line-height: 1.05;
+            margin-bottom: 20px;
+            font-weight: 800;
+            letter-spacing: -2px;
+        }
 
-        .optin-container { 
-            background: white; 
-            padding: 35px; 
-            border-radius: 20px; 
-            box-shadow: 0 15px 35px rgba(0,0,0,0.08); 
-            margin-top: -40px; 
+        .hero-p { font-size: 1.25rem; color: var(--dark); margin-bottom: 15px; font-weight: 600; }
+        
+        .why-text { 
+            font-size: 1.05rem; 
+            color: var(--slate); 
+            margin-bottom: 40px; 
+            max-width: 620px;
+            border-left: 3px solid var(--blue);
+            padding-left: 20px;
+        }
+
+        .highlight-box {
+            background: #fff;
+            padding: 30px;
+            border-radius: 16px;
+            border-left: 5px solid var(--primary);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            margin: 40px 0;
+        }
+
+        .feature-list { list-style: none; margin-top: 15px; }
+        .feature-list li {
+            font-size: 1.05rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: start;
+        }
+        .feature-list li b { color: var(--dark); display: block; font-weight: 700; }
+        .feature-list li::before {
+            content: "→";
+            color: var(--primary);
+            font-weight: bold;
+            margin-right: 12px;
+        }
+
+        /* --- OPT-IN CARD --- */
+        .optin-side { position: sticky; top: 40px; }
+
+        .optin-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 24px;
+            box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.15);
             border: 1px solid #e2e8f0;
             text-align: center;
-            position: relative;
-            z-index: 10;
         }
 
-        /* Image Placeholder for your Freebie */
-        .freebie-preview {
-            max-width: 300px;
-            margin: 20px auto;
-            border-radius: 10px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-            display: block;
+        .mockup-container {
+            margin: 0 auto 20px;
+            perspective: 1000px;
         }
 
-        .strategy-box { background: var(--light-bg); border: 1px solid #e2e8f0; padding: 30px; border-radius: 15px; margin: 40px 0; }
+        .mockup-img {
+            width: 180px;
+            height: auto;
+            border-radius: 4px;
+            transform: rotateY(-5deg) rotateX(5deg);
+            mix-blend-mode: multiply; 
+            display: inline-block;
+            transition: 0.3s ease;
+        }
         
-        .advantage-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 30px 0; }
-        .advantage-card { background: white; padding: 20px; border-radius: 12px; border: 1px solid #f1f5f9; box-shadow: 0 2px 4px rgba(0,0,0,0.02); text-align: left; }
-        .advantage-card h4 { color: var(--primary); font-size: 1.1em; margin-bottom: 5px; }
-        
-        .cta-section { 
-            background: var(--dark); 
-            color: white; 
-            padding: 60px 30px; 
-            text-align: center; 
-            border-radius: 25px; 
-            margin: 60px 0; 
+        .mockup-img:hover {
+            transform: rotateY(0deg) rotateX(0deg) scale(1.05);
         }
 
-        footer { background: #f1f5f9; padding: 40px 20px; border-radius: 20px 20px 0 0; font-size: 0.9em; border-top: 1px solid #e2e8f0; }
-        
-        .ml-embedded { margin: 15px auto; max-width: 450px; }
+        .optin-card h3 { font-size: 1.4rem; margin-bottom: 10px; font-weight: 700; }
 
-        @media (max-width: 768px) { .hero-title { font-size: 2em; } }
+        footer { text-align: center; padding: 60px 20px; border-top: 1px solid #e2e8f0; margin-top: 100px; }
+
+        @media (max-width: 900px) {
+            .main-wrapper { grid-template-columns: 1fr; gap: 40px; margin: 40px auto; }
+            .optin-side { position: relative; top: 0; }
+        }
     </style>
 </head>
 <body>
 
-<header>
-    <div class="nav-back"><a href="index.html">← Back to Home</a></div>
-    
-    <div class="logo">
-        Saasly<span style="color: var(--accent);">Hubs</span>
+    <div class="logo-bar">
+        <span class="logo-text">SAASLY<span class="logo-hubs">HUBS</span></span>
     </div>
 
-    <h1 class="hero-title">Get Your First Leads in 24 Hours — No Website Needed</h1>
-    <p class="hero-sub">Stop chasing algorithms. Start building a digital asset you actually own.</p>
-</header>
-
-<div class="container">
-    <div class="optin-container">
-        <h3 style="margin-bottom: 5px; color: var(--dark);">Download the "24h Lead Engine" Checklist</h3>
-        <p style="color: #64748b; margin-bottom: 10px; font-size: 0.95em;">+ 3 Ready-to-use Email Templates included for free.</p>
+    <main class="main-wrapper">
         
-        <img src="YOUR_IMAGE_URL_HERE.jpg" alt="Free Automation Checklist Preview" class="freebie-preview">
-        
-        <div class="ml-embedded" data-form="gP8Gf6"></div>
-    </div>
+        <div class="pitch-side">
+            <span class="badge">Free Lead Generation Guide</span>
+            <h1>Get Your First Leads in 24 Hours — No Website Needed.</h1>
+            <p class="hero-p">Stop chasing algorithms. Start building a digital asset you actually own.</p>
+            
+            <p class="why-text">
+                Social media is "rented land." If the algorithm changes, your reach drops to zero. Email is the only direct line to your audience that nobody can take away. This guide shows you how to bypass the tech-headache and start collecting leads today.
+            </p>
+            
+            <div class="highlight-box">
+                <strong>Inside this Free Package:</strong>
+                <ul class="feature-list">
+                    <li><b>The 24h Blueprint:</b> How to go live and capture your first lead in less than a day.</li>
+                    <li><b>Automation Checklist:</b> The exact steps to set up MailerLite so it works while you sleep.</li>
+                    <li><b>3 Done-For-You Templates:</b> Copy and paste these high-converting email templates immediately.</li>
+                </ul>
+            </div>
+        </div>
 
-    <section class="strategy-box" style="margin-top: 60px;">
-        <h2 style="color: var(--dark);">Why Email is Your #1 Asset</h2>
-        <p>Social media is "rented land". If the algorithm changes, your reach drops to zero. Email is the only direct line to your audience that <strong>nobody can take away.</strong></p>
-    </section>
+        <div class="optin-side">
+            <div class="optin-card">
+                <div class="mockup-container">
+                  <img src="Get Leads Today Without a Website.png" alt="Freebie Guide Preview" class="mockup-img">
+                </div>
+                
+                <h3>Download Your Free Guide</h3>
+                <p style="color: var(--slate); font-size: 0.9rem; margin-bottom: 25px;">Enter your email to get instant access to the checklist & templates.</p>
+                
+                <div class="ml-embedded" data-form="gP8Gf6"></div>
 
-    <div class="advantage-grid">
-        <div class="advantage-card"><h4>⚡ Launch Fast</h4><p>Go live in 15 mins. No coding, no tech-headaches.</p></div>
-        <div class="advantage-card"><h4>📩 Capture Leads</h4><p>Automate your list building effortlessly.</p></div>
-        <div class="advantage-card"><h4>🤖 24/7 Automation</h4><p>Your business works while you sleep.</p></div>
-    </div>
+                <div class="legal" style="font-size: 0.7rem; color: #94a3b8; margin-top: 15px;">
+                    No complex setup. No spam. Unsubscribe anytime.
+                </div>
+            </div>
+        </div>
 
-    <div class="cta-section">
-        <h2 style="color: white; margin-bottom: 15px;">Ready to own your audience?</h2>
-        <p style="margin-bottom: 25px; opacity: 0.8;">Enter your email below to get the checklist and start your first automation.</p>
-        
-        <div class="ml-embedded" data-form="gP8Gf6"></div>
-        
-        <p style="margin-top: 20px; font-size: 0.8em; opacity: 0.5;">Free forever for up to 1,000 subscribers.</p>
-    </div>
+    </main>
 
     <footer>
-        <div style="font-size: 1.5em; font-weight: 900; margin-bottom: 15px; letter-spacing: -1px; color: var(--logo-black);">
-            Saasly<span style="color: var(--accent);">Hubs</span>
-        </div>
-        <p>We test the tools so you don't have to. No fluff, just the systems that actually build your business.</p>
-        <p><strong>Contact:</strong> <a href="mailto:hello@saaslyhubs.com" style="color: var(--primary); text-decoration: none;">hello@saaslyhubs.com</a></p>
-        <p style="text-align: center; color: #94a3b8; font-size: 0.8em; margin-top: 40px;">
-            &copy; 2026 SaaslyHubs. All rights reserved.
+        <p style="color: #94a3b8; font-size: 0.85rem; font-weight: 600; margin-bottom: 15px;">&copy; 2026 SAASLYHUBS</p>
+        <p style="font-size: 0.7rem; color: #cbd5e1; max-width: 500px; margin: 0 auto; line-height: 1.4; font-style: italic;">
+            <strong>Affiliate Disclosure:</strong> Some links on this page may be affiliate links. I only recommend tools I personally use or believe in. If you sign up through a link, I may receive a small commission at no extra cost to you.
         </p>
     </footer>
-</div>
 
-<script>
-    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
-    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
-    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
-    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-    ml('account', '1183134');
-</script>
+    <script>
+        (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+        .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+        n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+        (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+        ml('account', '1183134');
+    </script>
 
 </body>
 </html>

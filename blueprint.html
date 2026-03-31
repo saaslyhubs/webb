@@ -3,127 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Small Business Blueprint 2026 | SaaslyHubs</title>
+    <title>The 24-Hour Business Blueprint | SaaslyHubs</title>
     <style>
         :root { --primary: #00a859; --dark: #1a1a1a; --bg: #fdfdfd; }
         body { font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif; line-height: 1.8; color: #333; max-width: 950px; margin: 0 auto; padding: 0; background-color: var(--bg); }
         
-        header { background: var(--dark); color: white; padding: 80px 20px; text-align: center; }
-        .hero-title { font-size: 3em; line-height: 1.1; margin-bottom: 20px; font-weight: 800; }
+        header { background: var(--dark); color: white; padding: 90px 20px; text-align: center; }
+        .hero-title { font-size: 3.2em; line-height: 1.1; margin-bottom: 20px; font-weight: 800; }
+        .hero-subtitle { font-size: 1.3em; opacity: 0.9; max-width: 750px; margin: 0 auto; line-height: 1.5; }
         
-        .quick-nav { background: rgba(255,255,255,0.1); padding: 15px; border-radius: 50px; display: inline-flex; gap: 15px; margin-top: 20px; flex-wrap: wrap; justify-content: center; }
-        .quick-nav a { color: white; text-decoration: none; font-size: 0.85em; font-weight: 600; padding: 5px 18px; border: 1px solid rgba(255,255,255,0.2); border-radius: 20px; transition: 0.3s; }
-        .quick-nav a:hover { background: var(--primary); border-color: var(--primary); }
-
         .container { padding: 60px 30px; background: white; margin-top: -40px; border-radius: 30px 30px 0 0; box-shadow: 0 -20px 40px rgba(0,0,0,0.05); }
         
         .strategy-section { margin-bottom: 70px; }
         .strategy-section h2 { font-size: 2.2em; color: var(--dark); margin-bottom: 25px; border-left: 6px solid var(--primary); padding-left: 20px; }
         
-        .advantage-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin: 40px 0; }
-        .advantage-card { border: 1px solid #eee; padding: 25px; border-radius: 15px; background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.02); }
-        .advantage-card h4 { color: var(--primary); margin-top: 0; display: flex; align-items: center; gap: 10px; }
-
-        .industry-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin: 40px 0; }
-        .industry-card { background: #f8fafc; border: 1px solid #e2e8f0; padding: 30px; border-radius: 15px; transition: 0.3s; }
-        .industry-card h4 { color: var(--primary); margin-top: 0; }
-        .industry-card a { display: inline-block; margin-top: 15px; text-decoration: none; border: 2px solid var(--primary); color: var(--primary); padding: 10px 25px; border-radius: 50px; font-weight: bold; transition: 0.3s; }
-        .industry-card a:hover { background: var(--primary); color: white; }
-
-        .internal-link-box { background: #eef9f3; border: 1px solid #c3e6cb; padding: 30px; border-radius: 15px; margin: 40px 0; text-align: center; }
-        .btn-outline { display: inline-block; border: 2px solid var(--primary); color: var(--primary); padding: 12px 30px; text-decoration: none; border-radius: 50px; font-weight: bold; transition: 0.3s; }
-        .btn-outline:hover { background: var(--primary); color: white; }
-
-        .cta-banner { background: #1a1a1a; color: white; padding: 70px 40px; border-radius: 30px; text-align: center; margin-top: 80px; }
-        .btn-main { display: inline-block; background: var(--primary); color: white; padding: 22px 50px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 1.3em; margin-top: 30px; transition: 0.3s; }
+        /* The High-Value Form Box */
+        .form-container { background: #f0fdf4; border: 2px solid #bcf0da; padding: 50px 40px; border-radius: 25px; margin: 40px 0; text-align: center; box-shadow: 0 10px 30px rgba(0,168,89,0.05); }
+        .form-container h3 { margin-top: 0; color: var(--dark); font-size: 2em; margin-bottom: 10px; }
+        .form-container p { margin-bottom: 30px; color: #4a5568; font-size: 1.1em; }
         
+        /* MailerLite Placeholder */
+        .ml-form-embed { background: #fff; padding: 20px; border-radius: 15px; border: 1px dashed #00a859; min-height: 120px; display: flex; align-items: center; justify-content: center; }
+
+        .bundle-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin: 40px 0; }
+        .bundle-item { border: 1px solid #edf2f7; padding: 25px; border-radius: 15px; background: #fff; transition: 0.3s; }
+        .bundle-item h4 { color: var(--primary); margin-top: 0; font-size: 1.25em; margin-bottom: 10px; }
+
+        .comparison-box { background: #fff5f5; border: 1px solid #feb2b2; padding: 35px; border-radius: 20px; margin-bottom: 50px; }
+        .comparison-box h3 { margin-top: 0; color: #c53030; font-size: 1.5em; }
+
         footer { text-align: center; padding: 60px 0; color: #999; font-size: 0.9em; border-top: 1px solid #eee; margin-top: 80px; }
+        
+        @media (max-width: 600px) {
+            .hero-title { font-size: 2.4em; }
+            .bundle-grid { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
 
 <header>
-    <h1 class="hero-title">Get Your First Customers in 24 Hours — No Website Needed</h1>
-    <div class="quick-nav">
-        <a href="index.html">← Back Home</a>
-        <a href="#problem">The Problem</a>
-        <a href="#solution">The Solution</a>
-        <a href="#examples">Use-Cases</a>
-    </div>
+    <p style="text-transform: uppercase; letter-spacing: 3px; font-size: 0.9em; font-weight: 700; color: var(--primary); margin-bottom: 20px;">Limited Release | 2026 Strategy</p>
+    <h1 class="hero-title">Launch Your Lead Machine in 24 Hours</h1>
+    <p class="hero-subtitle">Forget complex websites. Get the 5-step automation checklist and proven email templates to start getting customers on autopilot.</p>
 </header>
 
 <div class="container">
     
-    <section id="problem" class="strategy-section">
-        <h2>The Problem</h2>
-        <p>Many small businesses get stuck spending months and thousands on a website that doesn't bring in customers. Your time and cash flow are your most valuable assets — don't waste them.</p>
-    </section>
-
-    <section id="solution" class="strategy-section">
-        <h2>The Solution</h2>
+    <section class="strategy-section">
+        <h2>The High-Cost Trap</h2>
+        <p>Most businesses fail because they spend months building a website before they've ever made a sale. You don't need a "Coming Soon" page—you need a <strong>Digital Doorman</strong> that works while you sleep.</p>
+        
         <div class="comparison-box">
-            <h3 style="margin-top:0; color:#c53030;">The Old Way</h3>
-            <p>Pay $2,500+ for a web designer and wait months before you even get leads.</p>
-            <h3 style="color:var(--primary);">The Smart Way</h3>
-            <p>Launch a professional Mini-Site in 24 hours for $0 and start collecting leads immediately.</p>
-        </div>
-
-        <div class="advantage-grid">
-            <div class="advantage-card">
-                <h4>⭐ Launch Fast</h4>
-                <p>Build your mini-site in 15 minutes with no coding required.</p>
-            </div>
-            <div class="advantage-card">
-                <h4>⭐ Get Leads</h4>
-                <p>Collect customer info automatically and start building your list.</p>
-            </div>
-            <div class="advantage-card">
-                <h4>⭐ Follow Up</h4>
-                <p>Send emails instantly to new leads without lifting a finger.</p>
-            </div>
-            <div class="advantage-card">
-                <h4>⭐ Free Forever</h4>
-                <p>Start with MailerLite for free and pay only once you’re making money.</p>
-            </div>
-        </div>
-
-        <div class="internal-link-box">
-            <p>Ready to start getting customers today?</p>
-            <a href="https://www.mailerlite.com/?linkId=lp_170762&sourceId=deborah-panchillo&tenantId=mailerlite" class="btn-outline">Create Your Free Mini-Site →</a>
+            <h3>❌ The Old, Broken Way</h3>
+            <p>Paying $2,500+ for a custom site and waiting 90 days for your first lead. This is how you burn cash, not build a business.</p>
         </div>
     </section>
 
-    <section id="examples" class="strategy-section">
-        <h2>Who This Works For</h2>
-        <div class="industry-grid">
-            <div class="industry-card">
-                <h4>🛠️ Service Pros</h4>
-                <p>Collect leads on the job with a simple form and follow up automatically.</p>
-                <a href="https://www.mailerlite.com/?linkId=lp_170762&sourceId=deborah-panchillo&tenantId=mailerlite">Start Free</a>
-            </div>
-            <div class="industry-card">
-                <h4>🎓 Personal Brands</h4>
-                <p>Build trust, offer a free call, and automate bookings with ease.</p>
-                <a href="https://www.mailerlite.com/?linkId=lp_170762&sourceId=deborah-panchillo&tenantId=mailerlite">Start Free</a>
-            </div>
-            <div class="industry-card">
-                <h4>🛍️ Local Shops</h4>
-                <p>Offer first-visit incentives and grow a database of loyal customers.</p>
-                <a href="https://www.mailerlite.com/?linkId=lp_170762&sourceId=deborah-panchillo&tenantId=mailerlite">Start Free</a>
+    <section class="form-container">
+        <h3>Download the 24-Hour Launch Bundle</h3>
+        <p>Get the 5-Step Checklist + 3 "Copy & Paste" Email Templates. 100% Free.</p>
+        
+        <div class="ml-form-embed">
+            <div class="ml-embedded" data-form="[DITT_FORMULÄR_ID]">
+                <p style="color: #a0aec0;">[Insert MailerLite Form Code Here]</p>
             </div>
         </div>
     </section>
 
-    <div class="cta-banner">
-        <h2 style="color: white; margin-top: 0;">Start Getting Customers Today</h2>
-        <p style="font-size: 1.2em; opacity: 0.9;">Focus on your customers, start building your leads now — it’s free!</p>
-        <a href="https://www.mailerlite.com/?linkId=lp_170762&sourceId=deborah-panchillo&tenantId=mailerlite" class="btn-main">Create Your Free Mini-Site →</a>
-    </div>
+    <section class="strategy-section">
+        <h2>What's Inside the Blueprint?</h2>
+        <div class="bundle-grid">
+            <div class="bundle-item">
+                <h4>✅ The 5-Step Checklist</h4>
+                <p>The exact roadmap to set up your automation engine from scratch using only free tools.</p>
+            </div>
+            <div class="bundle-item">
+                <h4>📧 Done-For-You Templates</h4>
+                <p>Three high-converting email templates: The Handshake, The Expert, and The Invitation.</p>
+            </div>
+            <div class="bundle-item">
+                <h4>🎯 The Pinterest SEO Secret</h4>
+                <p>How to open the traffic floodgates without spending a single cent on paid advertising.</p>
+            </div>
+            <div class="bundle-item">
+                <h4>⚙️ Automation "Safety Check"</h4>
+                <p>A leak-proof final check to ensure your business runs on autopilot without technical glitches.</p>
+            </div>
+        </div>
+    </section>
 
     <footer>
-        <p>&copy; 2026 SaaslyHubs. Helping small businesses build smarter.</p>
+        <p>&copy; 2026 SaaslyHubs. Smarter tools, faster growth.</p>
     </footer>
 </div>
+
+</body>
+</html>
 
 </body>
 </html>

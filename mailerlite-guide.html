@@ -8,8 +8,8 @@
         :root { 
             --primary: #007f43; 
             --secondary: #00a859; 
-            --accent: #007bff; /* Din logotyp-blå */
-            --logo-black: #000000; /* Saasly-svart */
+            --accent: #007bff; /* Logo Blue */
+            --logo-black: #000000; /* Saasly Black */
             --dark: #0f172a; 
             --light-bg: #f8fafc; 
         }
@@ -17,7 +17,7 @@
         body { font-family: 'Inter', -apple-system, sans-serif; line-height: 1.6; color: #334155; max-width: 100%; margin: 0; padding: 0; background-color: #fff; }
         
         header { 
-            background: #ffffff; /* Ljus bakgrund för att den svarta loggan ska poppa */
+            background: #ffffff; 
             color: var(--dark); 
             padding: 40px 20px 60px; 
             text-align: center; 
@@ -28,6 +28,8 @@
         .nav-back a { color: #64748b; text-decoration: none; font-size: 0.8em; border: 1px solid #e2e8f0; padding: 6px 12px; border-radius: 50px; transition: 0.3s; }
         .nav-back a:hover { background: var(--light-bg); color: var(--dark); }
 
+        .logo { font-size: 2.2em; font-weight: 900; margin-bottom: 15px; letter-spacing: -1.5px; color: var(--logo-black); text-decoration: none; }
+        
         .hero-title { font-size: 2.8em; font-weight: 800; margin: 15px 0; line-height: 1.1; letter-spacing: -1px; color: var(--dark); }
         .hero-sub { font-size: 1.1em; color: #64748b; max-width: 600px; margin: 0 auto 30px; }
 
@@ -41,6 +43,17 @@
             margin-top: -40px; 
             border: 1px solid #e2e8f0;
             text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Image Placeholder for your Freebie */
+        .freebie-preview {
+            max-width: 300px;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            display: block;
         }
 
         .strategy-box { background: var(--light-bg); border: 1px solid #e2e8f0; padding: 30px; border-radius: 15px; margin: 40px 0; }
@@ -58,7 +71,7 @@
             margin: 60px 0; 
         }
 
-        footer { background: #f1f5f9; padding: 40px 20px; border-radius: 20px 20px 0 0; font-size: 0.9em; }
+        footer { background: #f1f5f9; padding: 40px 20px; border-radius: 20px 20px 0 0; font-size: 0.9em; border-top: 1px solid #e2e8f0; }
         
         .ml-embedded { margin: 15px auto; max-width: 450px; }
 
@@ -70,7 +83,7 @@
 <header>
     <div class="nav-back"><a href="index.html">← Back to Home</a></div>
     
-    <div style="font-size: 2.2em; font-weight: 900; margin-bottom: 15px; letter-spacing: -1.5px; color: var(--logo-black);">
+    <div class="logo">
         Saasly<span style="color: var(--accent);">Hubs</span>
     </div>
 
@@ -81,7 +94,9 @@
 <div class="container">
     <div class="optin-container">
         <h3 style="margin-bottom: 5px; color: var(--dark);">Download the "24h Lead Engine" Checklist</h3>
-        <p style="color: #64748b; margin-bottom: 20px; font-size: 0.95em;">+ 3 Ready-to-use Email Templates included for free.</p>
+        <p style="color: #64748b; margin-bottom: 10px; font-size: 0.95em;">+ 3 Ready-to-use Email Templates included for free.</p>
+        
+        <img src="YOUR_IMAGE_URL_HERE.jpg" alt="Free Automation Checklist Preview" class="freebie-preview">
         
         <div class="ml-embedded" data-form="gP8Gf6"></div>
     </div>
@@ -99,14 +114,22 @@
 
     <div class="cta-section">
         <h2 style="color: white; margin-bottom: 15px;">Ready to own your audience?</h2>
+        <p style="margin-bottom: 25px; opacity: 0.8;">Enter your email below to get the checklist and start your first automation.</p>
+        
         <div class="ml-embedded" data-form="gP8Gf6"></div>
+        
         <p style="margin-top: 20px; font-size: 0.8em; opacity: 0.5;">Free forever for up to 1,000 subscribers.</p>
     </div>
 
     <footer>
-        <h4 style="color: var(--logo-black); margin-top: 0; font-weight: 800;">Saasly<span style="color: var(--accent);">Hubs</span></h4>
-        <p>We simplify SaaS so you can grow faster. No fluff, just the tools that faktiskt fungerar.</p>
-        <p><strong>Contact:</strong> <a href="mailto:hello@saaslyhubs.com" style="color: var(--primary);">hello@saaslyhubs.com</a></p>
+        <div style="font-size: 1.5em; font-weight: 900; margin-bottom: 15px; letter-spacing: -1px; color: var(--logo-black);">
+            Saasly<span style="color: var(--accent);">Hubs</span>
+        </div>
+        <p>We test the tools so you don't have to. No fluff, just the systems that actually build your business.</p>
+        <p><strong>Contact:</strong> <a href="mailto:hello@saaslyhubs.com" style="color: var(--primary); text-decoration: none;">hello@saaslyhubs.com</a></p>
+        <p style="text-align: center; color: #94a3b8; font-size: 0.8em; margin-top: 40px;">
+            &copy; 2026 SaaslyHubs. All rights reserved.
+        </p>
     </footer>
 </div>
 

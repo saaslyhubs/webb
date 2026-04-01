@@ -3,108 +3,240 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Business Automation Solutions | SaaslyHubs</title>
-    <style>
-        :root { --primary: #00a859; --dark: #1a1a1a; --bg: #fdfdfd; --text: #333; }
-        body { font-family: 'Inter', sans-serif; line-height: 1.7; color: var(--text); margin: 0; background: var(--bg); }
-        
-        .nav { background: var(--dark); padding: 15px; text-align: center; }
-        .nav a { color: #ccc; text-decoration: none; margin: 0 15px; font-size: 0.9em; transition: 0.3s; }
-        .nav a:hover { color: white; }
+    <title>Business Automation Ideas | SaaslyHubs</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-        .hero { padding: 80px 20px; text-align: center; background: white; border-bottom: 1px solid #eee; }
-        .hero h1 { font-size: 3em; color: var(--dark); margin-bottom: 15px; }
+    <style>
+        :root { 
+            --primary: #065f46; 
+            --dark: #0f172a; 
+            --blue: #007bff; 
+            --slate: #64748b;
+            --bg: #f8fafc;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--bg);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* --- LOGO BAR --- */
+        .logo-bar {
+            background: white;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .logo-text { font-weight: 800; font-size: 1.5rem; letter-spacing: -0.5px; color: #000; text-transform: uppercase; }
+        .logo-hubs { color: var(--blue); }
+
+        .hero { 
+            padding: 80px 20px; 
+            text-align: center; 
+            background: white; 
+            border-bottom: 1px solid #e2e8f0; 
+        }
         
+        .hero h1 { 
+            font-size: clamp(2.3rem, 5vw, 3.5rem); 
+            line-height: 1.05; 
+            margin-bottom: 20px; 
+            font-weight: 800; 
+            letter-spacing: -2px;
+        }
+
         .container { max-width: 950px; margin: 0 auto; padding: 60px 20px; }
 
         /* JÄMFÖRELSE-TABELL */
-        .comparison-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: #eee; border-radius: 15px; overflow: hidden; margin-bottom: 60px; border: 1px solid #eee; }
-        .comp-header { background: #f8fafc; padding: 20px; font-weight: bold; text-align: center; }
-        .comp-cell { background: white; padding: 25px; }
-        .bad { color: #c53030; font-weight: 600; }
-        .good { color: var(--primary); font-weight: 600; }
+        .comparison-grid { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 1px; 
+            background: #e2e8f0; 
+            border-radius: 20px; 
+            overflow: hidden; 
+            margin-bottom: 60px; 
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+        }
+        .comp-header { background: #f8fafc; padding: 20px; font-weight: 800; text-align: center; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; }
+        .comp-cell { background: white; padding: 25px; font-size: 0.95rem; }
+        .bad { color: #ef4444; font-weight: 700; margin-right: 8px; }
+        .good { color: #10b981; font-weight: 700; margin-right: 8px; }
 
         /* SOLUTIONS CARDS */
-        .solution-box { background: white; border: 1px solid #e2e8f0; border-radius: 20px; padding: 40px; margin-bottom: 40px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-        .solution-box h3 { font-size: 1.8em; margin-top: 0; color: var(--dark); display: flex; align-items: center; gap: 15px; }
-        .step-tag { background: #eef9f3; color: var(--primary); font-size: 0.7em; padding: 4px 12px; border-radius: 20px; }
+        .solution-box { 
+            background: white; 
+            border: 1px solid #e2e8f0; 
+            border-radius: 24px; 
+            padding: 40px; 
+            margin-bottom: 30px; 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02); 
+        }
+        .solution-box h3 { 
+            font-size: 1.8rem; 
+            margin-bottom: 15px; 
+            color: var(--dark); 
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .step-tag { 
+            background: rgba(16, 185, 129, 0.1); 
+            color: #10b981; 
+            font-size: 0.75rem; 
+            padding: 6px 12px; 
+            border-radius: 50px; 
+            font-weight: 700;
+        }
 
-        .feature-list { list-style: none; padding: 0; margin: 20px 0; }
-        .feature-list li { margin-bottom: 12px; padding-left: 30px; position: relative; }
-        .feature-list li::before { content: '✓'; position: absolute; left: 0; color: var(--primary); font-weight: bold; }
+        /* --- FIXAD LISTA MED MELLANRUM --- */
+        .feature-list { list-style: none; margin: 20px 0; }
+        .feature-list li { 
+            margin-bottom: 12px; 
+            padding-left: 25px; 
+            position: relative; 
+            font-size: 1.05rem;
+            line-height: 1.5;
+        }
+        .feature-list li::before { 
+            content: '→'; 
+            position: absolute; 
+            left: 0; 
+            color: var(--primary); 
+            font-weight: bold; 
+        }
+        .feature-list li b {
+            color: var(--dark);
+            font-weight: 700;
+            margin-right: 6px; /* Detta skapar mellanrummet du bad om */
+        }
 
-        .cta-banner { background: var(--dark); color: white; padding: 60px; border-radius: 30px; text-align: center; margin-top: 60px; }
-        .btn-main { display: inline-block; background: var(--primary); color: white; padding: 20px 45px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 1.2em; transition: 0.3s; margin-top: 25px; }
-        .btn-main:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,168,89,0.3); }
+        .cta-banner { 
+            background: var(--dark); 
+            color: white; 
+            padding: 60px 40px; 
+            border-radius: 32px; 
+            text-align: center; 
+            margin-top: 60px; 
+        }
+        .btn-main { 
+            display: inline-block; 
+            background: var(--blue); 
+            color: white; 
+            padding: 18px 40px; 
+            text-decoration: none; 
+            border-radius: 12px; 
+            font-weight: 800; 
+            font-size: 1.1rem; 
+            transition: 0.3s; 
+            margin-top: 25px; 
+        }
+        .btn-main:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,123,255,0.3); }
 
-        footer { text-align: center; padding: 40px; color: #999; font-size: 0.9em; }
+        /* FOOTER & LEGAL BUTTONS */
+        footer { text-align: center; padding: 60px 20px; border-top: 1px solid #e2e8f0; margin-top: 100px; }
+        .legal-btns { margin-bottom: 20px; display: flex; justify-content: center; gap: 15px; }
+        .legal-btn {
+            background: #f1f5f9;
+            color: #64748b;
+            font-size: 0.7rem;
+            text-decoration: none;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: 0.2s;
+            border: 1px solid #e2e8f0;
+        }
+        .legal-btn:hover { background: #e2e8f0; color: var(--dark); }
+
+        @media (max-width: 768px) {
+            .comparison-grid { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 2.5rem; }
+        }
     </style>
 </head>
 <body>
 
-<div class="nav">
-    <a href="index.html">← Back to Hub</a>
-    <a href="blueprint.html">The Strategy</a>
-    <a href="guide.html">Technical Guide</a>
-</div>
-
-<header class="hero">
-    <span style="text-transform: uppercase; letter-spacing: 2px; color: var(--primary); font-weight: bold;">Efficiency for Small Business</span>
-    <h1>The 3 Automations You Need</h1>
-    <p style="max-width: 700px; margin: 20px auto; font-size: 1.2em; color: #555;">Most business owners are "too busy" because they do everything manually. Here is how to let MailerLite handle the repetitive tasks.</p>
-</header>
-
-<div class="container">
-
-    <h2 style="text-align:center; margin-bottom: 30px;">Manual Work vs. Automation</h2>
-    <div class="comparison-grid">
-        <div class="comp-header">The Old Way (Manual)</div>
-        <div class="comp-header">The New Way (MailerLite)</div>
-        
-        <div class="comp-cell"><span class="bad">✕</span> Spending 30 min every evening replying to "How much does it cost?" emails.</div>
-        <div class="comp-cell"><span class="good">✓</span> An automated PDF price list is sent <span style="text-decoration: underline;">instantly</span> when they ask.</div>
-        
-        <div class="comp-cell"><span class="bad">✕</span> Forgetting to follow up with a lead because you were on a job site.</div>
-        <div class="comp-cell"><span class="good">✓</span> A 3-day welcome sequence builds trust and books calls while you work.</div>
-        
-        <div class="comp-cell"><span class="bad">✕</span> Losing old customers because you haven't spoken to them in 6 months.</div>
-        <div class="comp-cell"><span class="good">✓</span> "Re-activation" emails automatically remind them it's time to book again.</div>
+    <div class="logo-bar">
+        <span class="logo-text">SAASLY<span class="logo-hubs">HUBS</span></span>
     </div>
 
-    <div class="solution-box">
-        <h3><span class="step-tag">Phase 1</span> The Instant Responder</h3>
-        <p>When someone visits your site, they want answers <strong>now</strong>. If you wait 4 hours to reply, they've already called your competitor.</p>
-        <ul class="feature-list">
-            <li><strong>Immediate Gratification:</strong> Your pricing, brochure, or "Top 5 Tips" arrives in their inbox in seconds.</li>
-            <li><strong>Filtered Leads:</strong> You only spend time talking to people who have already seen your prices and services.</li>
-            <li><strong>Professionalism:</strong> You look like a big agency, even if you're a one-person show.</li>
-        </ul>
-    </div>
-
-    <div class="solution-box">
-        <h3><span class="step-tag">Phase 2</span> The "Trust Builder" Sequence</h3>
-        <p>People don't buy from strangers. Use a 3-part automation to bridge the gap:</p>
-        <ul class="feature-list">
-            <li><strong>Email 1:</strong> The delivery of what they asked for + a short "Who we are".</li>
-            <li><strong>Email 2:</strong> A success story or a "Before & After" from a previous client.</li>
-            <li><strong>Email 3:</strong> The direct Call to Action (Booking link or Phone number).</li>
-        </ul>
-    </div>
-
-    <div class="cta-banner">
-        <h2 style="margin:0;">Ready to put your business on autopilot?</h2>
-        <p style="opacity: 0.8; margin-top: 15px;">It takes about 15 minutes to set up your first automation. After that, it works forever.</p>
-        <a href="https://www.mailerlite.com/?linkId=lp_170762&sourceId=deborah-panchillo&tenantId=mailerlite" class="btn-main">Start Your Free Account →</a>
-        <div style="margin-top: 25px; font-size: 0.9em;">
-            <a href="guide.html" style="color: white; opacity: 0.7;">Or see the step-by-step setup guide first →</a>
+    <header class="hero">
+        <div style="max-width: 900px; margin: 0 auto;">
+            <span style="text-transform: uppercase; letter-spacing: 2px; color: var(--primary); font-weight: 800; font-size: 0.85rem;">Efficiency for Small Business</span>
+            <h1>The 3 Automations You Need</h1>
+            <p style="font-size: 1.25rem; color: var(--slate); margin-top: 15px; font-weight: 500;">
+                Stop doing everything manually. Let MailerLite handle the repetitive tasks while you focus on your work.
+            </p>
         </div>
+    </header>
+
+    <div class="container">
+
+        <h2 style="text-align:center; margin-bottom: 40px; font-weight: 800;">Manual Work vs. Automation</h2>
+        <div class="comparison-grid">
+            <div class="comp-header">The Old Way (Manual)</div>
+            <div class="comp-header">The New Way (Automation)</div>
+            
+            <div class="comp-cell"><span class="bad">✕</span> Replying to price inquiries every evening.</div>
+            <div class="comp-cell"><span class="good">✓</span> Price list sent <b>instantly</b> to their inbox.</div>
+            
+            <div class="comp-cell"><span class="bad">✕</span> Forgetting to follow up because you were on a job site.</div>
+            <div class="comp-cell"><span class="good">✓</span> A 3-day sequence builds trust and books calls while you work.</div>
+            
+            <div class="comp-cell"><span class="bad">✕</span> Losing old customers because you haven't spoken in 6 months.</div>
+            <div class="comp-cell"><span class="good">✓</span> "Re-activation" emails automatically remind them to book again.</div>
+        </div>
+
+        <div class="solution-box">
+            <h3><span class="step-tag">Phase 1</span> The Instant Responder</h3>
+            <p>When someone visits your site, they want answers <b>now</b>. If you wait 4 hours, they've already called your competitor.</p>
+            <ul class="feature-list">
+                <li><b>Immediate Gratification:</b> Your pricing or brochure arrives in seconds.</li>
+                <li><b>Filtered Leads:</b> Spend time only on people who know your services.</li>
+                <li><b>Professionalism:</b> Look like a big agency, even as a one-person show.</li>
+            </ul>
+        </div>
+
+        <div class="solution-box">
+            <h3><span class="step-tag">Phase 2</span> The "Trust Builder" Sequence</h3>
+            <p>People don't buy from strangers. Use a 3-part automation to bridge the gap:</p>
+            <ul class="feature-list">
+                <li><b>Email 1:</b> The delivery of what they asked for + a short "Who we are".</li>
+                <li><b>Email 2:</b> A success story or a "Before & After" from a previous client.</li>
+                <li><b>Email 3:</b> The direct Call to Action (Booking link or Phone number).</li>
+            </ul>
+        </div>
+
+        <div class="cta-banner">
+            <h2 style="font-size: 2rem; font-weight: 800; margin-bottom: 15px;">Ready to put your business on autopilot?</h2>
+            <p style="opacity: 0.8; font-size: 1.1rem;">It takes about 15 minutes to set up your first automation.</p>
+            <a href="https://www.mailerlite.com/?linkId=lp_170762&sourceId=deborah-panchillo&tenantId=mailerlite" class="btn-main">Start Your Free Account →</a>
+            <div style="margin-top: 25px; font-size: 0.9em;">
+                <a href="index.html" style="color: white; opacity: 0.7; text-decoration: none;">← Back to Hub</a>
+            </div>
+        </div>
+
     </div>
 
-</div>
-
-<footer>
-    &copy; 2026 SaaslyHubs. Making business simple.
-</footer>
+    <footer>
+        <div class="legal-btns">
+            <a href="privacy policy.html" class="legal-btn">Privacy Policy</a>
+            <a href="terms of serivice.html" class="legal-btn">Terms of Service</a>
+        </div>
+        <p style="color: #94a3b8; font-size: 0.85rem; font-weight: 600; margin-bottom: 15px;">&copy; 2026 SAASLYHUBS</p>
+        <p style="font-size: 0.7rem; color: #cbd5e1; max-width: 500px; margin: 0 auto; line-height: 1.4; font-style: italic;">
+            <strong>Affiliate Disclosure:</strong> Some links on this page may be affiliate links. I only recommend tools I personally use.
+        </p>
+    </footer>
 
 </body>
 </html>

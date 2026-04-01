@@ -26,7 +26,7 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* --- LOGO BAR --- */
+        /* LOGO BAR */
         .logo-bar {
             background: white;
             padding: 20px;
@@ -36,36 +36,34 @@
         .logo-text { font-weight: 800; font-size: 1.5rem; letter-spacing: -0.5px; color: #000; text-transform: uppercase; }
         .logo-hubs { color: var(--blue); }
 
-        /* --- HERO SECTION --- */
+        /* HERO */
         .hero { 
-            padding: 80px 20px 40px; 
+            padding: 80px 20px; 
             text-align: center; 
             background: white; 
+            border-bottom: 1px solid #e2e8f0; 
         }
-        
         .hero h1 { 
-            font-size: clamp(2.3rem, 5vw, 3.5rem); 
-            line-height: 1.05; 
+            font-size: clamp(2.5rem, 6vw, 3.8rem); 
+            line-height: 1; 
             margin-bottom: 20px; 
             font-weight: 800; 
             letter-spacing: -2px;
         }
 
-        .badge {
-            background: rgba(16, 185, 129, 0.1);
-            color: #10b981;
-            padding: 8px 16px;
-            border-radius: 50px;
-            font-size: 0.85rem;
-            font-weight: 700;
-            display: inline-block;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-        }
+        .container { max-width: 800px; margin: 0 auto; padding: 60px 20px; }
 
-        .container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 60px; align-items: start; }
+        /* CONTENT STYLE */
+        .content-box { background: white; border: 1px solid #e2e8f0; border-radius: 24px; padding: 40px; margin-bottom: 40px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
+        .content-box h2 { font-size: 1.8rem; font-weight: 800; margin-bottom: 20px; letter-spacing: -1px; }
 
-        /* --- JÄMFÖRELSE & CONTENT --- */
+        /* FIXADE LISTOR (Mellanrum b + text) */
+        .feature-list { list-style: none; margin: 20px 0; }
+        .feature-list li { margin-bottom: 15px; padding-left: 30px; position: relative; font-size: 1.1rem; line-height: 1.5; }
+        .feature-list li::before { content: '→'; position: absolute; left: 0; color: var(--primary); font-weight: bold; }
+        .feature-list li b { color: var(--dark); font-weight: 700; margin-right: 8px; }
+
+        /* JÄMFÖRELSE-TABELL */
         .comparison-grid { 
             display: grid; 
             grid-template-columns: 1fr 1fr; 
@@ -73,53 +71,39 @@
             background: #e2e8f0; 
             border-radius: 20px; 
             overflow: hidden; 
-            margin-bottom: 40px; 
+            margin: 30px 0; 
             border: 1px solid #e2e8f0;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
         }
-        .comp-header { background: #f8fafc; padding: 15px; font-weight: 800; text-align: center; font-size: 0.75rem; text-transform: uppercase; }
-        .comp-cell { background: white; padding: 20px; font-size: 0.9rem; }
+        .comp-header { background: #f8fafc; padding: 15px; font-weight: 800; text-align: center; font-size: 0.8rem; text-transform: uppercase; }
+        .comp-cell { background: white; padding: 20px; font-size: 0.95rem; }
         .bad { color: #ef4444; font-weight: 700; margin-right: 5px; }
         .good { color: #10b981; font-weight: 700; margin-right: 5px; }
 
-        .solution-box { 
-            background: white; 
-            border: 1px solid #e2e8f0; 
-            border-radius: 24px; 
-            padding: 35px; 
-            margin-bottom: 25px; 
-        }
-        .solution-box h3 { font-size: 1.5rem; margin-bottom: 15px; font-weight: 800; }
-
-        /* --- LIST-FIX (Mellanrum b + text) --- */
-        .feature-list { list-style: none; margin: 15px 0; }
-        .feature-list li { margin-bottom: 10px; padding-left: 25px; position: relative; font-size: 1rem; }
-        .feature-list li::before { content: '→'; position: absolute; left: 0; color: var(--primary); font-weight: bold; }
-        .feature-list li b { margin-right: 8px; color: var(--dark); }
-
-        /* --- OPT-IN CARD (FREEBIE) --- */
-        .optin-side { position: sticky; top: 40px; }
-        .optin-card {
+        /* FREEBIE / OPT-IN CARD (Liknar de andra sidorna) */
+        .freebie-card {
             background: white;
-            padding: 35px;
-            border-radius: 24px;
-            box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.15);
-            border: 1px solid #e2e8f0;
+            border: 2px solid var(--dark);
+            border-radius: 32px;
+            padding: 50px 40px;
             text-align: center;
+            margin-top: 60px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
         }
-        .mockup-img { width: 140px; height: auto; margin-bottom: 20px; border-radius: 4px; transform: rotate(-3deg); }
+        .freebie-mockup { width: 180px; height: auto; margin-bottom: 25px; transform: rotate(-2deg); border-radius: 8px; }
         
-        /* MAILERLITE CLEANUP */
-        .ml-form-embedHeader, .ml-brand, .ml-form-embedFooter { display: none !important; }
+        /* MAILERLITE CLEANUP (Ingen GDPR-ruta eller extra text) */
+        .ml-form-embedHeader, .ml-brand, .ml-form-embedFooter, .ml-subscribe-form-gdpr { display: none !important; }
+        .ml-form-embedWrapper { padding: 0 !important; }
 
-        /* --- FOOTER & LEGAL --- */
-        footer { text-align: center; padding: 60px 20px; border-top: 1px solid #e2e8f0; margin-top: 80px; }
-        .legal-btns { margin-bottom: 20px; display: flex; justify-content: center; gap: 10px; }
-        .legal-btn { background: #f1f5f9; color: var(--slate); font-size: 0.7rem; text-decoration: none; padding: 6px 12px; border-radius: 6px; font-weight: 600; border: 1px solid #e2e8f0; }
+        /* FOOTER & LEGAL */
+        footer { text-align: center; padding: 60px 20px; border-top: 1px solid #e2e8f0; margin-top: 100px; }
+        .legal-btns { margin-bottom: 20px; display: flex; justify-content: center; gap: 15px; }
+        .legal-btn { background: #f1f5f9; color: var(--slate); font-size: 0.7rem; text-decoration: none; padding: 8px 16px; border-radius: 8px; font-weight: 600; border: 1px solid #e2e8f0; }
 
-        @media (max-width: 900px) {
-            .container { grid-template-columns: 1fr; }
-            .optin-side { position: relative; top: 0; }
+        @media (max-width: 600px) {
+            .comparison-grid { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 2.5rem; }
+            .freebie-card { padding: 30px 20px; }
         }
     </style>
 </head>
@@ -130,55 +114,56 @@
     </div>
 
     <header class="hero">
-        <span class="badge">Efficiency for Small Business</span>
-        <h1>The 3 Automations You Need</h1>
-        <p style="font-size: 1.2rem; color: var(--slate); max-width: 700px; margin: 15px auto;">
-            Most business owners are "too busy" because they do everything manually. Let MailerLite handle the repetitive tasks.
-        </p>
+        <div style="max-width: 900px; margin: 0 auto;">
+            <p style="text-transform: uppercase; letter-spacing: 2px; color: var(--primary); font-weight: 800; font-size: 0.9rem; margin-bottom: 10px;">Small Business Automation</p>
+            <h1>The 3 Automations You Need</h1>
+            <p style="font-size: 1.3rem; color: var(--slate); margin-top: 20px; font-weight: 500; max-width: 600px; margin-left: auto; margin-right: auto;">
+                Manual work is the silent killer of growth. Here is how to reclaim your time using MailerLite.
+            </p>
+        </div>
     </header>
 
     <div class="container">
-        <div class="content-side">
-            <h2 style="margin-bottom: 25px; font-weight: 800;">Manual vs. Automation</h2>
+
+        <div class="content-box">
+            <h2>Why Automation?</h2>
+            <p>Every minute you spend on repetitive emails is a minute you aren't growing your business. Here is the difference it makes:</p>
+            
             <div class="comparison-grid">
-                <div class="comp-header">The Old Way</div>
-                <div class="comp-header">The New Way</div>
-                <div class="comp-cell"><span class="bad">✕</span> Replying to prices every night.</div>
-                <div class="comp-cell"><span class="good">✓</span> Price list sent <b>instantly</b>.</div>
+                <div class="comp-header">Manual (Old)</div>
+                <div class="comp-header">Automated (New)</div>
+                <div class="comp-cell"><span class="bad">✕</span> Replying to prices at 9 PM.</div>
+                <div class="comp-cell"><span class="good">✓</span> PDF sent instantly.</div>
                 <div class="comp-cell"><span class="bad">✕</span> Forgetting to follow up.</div>
-                <div class="comp-cell"><span class="good">✓</span> 3-day sequence builds trust.</div>
-            </div>
-
-            <div class="solution-box">
-                <h3>The Instant Responder</h3>
-                <p>Reply in seconds, not hours. Filter out window shoppers before you pick up the phone.</p>
-                <ul class="feature-list">
-                    <li><b>Immediate Value:</b> Your pricing or PDF brochure arrives in seconds.</li>
-                    <li><b>Professionalism:</b> Look like a big agency even if you are solo.</li>
-                </ul>
-            </div>
-
-            <div class="solution-box">
-                <h3>The Trust Builder</h3>
-                <p>Nurture leads automatically with a simple 3-part sequence.</p>
-                <ul class="feature-list">
-                    <li><b>Email 1:</b> Delivery of the info + introduction.</li>
-                    <li><b>Email 2:</b> Social proof (Before & After).</li>
-                </ul>
+                <div class="comp-cell"><span class="good">✓</span> 3-day trust sequence.</div>
             </div>
         </div>
 
-        <div class="optin-side">
-            <div class="optin-card">
-                <img src="Get Leads Today Without a Website.png" alt="Free Guide" class="mockup-img">
-                <h3 style="font-size: 1.3rem; margin-bottom: 10px;">Get the Full Blueprint</h3>
-                <p style="font-size: 0.9rem; color: var(--slate); margin-bottom: 20px;">Download my free guide on how to capture your first lead in 24h.</p>
-                
-                <div class="ml-embedded" data-form="gP8Gf6"></div>
-                
-                <p style="font-size: 0.65rem; color: #cbd5e1; margin-top: 15px;">No spam. Unsubscribe anytime.</p>
-            </div>
+        <div class="content-box">
+            <h2>The Core Automations</h2>
+            <ul class="feature-list">
+                <li><b>The Instant Responder:</b> Send your price list or brochure in seconds while the lead is still "hot".</li>
+                <li><b>The Trust Builder:</b> A 3-part email sequence that shows your "Before & After" photos automatically.</li>
+                <li><b>The Re-Activator:</b> Remind old customers to book again after 6 months of silence.</li>
+            </ul>
         </div>
+
+        <div class="freebie-card">
+            <img src="Get Leads Today Without a Website.png" alt="Free Guide" class="freebie-mockup">
+            <h2 style="margin-bottom: 10px;">Get The Full Blueprint</h2>
+            <p style="color: var(--slate); font-size: 1.1rem; margin-bottom: 30px;">Download my free guide and learn exactly how to:</p>
+            
+            <ul class="feature-list" style="text-align: left; max-width: 500px; margin: 0 auto 30px;">
+                <li><b>Capture Leads:</b> How to get your first lead in 24 hours without a website.</li>
+                <li><b>The Setup:</b> Step-by-step instructions for your first automation.</li>
+                <li><b>Tools:</b> The exact (free) tech stack I use for my clients.</li>
+            </ul>
+
+            <div class="ml-embedded" data-form="gP8Gf6"></div>
+            
+            <p style="font-size: 0.7rem; color: #cbd5e1; margin-top: 20px;">No spam. Just results. Unsubscribe anytime.</p>
+        </div>
+
     </div>
 
     <footer>
@@ -186,7 +171,10 @@
             <a href="privacy.html" class="legal-btn">Privacy Policy</a>
             <a href="terms.html" class="legal-btn">Terms of Service</a>
         </div>
-        <p style="color: #94a3b8; font-size: 0.8rem; font-weight: 600;">&copy; 2026 SAASLYHUBS</p>
+        <p style="color: #94a3b8; font-size: 0.85rem; font-weight: 600; margin-bottom: 10px;">&copy; 2026 SAASLYHUBS</p>
+        <p style="font-size: 0.7rem; color: #cbd5e1; max-width: 500px; margin: 0 auto; line-height: 1.4; font-style: italic;">
+            <strong>Affiliate Disclosure:</strong> Some links may be affiliate links. I only recommend tools I use.
+        </p>
     </footer>
 
     <script>

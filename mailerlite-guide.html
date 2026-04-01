@@ -33,7 +33,7 @@
             text-align: center;
             border-bottom: 1px solid #e2e8f0;
         }
-        .logo-text { font-weight: 800; font-size: 1.5rem; letter-spacing: -0.5px; color: #000; }
+        .logo-text { font-weight: 800; font-size: 1.5rem; letter-spacing: -0.5px; color: #000; text-transform: uppercase; }
         .logo-hubs { color: var(--blue); }
 
         .main-wrapper {
@@ -127,7 +127,6 @@
             mix-blend-mode: multiply; 
             display: inline-block;
             transition: 0.4s ease;
-            filter: drop-shadow(10px 10px 20px rgba(0,0,0,0.1));
         }
         
         .mockup-img:hover {
@@ -136,18 +135,46 @@
 
         .optin-card h3 { font-size: 1.5rem; margin-bottom: 8px; font-weight: 800; color: var(--dark); }
 
-        /* The small reminder text */
         .wait-note {
             font-size: 0.7rem;
             color: var(--slate);
             margin-top: 12px;
             line-height: 1.3;
+            font-style: italic;
         }
 
-        footer { text-align: center; padding: 60px 20px; border-top: 1px solid #e2e8f0; margin-top: 100px; background: white; }
+        /* MAILERLITE CLEANUP */
+        .ml-form-embedHeader, .ml-brand, .ml-form-embedFooter, .ml-form-embedBody p { 
+            display: none !important; 
+        }
+
+        /* FOOTER & LEGAL BUTTONS */
+        footer { text-align: center; padding: 60px 20px; border-top: 1px solid #e2e8f0; margin-top: 100px; }
+
+        .legal-btns {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .legal-btn {
+            background: #f1f5f9;
+            color: #64748b;
+            font-size: 0.7rem;
+            text-decoration: none;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: 0.2s;
+            border: 1px solid #e2e8f0;
+        }
+        .legal-btn:hover {
+            background: #e2e8f0;
+            color: var(--dark);
+        }
 
         @media (max-width: 900px) {
-            .main-wrapper { grid-template-columns: 1fr; gap: 40px; margin: 40px auto; }
+            .main-wrapper { grid-template-columns: 1fr; gap: 40px; }
             .optin-side { position: relative; top: 0; }
         }
     </style>
@@ -191,11 +218,11 @@
                 <div class="ml-embedded" data-form="gP8Gf6"></div>
 
                 <p class="wait-note">
-                    Check your inbox (and spam folder) in about 2 minutes for your download link.
+                    Check your inbox (and spam folder) in 2 minutes for your link!
                 </p>
 
-                <div class="legal" style="font-size: 0.75rem; color: #94a3b8; margin-top: 15px;">
-                    No complex setup. No spam. Unsubscribe anytime.
+                <div class="legal" style="font-size: 0.7rem; color: #cbd5e1; margin-top: 15px;">
+                    Instant access. No spam. Unsubscribe anytime.
                 </div>
             </div>
         </div>
@@ -203,11 +230,14 @@
     </main>
 
     <footer>
-        <p style="color: #64748b; font-size: 0.9rem; font-weight: 700; margin-bottom: 15px; letter-spacing: 1px; text-transform: uppercase;">SAASLY<span style="color: var(--blue);">HUBS</span></p>
-        <p style="font-size: 0.75rem; color: #94a3b8; max-width: 500px; margin: 0 auto; line-height: 1.5; font-style: italic;">
-            <strong>Affiliate Disclosure:</strong> Some links on this page may be affiliate links. I only recommend tools I personally use or believe in.
+        <div class="legal-btns">
+            <a href="privacy policy.html" class="legal-btn">Privacy Policy</a>
+            <a href="terms of serivice.html" class="legal-btn">Terms of Service</a>
+        </div>
+        <p style="color: #94a3b8; font-size: 0.85rem; font-weight: 600; margin-bottom: 15px;">&copy; 2026 SAASLYHUBS</p>
+        <p style="font-size: 0.7rem; color: #cbd5e1; max-width: 500px; margin: 0 auto; line-height: 1.4; font-style: italic;">
+            <strong>Affiliate Disclosure:</strong> Some links on this page may be affiliate links. I only recommend tools I personally use. If you sign up through a link, I may receive a small commission at no extra cost to you.
         </p>
-        <p style="margin-top: 30px; font-size: 0.7rem; color: #cbd5e1;">&copy; 2026 SaaslyHubs. All rights reserved.</p>
     </footer>
 
     <script>

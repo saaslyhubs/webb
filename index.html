@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SaaslyHubs | Build Your Digital Hub</title>
+    <title>SaaslyHubs | 24-Hour Business Blueprint</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
@@ -26,7 +26,7 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* --- LOGO: BLACK & BLUE --- */
+        /* --- LOGO BAR --- */
         .logo-bar {
             background: white;
             padding: 20px;
@@ -116,19 +116,17 @@
 
         .mockup-container {
             margin: 0 auto 20px;
-            perspective: 1000px; /* Ger djup åt bilden */
+            perspective: 1000px;
         }
-
-    
-           .mockup-img {
-    width: 140px;
-    height: auto;
-    border-radius: 4px;
-    transform: rotateY(-5deg) rotateX(5deg);
-    /* Detta trick tar bort vit bakgrund digitalt */
-    mix-blend-mode: multiply; 
-    display: inline-block;
-
+        
+        .mockup-img {
+            width: 180px; 
+            height: auto;
+            border-radius: 4px;
+            transform: rotateY(-5deg) rotateX(5deg);
+            mix-blend-mode: multiply; 
+            display: inline-block;
+            transition: 0.3s;
         }
         
         .mockup-img:hover {
@@ -137,12 +135,42 @@
 
         .optin-card h3 { font-size: 1.4rem; margin-bottom: 10px; font-weight: 700; }
 
+        .spam-warning {
+            font-size: 0.75rem;
+            color: #94a3b8;
+            margin-top: 10px;
+            font-style: italic;
+        }
+
         /* MAILERLITE CLEANUP */
         .ml-form-embedHeader, .ml-brand, .ml-form-embedFooter, .ml-form-embedBody p { 
             display: none !important; 
         }
 
-        footer { text-align: center; padding: 60px 20px; color: #cbd5e1; border-top: 1px solid #e2e8f0; margin-top: 100px; }
+        footer { text-align: center; padding: 60px 20px; border-top: 1px solid #e2e8f0; margin-top: 100px; }
+
+        /* LEGAL BUTTONS */
+        .legal-btns {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .legal-btn {
+            background: #f1f5f9;
+            color: #64748b;
+            font-size: 0.7rem;
+            text-decoration: none;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: 0.2s;
+            border: 1px solid #e2e8f0;
+        }
+        .legal-btn:hover {
+            background: #e2e8f0;
+            color: var(--dark);
+        }
 
         @media (max-width: 900px) {
             .main-wrapper { grid-template-columns: 1fr; gap: 40px; }
@@ -159,20 +187,20 @@
     <main class="main-wrapper">
         
         <div class="pitch-side">
-            <span class="badge">Business Growth Guide</span>
-            <h1>Stop Renting Your Audience. Start Owning It.</h1>
-            <p class="hero-p">Build a direct line to your customers that generates revenue 24/7.</p>
+            <span class="badge">24-Hour Launch Blueprint</span>
+            <h1>Get Your First Customers in 24h. No Website Needed.</h1>
+            <p class="hero-p">The 5-step automation checklist to launch your "Digital Doorman" today.</p>
             
             <p class="why-text">
-                Email marketing is the fastest way to turn one-time visitors into repeat customers. Unlike social media, you own your list,meaning you can drive sales on demand without paying for ads or fighting algorithms. It’s not just about sending newsletters; it’s about creating a predictable system for consistent business growth.
+                Most businesses waste months building complex websites before making a single sale. This kills your momentum. Our 5-step blueprint shows you how to launch your "Digital Doorman" in minutes, collect leads 24/7, and use the "Digital Handshake" to turn subscribers into customers on autopilot.
             </p>
             
             <div class="highlight-box">
-                <strong>Inside the Free Guide:</strong>
+                <strong>Inside the 24-Hour Bundle:</strong>
                 <ul class="feature-list">
-                    <li><b>The 5-Step Strategy:</b> Your complete blueprint for building a high-converting digital "Hub."</li>
-                    <li><b>Plug-and-Play Templates:</b> 3 ready-to-use email templates (just copy, paste, and customize).</li>
-                    <li><b>The Traffic Valve:</b> A proven method for driving free, targeted leads from Pinterest 24/7.</li>
+                    <li><b>The 5-Step Blueprint:</b> Your complete roadmap to building a high-converting digital "Hub" from scratch.</li>
+                    <li><b>3 Done-For-You Templates:</b> High-converting email scripts (The Delivery, The Expert, and The Invitation).</li>
+                    <li><b>The Pinterest Valve:</b> How to drive free, targeted traffic to your hub without spending $1 on ads.</li>
                 </ul>
             </div>
         </div>
@@ -183,13 +211,15 @@
                   <img src="Get Leads Today Without a Website.png" alt="Freebie Guide Preview" class="mockup-img">
                 </div>
                 
-                <h3>Get Your Free Guide</h3>
-                <p style="color: var(--slate); font-size: 0.9rem; margin-bottom: 25px;">Join 1,000+ business owners building their digital hub.</p>
+                <h3>Download Your Blueprint</h3>
+                <p style="color: var(--slate); font-size: 0.9rem; margin-bottom: 25px;">Everything you need to automate your growth for $0.</p>
                 
                 <div class="ml-embedded" data-form="gP8Gf6"></div>
 
-                <div class="legal" style="font-size: 0.7rem; color: #94a3b8; margin-top: 15px;">
-                    No complex funnels. No spam. Unsubscribe anytime.
+                <p class="spam-warning">Don't forget to check your spam or junk folder!</p>
+
+                <div class="legal" style="font-size: 0.7rem; color: #cbd5e1; margin-top: 15px;">
+                    Instant access. No credit card required. Unsubscribe anytime.
                 </div>
             </div>
         </div>
@@ -197,26 +227,22 @@
     </main>
 
     <footer>
-<footer style="text-align: center; padding: 60px 20px; border-top: 1px solid #e2e8f0; margin-top: 100px;">
-    <p style="color: #94a3b8; font-size: 0.85rem; font-weight: 600; margin-bottom: 15px;">&copy; 2026 SAASLYHUBS</p>
-    
-    <p style="font-size: 0.7rem; color: #cbd5e1; max-width: 500px; margin: 0 auto; line-height: 1.4; font-style: italic;">
-        <strong>Affiliate Disclosure:</strong> Some links on this page may be affiliate links. I only recommend tools I personally use or believe in. If you sign up through a link, I may receive a small commission at no extra cost to you.
-    </p>
-</footer>
-    </p>
-</footer>
+        <div class="legal-btns">
+            <a href="privacy policy.html" class="legal-btn">Privacy Policy</a>
+            <a href="terms of serivice.html" class="legal-btn">Terms of Service</a>
+        </div>
+        <p style="color: #94a3b8; font-size: 0.85rem; font-weight: 600; margin-bottom: 15px;">&copy; 2026 SAASLYHUBS</p>
+        <p style="font-size: 0.7rem; color: #cbd5e1; max-width: 500px; margin: 0 auto; line-height: 1.4; font-style: italic;">
+            <strong>Affiliate Disclosure:</strong> Some links on this page may be affiliate links. I only recommend tools I personally use. If you sign up through a link, I may receive a small commission at no extra cost to you.
+        </p>
     </footer>
 
-   <!-- MailerLite Universal -->
-<script>
-    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
-    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
-    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
-    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-    ml('account', '2222294');
-</script>
-<!-- End MailerLite Universal -->
-
+    <script>
+        (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+        .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+        n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+        (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+        ml('account', '2222294');
+    </script>
 </body>
 </html>

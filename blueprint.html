@@ -147,7 +147,30 @@
             display: none !important; 
         }
 
+        /* FOOTER & LEGAL BUTTONS */
         footer { text-align: center; padding: 60px 20px; border-top: 1px solid #e2e8f0; margin-top: 100px; }
+
+        .legal-btns {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .legal-btn {
+            background: #f1f5f9;
+            color: #64748b;
+            font-size: 0.7rem;
+            text-decoration: none;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: 0.2s;
+            border: 1px solid #e2e8f0;
+        }
+        .legal-btn:hover {
+            background: #e2e8f0;
+            color: var(--dark);
+        }
 
         @media (max-width: 900px) {
             .main-wrapper { grid-template-columns: 1fr; gap: 40px; }

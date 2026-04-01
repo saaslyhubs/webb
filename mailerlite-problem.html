@@ -1,217 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Your Customers Are Waiting | SaaslyHubs</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaaslyHubs | Stop Losing Customers</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-<style>
-:root { 
-    --primary: #00a859; 
-    --dark: #111827; 
-    --text: #374151; 
-    --light-bg: #f9fafb; 
-    --light-grey: #f3f4f6;
-}
-body { 
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
-    margin: 0; 
-    color: var(--text); 
-    background: var(--light-bg);
-}
+    <style>
+        :root { 
+            --primary: #065f46; 
+            --dark: #0f172a; 
+            --blue: #007bff; 
+            --slate: #64748b;
+            --bg: #f8fafc;
+            --red: #ef4444;
+        }
 
-header { 
-    background: var(--dark); 
-    color: white; 
-    padding: 60px 20px; 
-    text-align: center; 
-    position: relative;
-}
-.header-fomo {
-    font-size: 1em;
-    color: #ef4444;
-    margin-bottom: 10px;
-    opacity: 0.9;
-}
-header h1 { font-size: 2.2em; line-height: 1.2; margin-bottom: 15px; }
-header p { opacity: 0.9; max-width: 550px; margin: 0 auto; font-size: 1em; }
-.hero-cta { margin-top: 20px; }
-.hero-micro { font-size: 0.9em; opacity: 0.8; margin-top: 5px; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
 
-.container { max-width: 800px; margin: 0 auto; padding: 30px 20px; }
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--bg);
+            -webkit-font-smoothing: antialiased;
+        }
 
-.problem-box, .solution-box {
-    padding: 20px;
-    border-radius: 12px;
-    margin: 25px 0;
-}
-.problem-box { background: #fff5f5; border-left: 5px solid #ef4444; }
-.solution-box { background: #eef9f3; border-left: 5px solid var(--primary); }
+        /* --- LOGO BAR --- */
+        .logo-bar {
+            background: white;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .logo-text { font-weight: 800; font-size: 1.5rem; letter-spacing: -0.5px; color: #000; text-transform: uppercase; }
+        .logo-hubs { color: var(--blue); }
 
-.steps { margin: 35px 0; }
-.step { margin-bottom: 15px; font-size: 1.05em; display: flex; align-items: flex-start; gap: 10px; }
-.step-circle { width: 28px; height: 28px; background: var(--primary); border-radius: 50%; color: white; display: flex; justify-content: center; align-items: center; font-weight: bold; flex-shrink: 0; }
+        .main-wrapper {
+            max-width: 1100px;
+            margin: 60px auto 100px;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 60px;
+            align-items: start;
+        }
 
-.experiences {
-    margin: 35px 0;
-}
-.experience-cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-.experience {
-    background: white;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    flex: 1 1 45%;
-    min-width: 250px;
-}
-.experience p { margin-bottom: 10px; }
-.experience .micro-copy { font-size: 0.85em; opacity: 0.7; margin-bottom: 10px; }
+        .pitch-side { padding-top: 10px; }
+        
+        .badge {
+            background: rgba(239, 68, 68, 0.1);
+            color: var(--red);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
 
-.cta {
-    background: var(--dark);
-    color: white;
-    padding: 45px 20px;
-    text-align: center;
-    border-radius: 20px;
-    margin-top: 40px;
-}
+        h1 {
+            font-size: clamp(2.3rem, 5vw, 3.5rem);
+            line-height: 1.05;
+            margin-bottom: 20px;
+            font-weight: 800;
+            letter-spacing: -2px;
+        }
 
-.btn {
-    display: inline-block;
-    background: var(--primary);
-    color: white;
-    padding: 18px 40px;
-    border-radius: 100px;
-    text-decoration: none;
-    font-weight: bold;
-    margin-top: 20px;
-    font-size: 1.1em;
-}
+        .hero-p { font-size: 1.25rem; color: var(--dark); margin-bottom: 15px; font-weight: 600; }
+        
+        .why-text { 
+            font-size: 1.05rem; 
+            color: var(--slate); 
+            margin-bottom: 40px; 
+            max-width: 620px;
+            border-left: 3px solid var(--red);
+            padding-left: 20px;
+        }
 
-.about-us {
-    background: var(--light-grey);
-    padding: 25px 20px;
-    border-radius: 12px;
-    margin: 40px 0 10px 0;
-    text-align: center;
-    font-size: 1em;
-    line-height: 1.5;
-}
+        .highlight-box {
+            background: #fff;
+            padding: 30px;
+            border-radius: 16px;
+            border-left: 5px solid var(--red);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            margin: 40px 0;
+        }
 
-.footer-small {
-    text-align: center;
-    font-size: 0.8em;
-    color: #6b7280;
-    margin-bottom: 50px;
-    line-height: 1.4;
-}
+        .feature-list { list-style: none; margin-top: 15px; }
+        .feature-list li {
+            font-size: 1.05rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: start;
+        }
+        .feature-list li b { color: var(--dark); display: block; font-weight: 700; }
+        .feature-list li::before {
+            content: "→";
+            color: var(--red);
+            font-weight: bold;
+            margin-right: 12px;
+        }
 
-/* RESPONSIVE */
-@media (max-width: 600px) {
-    .header-fomo { font-size: 0.9em; }
-    header h1 { font-size: 1.8em; }
-    header p { font-size: 0.95em; }
-    .container { padding: 20px 15px; }
-    .cta { padding: 35px 15px; }
-    .btn { padding: 18px 25px; font-size: 1.1em; width: 100%; text-align: center; }
-    .experience-cards { flex-direction: column; }
-    .experience .btn { width: 100%; }
-}
-</style>
+        /* --- OPT-IN CARD & MINI MOCKUP --- */
+        .optin-side { position: sticky; top: 40px; }
+
+        .optin-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 24px;
+            box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.15);
+            border: 1px solid #e2e8f0;
+            text-align: center;
+        }
+
+        .mockup-container {
+            margin: 0 auto 20px;
+            perspective: 1000px;
+        }
+        
+        .mockup-img {
+            width: 180px; 
+            height: auto;
+            border-radius: 4px;
+            transform: rotateY(-5deg) rotateX(5deg);
+            mix-blend-mode: multiply; 
+            display: inline-block;
+            transition: 0.3s;
+        }
+        
+        .mockup-img:hover {
+            transform: rotateY(0deg) rotateX(0deg) scale(1.05);
+        }
+
+        .optin-card h3 { font-size: 1.4rem; margin-bottom: 10px; font-weight: 700; }
+
+        .spam-warning {
+            font-size: 0.75rem;
+            color: #94a3b8;
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+        /* MAILERLITE CLEANUP */
+        .ml-form-embedHeader, .ml-brand, .ml-form-embedFooter, .ml-form-embedBody p { 
+            display: none !important; 
+        }
+
+        footer { text-align: center; padding: 60px 20px; border-top: 1px solid #e2e8f0; margin-top: 100px; }
+
+        @media (max-width: 900px) {
+            .main-wrapper { grid-template-columns: 1fr; gap: 40px; }
+            .optin-side { position: relative; top: 0; }
+        }
+    </style>
 </head>
-
 <body>
 
-<header>
-    <div class="header-fomo">Every day you wait, potential customers disappear.</div>
-    <h1>Get Your First Customer in Under 1 Hour — No Perfect Website Needed</h1>
-    <p>Small businesses lose leads every day. You can capture your first lead immediately.</p>
-    <div class="hero-cta">
-        <a href="https://www.mailerlite.com/?linkId=lp_170762&sourceId=deborah-panchillo&tenantId=mailerlite" class="btn">Get Your First Lead →</a>
-        <div class="hero-micro">No credit card needed. Takes less than 5 minutes.</div>
-    </div>
-</header>
-
-<div class="container">
-
-    <div class="problem-box">
-        <h2>The Problem</h2>
-        <ul>
-            <li>Leads ask → but then disappear</li>
-            <li>Relying on Instagram/Pinterest DMs → you miss customers</li>
-            <li>No follow-up → no second chance to sell</li>
-            <li>Everything manual → wasted time & lost customers</li>
-        </ul>
-        <p><strong>Truth:</strong> You don’t need a perfect website to start getting customers.</p>
+    <div class="logo-bar">
+        <span class="logo-text">SAASLY<span class="logo-hubs">HUBS</span></span>
     </div>
 
-    <div class="solution-box">
-        <h2>The Solution</h2>
-        <ul>
-            <li>✅ Get your first lead in under <strong>1 hour</strong> ⏱️</li>
-            <li>✅ Automate follow-ups in <strong>5 minutes</strong> ⚡</li>
-            <li>✅ No tech skills required — start selling immediately 🛠️</li>
-        </ul>
-        <p>Create a simple landing page and automated follow-up system — ready in under 24 hours.</p>
-    </div>
-
-    <div class="steps">
-        <h2>How It Works</h2>
-        <div class="step"><div class="step-circle">1</div>Create a simple landing page → capture your first inquiry today</div>
-        <div class="step"><div class="step-circle">2</div>Add a lead capture form → start building your list instantly</div>
-        <div class="step"><div class="step-circle">3</div>Automatically follow up via email → never lose a lead again</div>
-    </div>
-
-  <div class="experiences">
-    <h2>Explore the possibilities with MailerLite</h2>
-    <div class="experience-cards">
+    <main class="main-wrapper">
         
-        <div class="experience">
-            <p><strong>The "Day One" Goal:</strong> Imagine launching your first landing page today and seeing your very first subscriber notification before dinner.</p>
-            <div class="micro-copy">Designed for speed, no website required.</div>
-            <a href="https://www.mailerlite.com/?linkId=lp_170762&sourceId=deborah-panchillo&tenantId=mailerlite" class="btn">Start your journey →</a>
-        </div>
-
-        <div class="experience">
-            <p><strong>The "Passive" Vision:</strong> Visualize a system that handles your follow-ups automatically, so you can focus on creating while your list grows in the background.</p>
-            <div class="micro-copy">Built for 24/7 automation.</div>
-            <a href="https://www.mailerlite.com/?linkId=lp_170762&sourceId=deborah-panchillo&tenantId=mailerlite" class="btn">Explore automation →</a>
-        </div>
-
-        <div class="experience">
-            <p><strong>The "Professional" Look:</strong> Picture your brand looking like a million dollars in every inbox, using simple drag-and-drop tools that anyone can master.</p>
-            <div class="micro-copy">Premium designs, zero code.</div>
-            <a href="https://www.mailerlite.com/?linkId=lp_170762&sourceId=deborah-panchillo&tenantId=mailerlite" class="btn">Try the editor →</a>
-        </div>
-
-    </div>
-</div>
+        <div class="pitch-side">
+            <span class="badge">Critical Business Alert</span>
+            <h1>Stop Renting Your Audience. Start Owning It.</h1>
+            <p class="hero-p">Every day you wait, potential customers disappear forever.</p>
+            
+            <p class="why-text">
+                Relying on social media DMs and manual follow-ups is how small businesses lose money. You don't need a complex website to fix this—you need an automated system that captures interest while you sleep.
+            </p>
+            
+            <div class="highlight-box">
+                <strong>Inside the Free Blueprint:</strong>
+                <ul class="feature-list">
+                    <li><b>The 5-Step Blueprint:</b> Your complete roadmap to building a high-converting digital "Hub" from scratch.</li>
+                    <li><b>3 Done-For-You Templates:</b> High-converting email scripts (The Delivery, The Expert, and The Invitation).</li>
+                    <li><b>The Pinterest Valve:</b> How to drive free, targeted traffic to your hub without spending $1 on ads.</li>
+                </ul>
             </div>
         </div>
-    </div>
 
-    <div class="cta">
-        <h2>Start Capturing Leads Today</h2>
-        <p>Stop losing customers. Build your list now.</p>
-        <a href="https://www.mailerlite.com/?linkId=lp_170762&sourceId=deborah-panchillo&tenantId=mailerlite" class="btn">Get Your First Lead →</a>
-        <p style="margin-top:10px; font-size:0.9em; opacity:0.8;">It only takes 5 minutes to set up your first lead page.</p>
-        <p style="font-size:0.85em; opacity:0.7; margin-top:5px;">No credit card needed — start instantly.</p>
-    </div>
+        <div class="optin-side">
+            <div class="optin-card">
+                <div class="mockup-container">
+                  <img src="Get Leads Today Without a Website.png" alt="Freebie Guide Preview" class="mockup-img">
+                </div>
+                
+                <h3>Download Your Blueprint</h3>
+                <p style="color: var(--slate); font-size: 0.9rem; margin-bottom: 25px;">Build your direct line to customers in under 24 hours.</p>
+                
+                <div class="ml-embedded" data-form="gP8Gf6"></div>
 
-    <div class="about-us">
-        <p>We help business owners get leads fast without expensive agencies. Our mission: launch faster, spend less, and own your customer relationships.</p>
-    </div>
+                <p class="spam-warning">Don't forget to check your spam or junk folder!</p>
 
-    <div class="footer-small">
-        <p>Affiliate Disclosure: Some links are affiliate links. I may receive a commission at no extra cost to you.</p>
-        <p>© 2026 SaaslyHubs • Helping small businesses build smarter.</p>
-    </div>
+                <div class="legal" style="font-size: 0.7rem; color: #cbd5e1; margin-top: 15px;">
+                    Instant access. No credit card required. Unsubscribe anytime.
+                </div>
+            </div>
+        </div>
 
-</div>
+    </main>
 
+    <footer>
+        <p style="color: #94a3b8; font-size: 0.85rem; font-weight: 600; margin-bottom: 15px;">&copy; 2026 SAASLYHUBS</p>
+        <p style="font-size: 0.7rem; color: #cbd5e1; max-width: 600px; margin: 0 auto; line-height: 1.4; font-style: italic;">
+            <strong>Affiliate Disclosure:</strong> Some links on this page may be affiliate links. I only recommend tools I personally use. If you sign up through a link, I may receive a small commission at no extra cost to you.
+        </p>
+    </footer>
+
+    <script>
+        (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+        .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+        n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+        (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+        ml('account', '2222294');
+    </script>
 </body>
 </html>

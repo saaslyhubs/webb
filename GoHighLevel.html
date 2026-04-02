@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SaaslyHubs | GoHighLevel Full Analysis & Review</title>
+    <title>SaaslyHubs | GoHighLevel Full Analysis & Tech Review</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
@@ -11,7 +11,7 @@
         :root { 
             --primary: #065f46; 
             --dark: #0f172a; 
-            --blue: #146ef5; /* GHL-liknande blå */
+            --blue: #146ef5; 
             --slate: #64748b;
             --bg: #f8fafc;
         }
@@ -26,18 +26,19 @@
             -webkit-font-smoothing: antialiased;
         }
 
+        /* --- LOGO BAR --- */
         .logo-bar {
             background: white;
             padding: 20px;
             text-align: center;
             border-bottom: 1px solid #e2e8f0;
         }
-        .logo-text { font-weight: 800; font-size: 1.5rem; color: #000; text-transform: uppercase; }
+        .logo-text { font-weight: 800; font-size: 1.5rem; letter-spacing: -0.5px; color: #000; text-transform: uppercase; }
         .logo-hubs { color: var(--blue); }
 
         .main-wrapper {
             max-width: 1100px;
-            margin: 60px auto 100px;
+            margin: 60px auto 80px;
             padding: 0 20px;
             display: grid;
             grid-template-columns: 1.2fr 0.8fr;
@@ -45,6 +46,8 @@
             align-items: start;
         }
 
+        .pitch-side { padding-top: 10px; }
+        
         .badge {
             background: rgba(20, 110, 245, 0.1);
             color: var(--blue);
@@ -56,9 +59,15 @@
             margin-bottom: 20px;
         }
 
-        h1 { font-size: clamp(2.3rem, 5vw, 3.2rem); line-height: 1.1; margin-bottom: 25px; font-weight: 800; letter-spacing: -2px; }
+        h1 {
+            font-size: clamp(2.3rem, 5vw, 3.2rem);
+            line-height: 1.1;
+            margin-bottom: 25px;
+            font-weight: 800;
+            letter-spacing: -2px;
+        }
 
-        .review-text { font-size: 1.1rem; color: var(--slate); margin-bottom: 30px; }
+        .review-text { font-size: 1.05rem; color: var(--slate); margin-bottom: 25px; }
 
         /* JÄMFÖRELSE-TABELL */
         .price-compare {
@@ -75,12 +84,33 @@
         .compare-val { font-weight: 700; text-align: right; color: #ef4444; }
         .compare-total { background: #f8fafc; font-weight: 800; color: var(--dark); font-size: 1.2rem; }
 
-        .feature-list { list-style: none; margin-top: 20px; }
-        .feature-list li { font-size: 1.05rem; margin-bottom: 15px; display: flex; align-items: start; }
-        .feature-list li b { margin-right: 8px; color: var(--dark); }
-        .feature-list li::before { content: "✓"; color: #10b981; font-weight: bold; margin-right: 12px; }
+        .highlight-box {
+            background: #fff;
+            padding: 30px;
+            border-radius: 16px;
+            border-left: 5px solid var(--primary);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            margin: 40px 0;
+        }
 
-        /* CTA CARD */
+        .feature-list { list-style: none; margin-top: 15px; }
+        .feature-list li {
+            font-size: 1.05rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: start;
+        }
+        .feature-list li b { color: var(--dark); font-weight: 700; margin-right: 8px; }
+        .feature-list li::before {
+            content: "✓";
+            color: #10b981;
+            font-weight: bold;
+            margin-right: 12px;
+        }
+
+        /* --- CTA CARD --- */
+        .optin-side { position: sticky; top: 40px; }
+
         .cta-card {
             background: white;
             padding: 40px 30px;
@@ -88,8 +118,6 @@
             box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.15);
             border: 2px solid var(--blue);
             text-align: center;
-            position: sticky;
-            top: 40px;
         }
 
         .btn-ghl {
@@ -106,13 +134,29 @@
         }
         .btn-ghl:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(20, 110, 245, 0.3); }
 
-        footer { text-align: center; padding: 60px 20px; border-top: 1px solid #e2e8f0; margin-top: 100px; }
-        .legal-btns { margin-bottom: 20px; display: flex; justify-content: center; gap: 15px; }
-        .legal-btn { background: #f1f5f9; color: #64748b; font-size: 0.7rem; text-decoration: none; padding: 6px 12px; border-radius: 6px; font-weight: 600; border: 1px solid #e2e8f0; }
+        /* --- FOOTER & ABOUT --- */
+        .about-section { background: white; border-top: 1px solid #e2e8f0; padding: 80px 20px; }
+        .about-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+
+        footer { text-align: center; padding: 60px 20px; background: #fff; border-top: 1px solid #e2e8f0; }
+
+        .legal-btns { margin-bottom: 25px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+        .legal-btn {
+            background: #f1f5f9;
+            color: #64748b;
+            font-size: 0.7rem;
+            text-decoration: none;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-weight: 600;
+            border: 1px solid #e2e8f0;
+            transition: 0.2s;
+        }
+        .legal-btn:hover { background: #e2e8f0; color: var(--dark); }
 
         @media (max-width: 900px) {
-            .main-wrapper { grid-template-columns: 1fr; }
-            .cta-card { position: relative; top: 0; }
+            .main-wrapper, .about-grid { grid-template-columns: 1fr; gap: 40px; }
+            .optin-side { position: relative; top: 0; }
         }
     </style>
 </head>
@@ -123,11 +167,18 @@
     </div>
 
     <main class="main-wrapper">
+        
         <div class="pitch-side">
-            <span class="badge">Comprehensive Review 2026</span>
-            <h1>The All-In-One Tech Stack for Small Business.</h1>
+            <span class="badge">Comprehensive Software Analysis</span>
+            <h1>The All-In-One Tech Stack for Modern Business.</h1>
+            
             <p class="review-text">
-                Most businesses fail because they are buried in "Subscription Hell". Paying for 10 different tools that don't talk to each other is the fastest way to kill your margins. GoHighLevel solves this by consolidating your entire business into one platform.
+                In today's digital landscape, the average small business owner juggles between 7 and 12 different software subscriptions just to keep their operations running. This leads to "Data Silos"—where your leads are in one system, your emails in another, and your calendar in a third. 
+            </p>
+
+            <h2 style="margin-top: 40px; font-weight: 800; font-size: 1.5rem;">Consolidating Your Digital Assets</h2>
+            <p class="review-text" style="font-size: 1rem; margin-bottom: 20px;">
+                GoHighLevel was engineered to solve this fragmentation. It’s not just a CRM; it’s a full business operating system. By consolidating your marketing tools, you gain a "360-degree view" of your customer journey.
             </p>
 
             <div class="price-compare">
@@ -138,39 +189,80 @@
                 <div class="compare-row compare-total"><span class="compare-label">Total Monthly Cost</span><span class="compare-val" style="color:var(--dark)">$407+/mo</span></div>
             </div>
 
-            <h2 style="margin: 40px 0 20px; font-weight: 800;">Key Features We Analyzed:</h2>
-            <ul class="feature-list">
-                <li><b>Unlimited Sales Funnels:</b> Build and host as many landing pages as you need without extra costs.</li>
-                <li><b>Advanced CRM:</b> Keep track of every lead from the first click to the final sale.</li>
-                <li><b>Email & SMS Automation:</b> Create complex sequences that trigger based on user behavior.</li>
-                <li><b>Workflow Builder:</b> Automate repetitive tasks so you can focus on high-level strategy.</li>
-            </ul>
+            <h3 style="margin: 40px 0 15px; font-weight: 800;">1. Unified CRM & Lead Management</h3>
+            <p class="review-text" style="font-size: 1rem;">
+                The core of the platform is a robust CRM that tracks every interaction. Whether a lead comes from a Facebook Ad, an Instagram DM, or a website form, it lands in one unified inbox. No more lost opportunities in buried email threads.
+            </p>
+
+            <h3 style="margin: 25px 0 15px; font-weight: 800;">2. Advanced Marketing Automation</h3>
+            <p class="review-text" style="font-size: 1rem;">
+                With the "Workflow Builder," you can create complex logic-based automations. If a lead doesn't book a call within 24 hours, the system can automatically send a follow-up SMS or a personalized voice drop.
+            </p>
+
+            <div class="highlight-box">
+                <strong>Why We Recommend Consolidation:</strong>
+                <ul class="feature-list">
+                    <li><b>Data Integrity:</b> Your analytics are 100% accurate because they come from one source.</li>
+                    <li><b>Speed to Lead:</b> Automated instant-replies increase conversion rates significantly.</li>
+                    <li><b>Lower Overhead:</b> Pay one flat fee for unlimited accounts and users.</li>
+                </ul>
+            </div>
         </div>
 
         <div class="optin-side">
             <div class="cta-card">
                 <h2 style="font-weight: 800; margin-bottom: 10px;">Ready to Scale?</h2>
-                <p style="color: var(--slate); font-size: 0.9rem;">Consolidate your stack and save hundreds of dollars every month.</p>
+                <p style="color: var(--slate); font-size: 0.95rem; margin-bottom: 20px;">Stop paying for dozens of tools and start using the system that works.</p>
                 
-                <a href="DIN_GHL_AFFILIATE_LÄNK" class="btn-ghl">Start Your 14-Day Free Trial</a>
+                <a href="YOUR_GHL_AFFILIATE_LINK" class="btn-ghl">Start Your 14-Day Free Trial</a>
                 
-                <p style="font-size: 0.75rem; color: var(--slate);">Get full access to all features instantly.</p>
+                <p style="font-size: 0.75rem; color: var(--slate);">Full access. Instant setup. No credit card required.</p>
                 
                 <div style="border-top: 1px solid #f1f5f9; margin-top: 25px; padding-top: 15px;">
-                    <p style="font-size: 0.7rem; color: #cbd5e1; font-style: italic;">
+                    <p style="font-size: 0.7rem; color: #cbd5e1; font-style: italic; line-height: 1.4;">
                         <strong>Affiliate Disclosure:</strong> As a SaaslyHubs partner, we may receive a commission if you sign up through our link at no extra cost to you.
                     </p>
                 </div>
             </div>
         </div>
+
     </main>
+
+    <div class="about-section">
+        <div class="about-grid">
+            <div>
+                <h2 style="font-weight: 800; font-size: 1.8rem; margin-bottom: 20px; letter-spacing: -1px;">About SaaslyHubs</h2>
+                <p style="color: var(--slate); font-size: 1.05rem; line-height: 1.7;">
+                    SaaslyHubs is a dedicated resource hub designed to help modern entrepreneurs navigate the complex world of business automation. We analyze, test, and recommend the best-in-class tools that allow you to scale your operations without increasing your overhead.
+                </p>
+            </div>
+            <div style="background: #f8fafc; padding: 30px; border-radius: 20px; border: 1px solid #e2e8f0;">
+                <h4 style="font-weight: 800; margin-bottom: 15px; color: var(--dark);">Contact Information</h4>
+                <ul style="list-style: none; color: var(--slate); font-size: 0.95rem;">
+                    <li style="margin-bottom: 10px;"><strong>Support:</strong> hello@saaslyhubs.com</li>
+                    <li style="margin-bottom: 10px;"><strong>Location:</strong> Stockholm, Sweden</li>
+                    <li><strong>Business Hours:</strong> Mon-Fri, 9 AM - 5 PM CET</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
     <footer>
         <div class="legal-btns">
             <a href="privacy policy.html" class="legal-btn">Privacy Policy</a>
             <a href="terms of serivice.html" class="legal-btn">Terms of Service</a>
+            <a href="mailto:hello@saaslyhubs.com" class="legal-btn">Contact Us</a>
         </div>
-        <p style="color: #94a3b8; font-size: 0.85rem; font-weight: 600;">&copy; 2026 SAASLYHUBS</p>
+        
+        <p style="color: var(--dark); font-size: 0.9rem; font-weight: 800; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px;">
+            SAASLY<span style="color: var(--blue);">HUBS</span>
+        </p>
+        
+        <p style="color: #94a3b8; font-size: 0.8rem; margin-bottom: 20px;">&copy; 2026 SaaslyHubs. All rights reserved.</p>
+        
+        <p style="font-size: 0.7rem; color: #cbd5e1; max-width: 700px; margin: 0 auto; line-height: 1.6; font-style: italic;">
+            <strong>Affiliate Transparency:</strong> SaaslyHubs is an independent review site. We may receive compensation from the companies whose products we review. This compensation helps us provide high-quality analysis for our readers.
+        </p>
     </footer>
 
 </body>

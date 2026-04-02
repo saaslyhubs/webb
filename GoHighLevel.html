@@ -108,6 +108,11 @@ p{line-height:1.6;}
     color:#4b5563;
 }
 
+/* Specifikt för Tips-lista med bara ✨ */
+.tips-list li::before {
+    content:"✨ ";
+}
+
 @media(max-width:600px){
     .main-wrapper{padding:10px;}
 }
@@ -161,7 +166,7 @@ Perfect for lead generation, CRM, and automation workflows.
 
 <div class="section-card">
 <h2>Who GoHighLevel Is NOT For</h2>
-<ul class="feature-list">
+<ul class="feature-list" style="list-style:disc;padding-left:20px;">
 <li>Beginners wanting simple email marketing</li>
 <li>Small hobby businesses</li>
 <li>Users wanting plug-and-play simplicity</li>
@@ -175,11 +180,11 @@ Perfect for lead generation, CRM, and automation workflows.
 
 <div class="section-card">
 <h2>Tips to Get Started Quickly</h2>
-<ul class="feature-list">
-<li>✔✨ Start with one funnel and one automation</li>
-<li>📄✨ Use templates instead of building from scratch</li>
-<li>📅✨ Connect calendar and email first</li>
-<li>🎯✨ Focus on lead capture before advanced workflows</li>
+<ul class="feature-list tips-list">
+<li>Start with one funnel and one automation</li>
+<li>Use templates instead of building from scratch</li>
+<li>Connect calendar and email first</li>
+<li>Focus on lead capture before advanced workflows</li>
 </ul>
 </div>
 

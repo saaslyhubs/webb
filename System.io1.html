@@ -1,103 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SaaslyHubs | Systeme.io Funnel Template</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-<style>
-:root{--primary:#065f46;--dark:#0f172a;--blue:#007bff;--slate:#64748b;--bg:#f8fafc}
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Inter',sans-serif;line-height:1.6;color:var(--dark);background:var(--bg);-webkit-font-smoothing:antialiased}
-.logo-bar{background:#fff;padding:20px;text-align:center;border-bottom:1px solid #e2e8f0}
-.logo-text{font-weight:800;font-size:1.5rem;text-transform:uppercase}
-.logo-hubs{color:var(--blue)}
-.main-wrapper{max-width:1100px;margin:60px auto 100px;padding:0 20px;display:grid;grid-template-columns:1.2fr 0.8fr;gap:60px;align-items:start}
-.pitch-side{padding-top:10px}
-.badge{background:rgba(16,185,129,.1);color:#10b981;padding:8px 16px;border-radius:50px;font-size:.85rem;font-weight:600;display:inline-block;margin-bottom:20px}
-h1{font-size:clamp(2.3rem,5vw,3.5rem);line-height:1.05;margin-bottom:20px;font-weight:800;letter-spacing:-2px}
-.hero-p{font-size:1.25rem;color:var(--dark);margin-bottom:15px;font-weight:600}
-.why-text{font-size:1.05rem;color:var(--slate);margin-bottom:40px;max-width:620px;border-left:3px solid var(--blue);padding-left:20px}
-.highlight-box{background:#fff;padding:30px;border-radius:16px;border-left:5px solid var(--primary);box-shadow:0 10px 25px rgba(0,0,0,.05);margin:40px 0}
-.feature-list{list-style:none;margin-top:15px}
-.feature-list li{font-size:1.05rem;margin-bottom:20px;display:flex;align-items:start}
-.feature-list li b{color:var(--dark);display:inline-block;font-weight:700;margin-right:8px}
-.feature-list li::before{content:"→";color:var(--primary);font-weight:bold;margin-right:12px}
-.optin-side{position:sticky;top:40px}
-.optin-card{background:#fff;padding:40px 30px;border-radius:24px;box-shadow:0 30px 60px -15px rgba(0,0,0,.15);border:1px solid #e2e8f0;text-align:center}
-.mockup-container{margin:0 auto 20px;perspective:1000px}
-.mockup-img{width:180px;height:auto;border-radius:4px;transform:rotateY(-5deg) rotateX(5deg);mix-blend-mode:multiply;display:inline-block;transition:.3s}
-.mockup-img:hover{transform:rotateY(0deg) rotateX(0deg) scale(1.05)}
-.optin-card h3{font-size:1.4rem;margin-bottom:10px;font-weight:700}
-.spam-warning{font-size:.75rem;color:#94a3b8;margin-top:10px;font-style:italic}
-.ml-form-embedHeader,.ml-brand,.ml-form-embedFooter,.ml-form-embedBody p,.ml-subscribe-form-gdpr{display:none !important;}
-footer{text-align:center;padding:60px 20px;border-top:1px solid #e2e8f0;margin-top:100px}
-.legal-btns{margin-bottom:20px;display:flex;justify-content:center;gap:15px}
-.legal-btn{background:#f1f5f9;color:#64748b;font-size:.7rem;text-decoration:none;padding:6px 12px;border-radius:6px;font-weight:600;transition:.2s;border:1px solid #e2e8f0}
-.legal-btn:hover{background:#e2e8f0;color:var(--dark)}
-@media(max-width:900px){.main-wrapper{grid-template-columns:1fr;gap:40px}.optin-side{position:relative;top:0}}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Leads in 24h | SaaslyHubs</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root { 
+            --primary: #065f46; 
+            --dark: #0f172a; 
+            --blue: #007bff; 
+            --slate: #64748b;
+            --bg: #f8fafc;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--bg);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .logo-bar { background: white; padding: 20px; text-align: center; border-bottom: 1px solid #e2e8f0; }
+        .logo-text { font-weight: 800; font-size: 1.5rem; letter-spacing: -0.5px; color: #000; text-transform: uppercase; }
+        .logo-hubs { color: var(--blue); }
+
+        .main-wrapper { max-width: 1100px; margin: 60px auto 100px; padding: 0 20px; display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 60px; align-items: start; }
+        .pitch-side { padding-top: 10px; }
+        
+        .badge { background: rgba(16, 185, 129, 0.1); color: #10b981; padding: 8px 16px; border-radius: 50px; font-size: 0.85rem; font-weight: 600; display: inline-block; margin-bottom: 20px; }
+
+        h1 { font-size: clamp(2.3rem, 5vw, 3.5rem); line-height: 1.05; margin-bottom: 20px; font-weight: 800; letter-spacing: -2px; }
+        .hero-p { font-size: 1.25rem; color: var(--dark); margin-bottom: 15px; font-weight: 600; }
+        .why-text { font-size: 1.05rem; color: var(--slate); margin-bottom: 40px; max-width: 620px; border-left: 3px solid var(--blue); padding-left: 20px; }
+
+        .highlight-box { background: #fff; padding: 30px; border-radius: 16px; border-left: 5px solid var(--primary); box-shadow: 0 10px 25px rgba(0,0,0,0.05); margin: 40px 0; }
+        .feature-list { list-style: none; margin-top: 15px; }
+        .feature-list li { font-size: 1.05rem; margin-bottom: 12px; padding-left: 25px; position: relative; line-height: 1.5; }
+        .feature-list li::before { content: "→"; color: var(--primary); font-weight: bold; position: absolute; left: 0; }
+        .feature-list li b { color: var(--dark); font-weight: 700; margin-right: 4px; }
+
+        .optin-side { position: sticky; top: 40px; }
+        .optin-card { background: white; padding: 40px 30px; border-radius: 24px; box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.15); border: 1px solid #e2e8f0; text-align: center; }
+        .mockup-container { margin: 0 auto 25px; perspective: 1000px; }
+        .mockup-img { width: 180px; height: auto; border-radius: 4px; transform: rotateY(-8deg) rotateX(5deg); mix-blend-mode: multiply; display: inline-block; transition: 0.4s ease; }
+        .mockup-img:hover { transform: rotateY(0deg) rotateX(0deg) scale(1.05); }
+
+        .optin-card h3 { font-size: 1.5rem; margin-bottom: 8px; font-weight: 800; color: var(--dark); }
+        .wait-note { font-size: 0.7rem; color: var(--slate); margin-top: 12px; line-height: 1.3; font-style: italic; }
+
+        .ml-form-embedHeader, .ml-brand, .ml-form-embedFooter, .ml-form-embedBody p { display: none !important; }
+
+        footer { text-align: center; padding: 60px 20px; border-top: 1px solid #e2e8f0; margin-top: 100px; }
+        .legal-btns { margin-bottom: 20px; display: flex; justify-content: center; gap: 15px; }
+        .legal-btn { background: #f1f5f9; color: #64748b; font-size: 0.7rem; text-decoration: none; padding: 6px 12px; border-radius: 6px; font-weight: 600; transition: 0.2s; border: 1px solid #e2e8f0; }
+        .legal-btn:hover { background: #e2e8f0; color: var(--dark); }
+
+        @media (max-width: 900px) { .main-wrapper { grid-template-columns: 1fr; gap: 40px; } .optin-side { position: relative; top: 0; } }
+    </style>
 </head>
 <body>
 
-<div class="logo-bar">
-<span class="logo-text">SAASLY<span class="logo-hubs">HUBS</span></span>
-</div>
+    <div class="logo-bar">
+        <span class="logo-text">SAASLY<span class="logo-hubs">HUBS</span></span>
+    </div>
 
-<main class="main-wrapper">
+    <main class="main-wrapper">
+        <div class="pitch-side">
+            <span class="badge">Free Lead Generation Guide</span>
+            <h1>Get Your First Leads in 24 Hours — No Website Needed.</h1>
+            <p class="hero-p">Stop chasing algorithms. Start building a digital asset you actually own.</p>
+            
+            <p class="why-text">
+                Social media is "rented land." If the algorithm changes, your reach drops to zero. Email is the only direct line to your audience that nobody can take away. This guide shows you how to bypass the tech-headache and start collecting leads today.
+            </p>
+            
+            <div class="highlight-box">
+                <strong>Inside this Free Package:</strong>
+                <ul class="feature-list">
+                    <li><b>The 24h Blueprint:</b> How to capture your first lead today.</li>
+                    <li><b>Automation Checklist:</b> Set up System.io in minutes.</li>
+                    <li><b>3 High-Converting Templates:</b> Just copy, paste, and customize.</li>
+                </ul>
+            </div>
+        </div>
 
-<div class="pitch-side">
-<span class="badge">Free Funnel Template</span>
-<h1>Start Collecting Leads in Under 60 Minutes</h1>
-<p class="hero-p">Plug-and-play Systeme.io funnel for small business growth.</p>
+        <div class="optin-side">
+            <div class="optin-card">
+                <div class="mockup-container">
+                    <img src="GetLeadsWithoutWebsite.png" alt="Freebie Guide Preview" class="mockup-img">
+                </div>
+                <h3>Download Your Free Guide</h3>
+                <p style="color: var(--slate); font-size: 0.95rem; margin-bottom: 10px;">Get instant access to the checklist & templates.</p>
+                <div class="ml-embedded" data-form="YOUR-SYSTEMIO-FORM-ID"></div>
+                <p class="wait-note">Check your inbox (and spam folder) in 2 minutes for your link!</p>
+                <div class="legal" style="font-size: 0.7rem; color: #cbd5e1; margin-top: 15px;">
+                    Instant access. No spam. Unsubscribe anytime.
+                </div>
+            </div>
+        </div>
+    </main>
 
-<p class="why-text">
-Most small businesses fail to capture leads effectively because setting up funnels is confusing and slow. This ready-to-use template lets you instantly generate leads, nurture prospects, and automate follow-ups without building anything from scratch.
-</p>
+    <footer>
+        <div class="legal-btns">
+            <a href="privacy.html" class="legal-btn">Privacy Policy</a>
+            <a href="terms.html" class="legal-btn">Terms of Service</a>
+        </div>
+        <p style="color: #94a3b8; font-size: 0.85rem; font-weight: 600; margin-bottom: 15px;">&copy; 2026 SAASLYHUBS</p>
+        <p style="font-size: 0.7rem; color: #cbd5e1; max-width: 500px; margin: 0 auto; line-height: 1.4; font-style: italic;">
+            <strong>Affiliate Disclosure:</strong> Some links on this page may be affiliate links. I only recommend tools I personally use.
+        </p>
+    </footer>
 
-<div class="highlight-box">
-<strong>What's Inside:</strong>
-<ul class="feature-list">
-<li><b>Complete Funnel:</b> Landing page, thank-you page, and automated emails ready to go.</li>
-<li><b>3 Pre-Written Emails:</b> Welcome, delivery, and follow-up to engage leads fast.</li>
-<li><b>Quick Setup Checklist:</b> Step-by-step guide to launch in under an hour.</li>
-</ul>
-</div>
-</div>
-
-<div class="optin-side">
-<div class="optin-card">
-<div class="mockup-container">
-<img src="systemeio-funnel-preview.png" alt="Systeme.io Funnel Preview" class="mockup-img">
-</div>
-
-<h3>Get Your Free Template</h3>
-<p style="color: var(--slate); font-size: 0.9rem; margin-bottom:25px;">Everything you need to start generating leads today.</p>
-
-<div class="ml-embedded" data-form="REPLACE_WITH_YOUR_FORM_ID"></div>
-
-<p class="spam-warning">Check your spam or junk folder for your download link.</p>
-<div class="legal" style="font-size:.7rem;color:#cbd5e1;margin-top:15px;">Instant access. No credit card required. Unsubscribe anytime.</div>
-</div>
-</div>
-
-</main>
-
-<footer>
-<div class="legal-btns">
-<a href="privacy policy.html" class="legal-btn">Privacy Policy</a>
-<a href="terms of service.html" class="legal-btn">Terms of Service</a>
-</div>
-<p style="color:#94a3b8;font-size:.85rem;font-weight:600;margin-bottom:15px;">&copy; 2026 SAASLYHUBS</p>
-<p style="font-size:.7rem;color:#cbd5e1;max-width:500px;margin:0 auto;line-height:1.4;font-style:italic;">
-<strong>Affiliate Disclosure:</strong> Some links may be affiliate links. I only recommend tools I personally use.
-</p>
-</footer>
-
-<script>
-(function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);},l=d.createElement(e);l.async=1;l.src=u;n=d.getElementsByTagName(e)[0].parentNode.insertBefore(l,n);})
-(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-ml('account','2222294');
-</script>
+    <script src="https://assets.mailerlite.com/js/universal.js"></script>
 </body>
 </html>

@@ -3,232 +3,286 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The 24-Hour Lead Machine | SaaslyHubs</title>
+<title>The 24-Hour Lead Machine — Free Guide for Small Businesses | SaaslyHubs</title>
+<meta name="description" content="Free guide: turn social traffic into email leads in 24 hours. The simple 3-step funnel small businesses use to stop losing visitors. Instant access.">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-:root { 
-    --primary: #065f46; 
-    --dark: #0f172a; 
-    --blue: #007bff; 
-    --slate: #64748b;
-    --bg: #f8fafc;
+:root{
+  --bg:#fdf6f8;
+  --cream:#f8e8ee;
+  --ink:#1a1a1a;
+  --ink-soft:#4a3540;
+  --muted:#8a7480;
+  --lavender:#c9a0dc;
+  --lavender-deep:#9b72cf;
+  --lavender-dark:#7a52b0;
+  --white:#ffffff;
+  --line:rgba(155,114,207,.18);
+  --shadow-sm:0 4px 14px rgba(155,114,207,.10);
+  --shadow-md:0 18px 40px -12px rgba(155,114,207,.25);
+  --shadow-lg:0 30px 70px -20px rgba(122,82,176,.35);
 }
-* { box-sizing: border-box; margin:0; padding:0; }
+
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
 
 body{
-    font-family:'Inter',sans-serif;
-    line-height:1.6;
-    color:var(--dark);
-    background:var(--bg);
+  font-family:'Karla',sans-serif;
+  font-size:17px;
+  line-height:1.65;
+  color:var(--ink);
+  background:var(--bg);
+  -webkit-font-smoothing:antialiased;
 }
 
-.logo-bar{
-    background:#fff;
-    padding:20px;
-    text-align:center;
-    border-bottom:1px solid #e2e8f0;
-}
-.logo-text{font-weight:800;font-size:1.5rem;text-transform:uppercase;}
-.logo-hubs{color:var(--blue);}
-
-.main-wrapper{
-    max-width:1100px;
-    margin:60px auto 100px;
-    padding:0 20px;
-    display:grid;
-    grid-template-columns:1.2fr .8fr;
-    gap:60px;
+h1,h2,h3{
+  font-family:'Cormorant Garamond',serif;
+  font-weight:600;
+  letter-spacing:-.01em;
+  line-height:1.1;
 }
 
-.badge{
-    background:rgba(16,185,129,.1);
-    color:#10b981;
-    padding:8px 16px;
-    border-radius:50px;
-    font-size:.85rem;
-    font-weight:600;
-    display:inline-block;
-    margin-bottom:20px;
+/* Top announcement */
+.announce{
+  background:var(--ink);
+  color:#fff;
+  text-align:center;
+  font-size:.82rem;
+  padding:10px 16px;
+  letter-spacing:.04em;
+}
+.announce strong{color:var(--lavender);}
+
+/* Header */
+.nav{
+  background:rgba(253,246,248,.85);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+  padding:18px 24px;
+  text-align:center;
+  position:sticky;top:0;z-index:50;
+}
+.logo{
+  font-family:'Cormorant Garamond',serif;
+  font-weight:700;
+  font-size:1.6rem;
+  letter-spacing:.02em;
+  color:var(--ink);
+}
+.logo span{color:var(--lavender-deep);font-style:italic;}
+
+/* Hero */
+.hero{
+  max-width:1180px;
+  margin:0 auto;
+  padding:70px 24px 90px;
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:80px;
+  align-items:center;
+}
+
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--cream);
+  color:var(--lavender-dark);
+  padding:8px 16px;
+  border-radius:999px;
+  font-size:.78rem;
+  font-weight:700;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  margin-bottom:24px;
+}
+
+.eyebrow::before{
+  content:"";
+  width:6px;height:6px;
+  border-radius:50%;
+  background:var(--lavender-deep);
 }
 
 h1{
-    font-size:clamp(2.3rem,5vw,3.4rem);
-    line-height:1.05;
-    margin-bottom:18px;
-    font-weight:800;
+  font-size:clamp(2.6rem,5.2vw,4.2rem);
+  margin-bottom:22px;
+  color:var(--ink);
 }
 
-.hero-p{font-size:1.25rem;font-weight:600;margin-bottom:15px;}
+h1 em{font-style:italic;color:var(--lavender-deep);}
 
-.why-text{
-    font-size:1.05rem;
-    color:var(--slate);
-    margin-bottom:35px;
-    border-left:3px solid var(--blue);
-    padding-left:18px;
+.lede{
+  font-size:1.18rem;
+  color:var(--ink-soft);
+  margin-bottom:28px;
+  max-width:540px;
 }
 
-.highlight-box{
-    background:#fff;
-    padding:30px;
-    border-radius:16px;
-    border-left:5px solid var(--primary);
-    box-shadow:0 10px 25px rgba(0,0,0,.05);
+.lede strong{color:var(--ink);}
+
+/* Opt-in card */
+.optin{
+  background:var(--white);
+  border-radius:28px;
+  padding:38px 32px;
+  box-shadow:var(--shadow-lg);
+  border:1px solid var(--line);
+  position:relative;
+  text-align:center;
 }
 
-.feature-list{list-style:none;margin-top:15px;}
-.feature-list li{
-    margin-bottom:12px;
-    padding-left:25px;
-    position:relative;
-}
-.feature-list li::before{
-    content:"→";
-    position:absolute;
-    left:0;
-    color:var(--primary);
-    font-weight:bold;
-}
-
-.optin-card{
-    background:#fff;
-    padding:40px 30px;
-    border-radius:24px;
-    box-shadow:0 30px 60px -15px rgba(0,0,0,.15);
-    border:1px solid #e2e8f0;
-    text-align:center;
-    position:sticky;
-    top:40px;
+.optin::before{
+  content:"FREE";
+  position:absolute;
+  top:-14px;right:24px;
+  background:var(--ink);
+  color:var(--lavender);
+  font-family:'Karla',sans-serif;
+  font-size:.7rem;
+  font-weight:700;
+  letter-spacing:.15em;
+  padding:6px 12px;
+  border-radius:6px;
 }
 
-.mockup-img{width:180px;margin-bottom:20px;}
-.wait-note{font-size:.75rem;color:var(--slate);margin-top:12px;}
-
-.bottom-info{
-    max-width:1100px;
-    margin:0 auto 60px;
-    padding:0 20px;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:30px;
+.cover{
+  width:170px;height:230px;
+  margin:0 auto 22px;
+  border-radius:8px;
+  background:
+    linear-gradient(135deg,rgba(255,255,255,.15),rgba(0,0,0,.15)),
+    linear-gradient(160deg,#f8e8ee 0%,#c9a0dc 55%,#9b72cf 100%);
+  box-shadow:0 25px 50px -12px rgba(122,82,176,.4),
+             inset 0 0 0 1px rgba(255,255,255,.3);
+  transform:rotate(-3deg);
 }
 
-.info-box{
-    background:#fff;
-    border:1px solid #e2e8f0;
-    border-radius:14px;
-    padding:22px;
-    font-size:.9rem;
-}
-.info-box p{color:var(--slate);}
+.optin h3{font-size:1.7rem;margin-bottom:8px;}
+.optin p.sub{font-size:.95rem;color:var(--muted);margin-bottom:22px;}
 
-footer{text-align:center;padding:60px 20px;border-top:1px solid #e2e8f0;}
-.legal-btns{margin-bottom:20px;display:flex;justify-content:center;gap:15px;}
-.legal-btn{
-    background:#f1f5f9;
-    color:#64748b;
-    font-size:.7rem;
-    text-decoration:none;
-    padding:6px 12px;
-    border-radius:6px;
-    font-weight:600;
-    border:1px solid #e2e8f0;
+.trust{
+  display:flex;
+  justify-content:center;
+  gap:14px;
+  margin-top:14px;
+  font-size:.74rem;
+  color:var(--muted);
+  flex-wrap:wrap;
 }
+
+.trust span::before{
+  content:"✓ ";
+  color:var(--lavender-deep);
+}
+
+/* MailerLite fix (viktigt för design) */
+.ml-embedded{
+  margin-top:10px;
+}
+
+.ml-embedded input{
+  width:100%;
+  padding:15px 18px;
+  border:1.5px solid var(--line);
+  border-radius:12px;
+  font-family:inherit;
+  font-size:1rem;
+  background:var(--bg);
+  margin-bottom:12px;
+}
+
+.ml-embedded button{
+  width:100%;
+  background:var(--ink);
+  color:#fff;
+  border:none;
+  padding:16px 22px;
+  border-radius:12px;
+  font-weight:700;
+  cursor:pointer;
+}
+
+/* Sections (oförändrat) */
+.section{padding:70px 24px;}
+.container{max-width:1100px;margin:0 auto;}
+
+.section.alt{background:var(--cream);}
+.section h2{text-align:center;font-size:2.4rem;margin-bottom:18px;}
+.section .sub{text-align:center;color:var(--ink-soft);max-width:640px;margin:0 auto 50px;}
+
+footer{
+  background:var(--ink);
+  color:#cdb8d8;
+  padding:50px 24px 30px;
+  text-align:center;
+}
+footer .logo{color:#fff;}
+footer .logo span{color:var(--lavender);}
+footer p{font-size:.85rem;margin-top:14px;color:#a89bb0;}
+footer .links{margin-top:22px;display:flex;justify-content:center;gap:18px;flex-wrap:wrap;}
+footer .links a{color:#cdb8d8;text-decoration:none;font-size:.82rem;}
+footer .copy{margin-top:26px;font-size:.75rem;color:#7a6a82;}
 
 @media(max-width:900px){
-    .main-wrapper{grid-template-columns:1fr;}
-    .bottom-info{grid-template-columns:1fr;}
+  .hero{grid-template-columns:1fr;}
 }
 </style>
 </head>
 
 <body>
 
-<div class="logo-bar">
-<span class="logo-text">SAASLY<span class="logo-hubs">HUBS</span></span>
-</div>
+<div class="announce">⚡ <strong>Free for a limited time</strong> — Instant download, no credit card</div>
 
-<main class="main-wrapper">
+<header class="nav">
+  <div class="logo">Saasly<span>Hubs</span></div>
+</header>
 
-<div>
-<span class="badge">Free Guide For Creators & Online Businesses</span>
+<section class="hero">
+  <div>
+    <span class="eyebrow">Free guide for small businesses</span>
+    <h1>Turn your social traffic into <em>real email leads</em> — in 24 hours.</h1>
+    <p class="lede">
+      Getting clicks but no customers? <strong>You're losing 97% of your visitors</strong>.
+    </p>
+  </div>
 
-<h1>Turn your audience into leads in just 24 hourss</h1>
+  <aside class="optin">
+    <div class="cover"></div>
+    <h3>Get instant access</h3>
+    <p class="sub">Delivered in under 2 minutes.</p>
 
-<p class="hero-p">
-Getting traffic but no subscribers? This is the step most creators miss.
-</p>
+    <!-- MAILERLITE -->
+    <div class="ml-embedded" data-form="NNV6qP"></div>
 
-<p class="why-text">
-Every day, creators and online businesses get visitors from social media, YouTube, and ads,only to lose most of them before they become customers.
-Not because people aren’t interested, but because there’s no system to capture them.
-</p>
-
-<div class="highlight-box">
-<strong>Inside “The 24-Hour Lead Machine”:</strong>
-<ul class="feature-list">
-<li><b>The Content → Lead Funnel Map</b> – The missing link most creators skip</li>
-<li><b>The 3-step lead machine</b> – Freebie → Landing Page → Automation</li>
-<li><b>The simple funnel setup</b> – Build your first funnel in one afternoon</li>
-<li><b>The traffic bridge</b> – Turn viewers into subscribers automatically</li>
-</ul>
-</div>
-</div>
-
-<div class="optin-card">
-<img src="TurnYourContenttoleads.png" class="mockup-img">
-
-<h3>Get Instant Access</h3>
-
-<div class="ml-embedded" data-form="NNV6qP"></div>
-
-<p style="font-size:.7rem;color:#cbd5e1;margin-top:4px;font-style:italic;">
-Some links in this guide may be affiliate links; I only recommend tools I trust.
-</p>
-
-<p class="wait-note">Check your inbox in 2 minutes for your access link.</p>
-</div>
-
-</main>
-
-<section class="bottom-info">
-<div class="info-box">
-<h4>About SaaslyHubs</h4>
-<p>SaaslyHubs is an independent research hub focused on CRM, marketing automation and digital growth tools.</p>
-</div>
-
-<div class="info-box">
-<h4>Contact</h4>
-<p>hello@saaslyhubs.com<br>Stockholm, Sweden</p>
-</div>
+    <div class="trust">
+      <span>No spam</span><span>Free</span>
+    </div>
+  </aside>
 </section>
 
 <footer>
-<div class="legal-btns">
-<a href="privacy.html" class="legal-btn">Privacy Policy</a>
-<a href="terms.html" class="legal-btn">Terms of Service</a>
-</div>
-
-<p style="color:#94a3b8;font-size:.85rem;font-weight:600;">© 2026 SAASLYHUBS</p>
-
-<p style="font-size:.7rem;color:#cbd5e1;max-width:500px;margin:15px auto;font-style:italic;">
-Affiliate Disclosure: Some links may be affiliate links. I may earn a commission at no extra cost to you.
-</p>
+  <div class="logo">Saasly<span>Hubs</span></div>
+  <p>Independent research hub for digital growth tools.</p>
+  <div class="links">
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms</a>
+  </div>
+  <div class="copy">© 2026 SAASLYHUBS</div>
 </footer>
 
-
-<!-- MailerLite Universal -->
+<!-- MAILERLITE SCRIPT -->
 <script>
-    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
-    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
-    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
-    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-    ml('account', '2222294');
-</script>
-<!-- End MailerLite Universal -->
+(function(w,d,e,u,f,l,n){
+w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);};
+l=d.createElement(e);l.async=1;l.src=u;
+n=d.getElementsByTagName(e)[0];n.parentNode.insertBefore(l,n);
+})(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
 
+ml('account','2222294');
+</script>
 
 </body>
 </html>

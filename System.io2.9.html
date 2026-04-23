@@ -5,16 +5,223 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The 24-Hour Lead Machine — Free Guide for Small Businesses | SaaslyHubs</title>
 <meta name="description" content="Free guide: turn social traffic into email leads in 24 hours. The simple 3-step funnel small businesses use to stop losing visitors. Instant access.">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
-/* --- ALL CSS UNCHANGED --- */
+:root{
+  --bg:#fdf6f8;
+  --cream:#f8e8ee;
+  --ink:#1a1a1a;
+  --ink-soft:#4a3540;
+  --muted:#8a7480;
+  --lavender:#c9a0dc;
+  --lavender-deep:#9b72cf;
+  --lavender-dark:#7a52b0;
+  --white:#ffffff;
+  --line:rgba(155,114,207,.18);
+  --shadow-sm:0 4px 14px rgba(155,114,207,.10);
+  --shadow-md:0 18px 40px -12px rgba(155,114,207,.25);
+  --shadow-lg:0 30px 70px -20px rgba(122,82,176,.35);
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+
+body{
+  font-family:'Karla',sans-serif;
+  font-size:17px;
+  line-height:1.65;
+  color:var(--ink);
+  background:var(--bg);
+  -webkit-font-smoothing:antialiased;
+}
+
+h1,h2,h3{
+  font-family:'Cormorant Garamond',serif;
+  font-weight:600;
+  line-height:1.1;
+}
+
+/* NAV */
+.nav{
+  background:rgba(253,246,248,.85);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+  padding:18px 24px;
+  text-align:center;
+  position:sticky;top:0;z-index:50;
+}
+.logo{font-size:1.6rem;font-weight:700;}
+.logo span{color:var(--lavender-deep);}
+
+/* HERO */
+.hero{
+  max-width:1180px;
+  margin:0 auto;
+  padding:70px 24px 90px;
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:80px;
+  align-items:center;
+}
+
+.eyebrow{
+  display:inline-flex;
+  background:var(--cream);
+  color:var(--lavender-dark);
+  padding:8px 16px;
+  border-radius:999px;
+  font-size:.78rem;
+  font-weight:700;
+  margin-bottom:24px;
+}
+
+h1{
+  font-size:clamp(2.6rem,5.2vw,4.2rem);
+  margin-bottom:22px;
+}
+
+h1 em{color:var(--lavender-deep);font-style:italic;}
+
+.lede{
+  font-size:1.18rem;
+  color:var(--ink-soft);
+  margin-bottom:28px;
+}
+
+/* OPTIN */
+.optin{
+  background:#fff;
+  border-radius:28px;
+  padding:38px 32px;
+  box-shadow:var(--shadow-lg);
+  border:1px solid var(--line);
+  text-align:center;
+}
+
+.field{
+  width:100%;
+  padding:15px;
+  border:1.5px solid var(--line);
+  border-radius:12px;
+  margin-bottom:12px;
+}
+
+.cta{
+  width:100%;
+  background:var(--ink);
+  color:#fff;
+  border:none;
+  padding:16px;
+  border-radius:12px;
+  font-weight:700;
+  cursor:pointer;
+}
+
+/* SECTIONS */
+.section{padding:70px 24px;}
+.section.alt{background:var(--cream);}
+.container{max-width:1100px;margin:0 auto;}
+
+.section-eyebrow{
+  text-align:center;
+  font-size:.75rem;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:var(--lavender-dark);
+  font-weight:700;
+  margin-bottom:14px;
+}
+
+.section h2{
+  text-align:center;
+  font-size:2.5rem;
+  margin-bottom:18px;
+}
+
+.sub{
+  text-align:center;
+  color:var(--ink-soft);
+  max-width:700px;
+  margin:0 auto 50px;
+}
+
+/* PROBLEMS */
+.problems{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+}
+
+.problem{
+  background:#fff;
+  padding:28px;
+  border-radius:18px;
+  border:1px solid var(--line);
+}
+
+.problem-num{
+  font-size:2.2rem;
+  color:var(--lavender-deep);
+  margin-bottom:10px;
+}
+
+.problem h3{margin-bottom:8px;}
+
+/* GUIDE */
+.guide-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+}
+
+.guide-item{
+  background:#fff;
+  padding:26px;
+  border-radius:16px;
+  border:1px solid var(--line);
+  display:flex;
+  gap:16px;
+}
+
+.guide-icon{
+  width:44px;height:44px;
+  display:grid;
+  place-items:center;
+  background:var(--cream);
+  border-radius:12px;
+  font-weight:700;
+}
+
+/* FINAL */
+.final{
+  text-align:center;
+  background:linear-gradient(160deg,var(--cream),#f3dceb);
+}
+
+.final-cta{
+  background:var(--ink);
+  color:#fff;
+  padding:18px 36px;
+  border-radius:12px;
+  text-decoration:none;
+  display:inline-block;
+  margin-top:14px;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;gap:40px;text-align:center;}
+  .problems{grid-template-columns:1fr;}
+  .guide-grid{grid-template-columns:1fr;}
+}
 </style>
 </head>
-<body>
 
-<div class="announce">⚡ <strong>Free for a limited time</strong> — Instant download · No credit card · Takes under 2 minutes</div>
+<body>
 
 <header class="nav">
   <div class="logo">Saasly<span>Hubs</span></div>
@@ -22,149 +229,113 @@
 
 <section class="hero">
   <div>
-    <span class="eyebrow">Free guide for small businesses</span>
-    <h1>Turn Pinterest & social traffic into <em>email subscribers</em> — in one afternoon.</h1>
-    <p class="lede">
-      Most small businesses post constantly but never capture their visitors.  
-      This short guide shows the <strong>simplest possible funnel</strong> to turn casual visitors into subscribers automatically.
-    </p>
+    <span class="eyebrow">Free lead system for small businesses</span>
 
-    <div class="proof-row">
-      <div class="avatars">
-        <span></span><span></span><span></span><span></span>
-      </div>
-      <div class="proof-text">
-        <div class="stars">★★★★★</div>
-        <strong>Loved by small business owners</strong> building their first funnels
-      </div>
-    </div>
+    <h1>Get your first email leads from social traffic in <em>24 hours</em> — even if you have no funnel today.</h1>
+
+    <p class="lede">
+      You don’t need more traffic. You need a simple system that captures emails before visitors leave — using one landing page, one freebie, and one automation.
+    </p>
   </div>
 
-  <aside class="optin">
-    <div class="cover" aria-hidden="true">
-      <div class="cover-tag">FREE GUIDE</div>
-      <div class="cover-title">The 24-Hour<br><em>Lead Machine</em></div>
-      <div class="cover-foot">SAASLYHUBS · 2026</div>
-    </div>
+  <div class="optin">
     <h3>Get instant access</h3>
-    <p class="sub">A short, actionable PDF you can read in under 15 minutes.</p>
-
-    <form onsubmit="event.preventDefault();this.querySelector('button').textContent='✓ Check your inbox!';">
-      <input class="field" type="text" placeholder="Your first name" required>
-      <input class="field" type="email" placeholder="Your best email" required>
-      <button class="cta" type="submit">Send me the free guide →</button>
-    </form>
-
-    <div class="trust">
-      <span>No spam, ever</span>
-      <span>Unsubscribe anytime</span>
-      <span>Instant download</span>
-    </div>
-  </aside>
+    <input class="field" placeholder="First name">
+    <input class="field" placeholder="Email">
+    <button class="cta">Show me the 24-hour system →</button>
+  </div>
 </section>
 
 <section class="section alt">
   <div class="container">
-    <div class="section-eyebrow">The Real Problem</div>
-    <h2>You don't have a traffic problem. You have a <em style="font-style:italic;color:var(--lavender-deep);">capture</em> problem.</h2>
-    <p class="sub">Pinterest, Instagram and Google can bring visitors — but without a simple funnel, most leave forever.</p>
+    <div class="section-eyebrow">Why you're stuck</div>
+
+    <h2>You’re not failing at content. You’re failing at <em style="color:var(--lavender-deep);font-style:italic;">capturing attention</em>.</h2>
+
+    <p class="sub">
+      Most small businesses don’t have a traffic problem — they have a system problem. Visitors show up… and disappear.
+    </p>
 
     <div class="problems">
+
       <div class="problem">
         <div class="problem-num">01</div>
-        <h3>No clear freebie</h3>
-        <p>Visitors need a reason to stay connected. Without value, they leave and forget you.</p>
+        <h3>People visit… and leave immediately</h3>
+        <p>No clear next step = lost traffic forever.</p>
       </div>
+
       <div class="problem">
         <div class="problem-num">02</div>
-        <h3>No focused page</h3>
-        <p>Sending traffic to a homepage splits attention and lowers conversions.</p>
+        <h3>No reason to give their email</h3>
+        <p>Without a free offer, visitors stay anonymous.</p>
       </div>
+
       <div class="problem">
         <div class="problem-num">03</div>
-        <h3>No simple automation</h3>
-        <p>Without follow-up emails, new subscribers rarely become customers.</p>
+        <h3>No follow-up system</h3>
+        <p>Interest disappears within 24–48 hours.</p>
       </div>
+
     </div>
   </div>
 </section>
 
 <section class="section">
   <div class="container">
-    <div class="section-eyebrow">What's Inside</div>
-    <h2>A simple system you can set up today.</h2>
-    <p class="sub">Short. Practical. Designed for beginners.</p>
+
+    <div class="section-eyebrow">What you get</div>
+
+    <h2>A simple system to turn traffic into email leads</h2>
+
+    <p class="sub">
+      Build it in an afternoon. Use it on any traffic source.
+    </p>
 
     <div class="guide-grid">
+
       <div class="guide-item">
-        <div class="guide-icon">①</div>
+        <div class="guide-icon">1</div>
         <div>
-          <h4>The Funnel Map</h4>
-          <p>Understand how social visitors become subscribers and future customers.</p>
+          <h4>Lead capture page</h4>
+          <p>High-converting structure that actually gets emails.</p>
         </div>
       </div>
 
       <div class="guide-item">
-        <div class="guide-icon">②</div>
+        <div class="guide-icon">2</div>
         <div>
-          <h4>The 3-Step Lead Machine</h4>
-          <p>A beginner-friendly funnel any small business can build.</p>
+          <h4>3-step funnel</h4>
+          <p>Traffic → free value → email → follow-up.</p>
         </div>
       </div>
 
       <div class="guide-item">
-        <div class="guide-icon">③</div>
+        <div class="guide-icon">3</div>
         <div>
-          <h4>The Afternoon Setup</h4>
-          <p>Tools and templates to launch quickly without tech overwhelm.</p>
+          <h4>Freebie strategy</h4>
+          <p>What actually makes people subscribe.</p>
         </div>
       </div>
 
       <div class="guide-item">
-        <div class="guide-icon">④</div>
+        <div class="guide-icon">4</div>
         <div>
-          <h4>The Traffic Bridge</h4>
-          <p>How to connect Pinterest and social posts to your email list.</p>
+          <h4>Email follow-up</h4>
+          <p>Simple sequence that keeps attention alive.</p>
         </div>
       </div>
+
     </div>
-  </div>
-</section>
 
-<section class="section alt">
-  <div class="container">
-    <div class="testimonial">
-      <div class="quote-mark">"</div>
-      <blockquote>
-        This guide helped me understand how email funnels actually work.  
-        I finally set up my first lead capture page and started building my list.
-      </blockquote>
-      <cite><strong>Maya R.</strong> · Etsy shop owner</cite>
-    </div>
   </div>
 </section>
 
 <section class="section final">
   <div class="container">
-    <div class="section-eyebrow">Start Capturing Visitors</div>
-    <h2>Your future customers are already discovering you. <em style="font-style:italic;color:var(--lavender-deep);">Don't lose them.</em></h2>
-    <p class="sub">Download the free guide and build your first lead funnel today.</p>
-    <a href="#top" class="final-cta" onclick="document.querySelector('.field').focus();return false;">Get the free guide →</a>
-    <small>Instant access · No credit card · Unsubscribe anytime</small>
+    <h2>Start capturing the traffic you already have</h2>
+    <a class="final-cta" href="#">Get the free guide →</a>
   </div>
 </section>
 
-<footer>
-  <div class="logo">Saasly<span>Hubs</span></div>
-  <p>An independent research hub focused on CRM, marketing automation, and digital growth tools for small businesses.</p>
-  <div class="links">
-    <a href="#">Privacy Policy</a>
-    <a href="#">Terms of Service</a>
-    <a href="mailto:hello@saaslyhubs.com">hello@saaslyhubs.com</a>
-  </div>
-  <div class="copy">© 2026 SAASLYHUBS · Stockholm, Sweden · Educational content only.</div>
-</footer>
-
 </body>
-</html>
 </html>

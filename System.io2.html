@@ -146,21 +146,25 @@ h1 em{font-style:italic;color:var(--lavender-deep);}
   border-radius:6px;
 }
 .cover{
-  width:170px;height:230px;
+  width:170px;
+  height:auto;
+  display:block;
   margin:0 auto 22px;
-  border-radius:8px;
-  background:
-    linear-gradient(135deg,rgba(255,255,255,.15),rgba(0,0,0,.15)),
-    linear-gradient(160deg,#f8e8ee 0%,#c9a0dc 55%,#9b72cf 100%);
-  box-shadow:0 25px 50px -12px rgba(122,82,176,.4),
-             inset 0 0 0 1px rgba(255,255,255,.3);
-  display:flex;flex-direction:column;justify-content:space-between;
-  padding:22px 18px;
-  color:#fff;
-  text-align:left;
-  position:relative;
-  transform:rotate(-3deg);
-  transition:transform .4s ease;
+
+  border-radius:14px;
+
+  box-shadow:
+    0 25px 50px -12px rgba(122,82,176,.45),
+    0 10px 20px rgba(0,0,0,.08);
+
+  transform: perspective(900px) rotateY(-12deg) rotateZ(-3deg);
+  transition: all .4s ease;
+
+  border:1px solid rgba(255,255,255,.35);
+}
+
+.cover:hover{
+  transform: perspective(900px) rotateY(0deg) rotateZ(0deg) scale(1.05);
 }
 .cover:hover{transform:rotate(0deg) scale(1.03);}
 .cover-tag{font-family:'Karla',sans-serif;font-size:.6rem;letter-spacing:.2em;font-weight:700;opacity:.85;}
@@ -266,7 +270,7 @@ footer .copy{margin-top:26px;font-size:.75rem;color:#7a6a82;}
   </div>
 
   <aside class="optin">
-    <div class="cover"></div>
+   <img class="cover" src="https://raw.githubusercontent.com/saaslyhubs/webb/main/24-Hour-Lead-Capture-System.png" alt="Free guide">
     <h3>Get instant access</h3>
     <p class="sub">Delivered in under 2 minutes.</p>
     <div class="ml-embedded" data-form="EZ0Ljf"></div>
@@ -350,8 +354,8 @@ footer .copy{margin-top:26px;font-size:.75rem;color:#7a6a82;}
   <p>An independent research hub focused on CRM, marketing automation, and digital growth tools for small businesses.</p>
 
   <div class="links">
-    <a href="privacy.html">Privacy Policy</a>
-    <a href="terms.html">Terms of Service</a>
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="terms-of-service.html">Terms of Service</a>
     <a href="mailto:hello@saaslyhubs.com">hello@saaslyhubs.com</a>
   </div>
 

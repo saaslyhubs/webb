@@ -146,23 +146,29 @@ h1 em{font-style:italic;color:var(--lavender-deep);}
   border-radius:6px;
 }
 .cover{
-  width:170px;height:230px;
+  width:170px;
+  height:auto;
+  display:block;
   margin:0 auto 22px;
-  border-radius:8px;
-  background:
-    linear-gradient(135deg,rgba(255,255,255,.15),rgba(0,0,0,.15)),
-    linear-gradient(160deg,#f8e8ee 0%,#c9a0dc 55%,#9b72cf 100%);
-  box-shadow:0 25px 50px -12px rgba(122,82,176,.4),
-             inset 0 0 0 1px rgba(255,255,255,.3);
-  display:flex;flex-direction:column;justify-content:space-between;
-  padding:22px 18px;
-  color:#fff;
-  text-align:left;
-  position:relative;
-  transform:rotate(-3deg);
-  transition:transform .4s ease;
+
+  border-radius:14px;
+
+  box-shadow:
+    0 25px 50px -12px rgba(122,82,176,.45),
+    0 10px 20px rgba(0,0,0,.08);
+
+  transform: perspective(900px) rotateY(-12deg) rotateZ(-3deg);
+  transition: transform .4s ease;
+
+  background: none;
+  border: none;
+
 }
-.cover:hover{transform:rotate(0deg) scale(1.03);}
+
+.cover:hover{
+  transform: perspective(900px) rotateY(0deg) rotateZ(0deg) scale(1.05);
+}
+
 .cover-tag{font-family:'Karla',sans-serif;font-size:.6rem;letter-spacing:.2em;font-weight:700;opacity:.85;}
 .cover-title{font-family:'Cormorant Garamond',serif;font-size:1.5rem;line-height:1.05;font-weight:600;}
 .cover-title em{font-style:italic;}
@@ -258,7 +264,7 @@ footer .copy{margin-top:26px;font-size:.75rem;color:#7a6a82;}
 <!-- HERO -->
 <section class="hero">
   <div>
-    <span class="eyebrow">Free guide for small businesses</span>
+    <span class="eyebrow">Small business? Here's how to stop losing the leads you're already getting</span>
     <h1>Turn your social traffic into <em>real email leads</em> — in 24 hours.</h1>
     <p class="lede">
       Getting clicks but no customers? <strong>You're losing 97% of your visitors</strong>.
@@ -266,7 +272,7 @@ footer .copy{margin-top:26px;font-size:.75rem;color:#7a6a82;}
   </div>
 
   <aside class="optin">
-    <div class="cover"></div>
+   <img class="cover" src="https://raw.githubusercontent.com/saaslyhubs/webb/main/Turn-Your-Content-Into-Leads2.png" alt="Free guide">
     <h3>Get instant access</h3>
     <p class="sub">Delivered in under 2 minutes.</p>
     <div class="ml-embedded" data-form="EZ0Ljf"></div>
@@ -313,7 +319,7 @@ footer .copy{margin-top:26px;font-size:.75rem;color:#7a6a82;}
         <div class="guide-icon">①</div>
         <div>
           <h4>The Funnel Map</h4>
-          <p>Where leads disappear.</p>
+          <p>See exactly where your leads are disappearing (and how to plug the leak)</p>
         </div>
       </div>
 
@@ -321,7 +327,7 @@ footer .copy{margin-top:26px;font-size:.75rem;color:#7a6a82;}
         <div class="guide-icon">②</div>
         <div>
           <h4>3-Step System</h4>
-          <p>Traffic → Email → Sales.</p>
+          <p>Go from clicks to email list to sales, one simple step at a time</p>
         </div>
       </div>
 
@@ -329,7 +335,7 @@ footer .copy{margin-top:26px;font-size:.75rem;color:#7a6a82;}
         <div class="guide-icon">③</div>
         <div>
           <h4>Quick Setup</h4>
-          <p>Build in one afternoon.</p>
+          <p>Build the whole system in one afternoon — no tech skills required</p>
         </div>
       </div>
 
@@ -337,7 +343,7 @@ footer .copy{margin-top:26px;font-size:.75rem;color:#7a6a82;}
         <div class="guide-icon">④</div>
         <div>
           <h4>Traffic Bridge</h4>
-          <p>Turn visitors into leads.</p>
+          <p>Turn social visitors into leads who actually remember you</p>
         </div>
       </div>
     </div>
@@ -350,8 +356,8 @@ footer .copy{margin-top:26px;font-size:.75rem;color:#7a6a82;}
   <p>An independent research hub focused on CRM, marketing automation, and digital growth tools for small businesses.</p>
 
   <div class="links">
-    <a href="privacy.html">Privacy Policy</a>
-    <a href="terms.html">Terms of Service</a>
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="terms-of-service.html">Terms of Service</a>
     <a href="mailto:hello@saaslyhubs.com">hello@saaslyhubs.com</a>
   </div>
 

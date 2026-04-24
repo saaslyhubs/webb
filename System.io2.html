@@ -158,15 +158,17 @@ h1 em{font-style:italic;color:var(--lavender-deep);}
     0 10px 20px rgba(0,0,0,.08);
 
   transform: perspective(900px) rotateY(-12deg) rotateZ(-3deg);
-  transition: all .4s ease;
+  transition: transform .4s ease;
 
-  border:1px solid rgba(255,255,255,.35);
+  background: none;
+  border: none;
+
 }
 
 .cover:hover{
   transform: perspective(900px) rotateY(0deg) rotateZ(0deg) scale(1.05);
 }
-.cover:hover{transform:rotate(0deg) scale(1.03);}
+
 .cover-tag{font-family:'Karla',sans-serif;font-size:.6rem;letter-spacing:.2em;font-weight:700;opacity:.85;}
 .cover-title{font-family:'Cormorant Garamond',serif;font-size:1.5rem;line-height:1.05;font-weight:600;}
 .cover-title em{font-style:italic;}

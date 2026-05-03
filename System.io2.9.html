@@ -3,11 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Stop Losing the Leads You're Already Getting — Free Guide for Small Businesses | SaaslyHubs</title>
-<meta name="description" content="Free guide: turn social traffic into real email leads this weekend. The simple 3-step funnel small businesses use to stop losing visitors forever. Instant access.">
+<title>Turn Your Content Into Email Leads — Free Funnel Guide | SaaslyHubs</title>
+<meta name="description" content="Free guide: build a simple email funnel system that turns content into subscribers and automated leads. No tech skills required.">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
 :root{
   --bg:#fdf6f8;
@@ -20,231 +22,169 @@
   --lavender-dark:#7a52b0;
   --white:#ffffff;
   --line:rgba(155,114,207,.18);
-  --shadow-sm:0 4px 14px rgba(155,114,207,.10);
-  --shadow-md:0 18px 40px -12px rgba(155,114,207,.25);
   --shadow-lg:0 30px 70px -20px rgba(122,82,176,.35);
 }
+
 *{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;}
 body{
   font-family:'Karla',sans-serif;
   font-size:17px;
   line-height:1.65;
   color:var(--ink);
   background:var(--bg);
-  -webkit-font-smoothing:antialiased;
 }
-h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:600;letter-spacing:-.01em;line-height:1.1;}
-
-/* Top announcement */
-.announce{
-  background:var(--ink);
-  color:#fff;
-  text-align:center;
-  font-size:.82rem;
-  padding:10px 16px;
-  letter-spacing:.04em;
+h1,h2,h3{
+  font-family:'Cormorant Garamond',serif;
+  font-weight:600;
+  line-height:1.1;
 }
-.announce strong{color:var(--lavender);}
 
-/* Header */
+/* HEADER */
 .nav{
   background:rgba(253,246,248,.85);
   backdrop-filter:blur(10px);
   border-bottom:1px solid var(--line);
   padding:18px 24px;
   text-align:center;
-  position:sticky;top:0;z-index:50;
 }
 .logo{
   font-family:'Cormorant Garamond',serif;
   font-weight:700;
   font-size:1.6rem;
-  letter-spacing:.02em;
-  color:var(--ink);
 }
-.logo span{color:var(--lavender-deep);font-style:italic;}
+.logo span{color:var(--lavender-deep);}
 
-/* Hero */
+/* HERO */
 .hero{
-  max-width:1180px;
+  max-width:1100px;
   margin:0 auto;
-  padding:70px 24px 90px;
+  padding:70px 24px;
   display:grid;
-  grid-template-columns:1.15fr .85fr;
-  gap:80px;
+  grid-template-columns:1.2fr .8fr;
+  gap:60px;
   align-items:center;
 }
-.eyebrow{
-  display:inline-flex;align-items:center;gap:8px;
-  background:var(--cream);
-  color:var(--lavender-dark);
-  padding:8px 16px;
-  border-radius:999px;
-  font-size:.78rem;
-  font-weight:700;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-  margin-bottom:24px;
-}
-.eyebrow::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--lavender-deep);}
-h1{
-  font-size:clamp(2.6rem,5.2vw,4.2rem);
-  margin-bottom:22px;
-  color:var(--ink);
-}
-h1 em{font-style:italic;color:var(--lavender-deep);}
-.lede{
-  font-size:1.18rem;
-  color:var(--ink-soft);
-  margin-bottom:28px;
-  max-width:540px;
-}
-.lede strong{color:var(--ink);}
-.proof-row{
-  display:flex;align-items:center;gap:18px;
-  margin-bottom:30px;
-  flex-wrap:wrap;
-}
-.avatars{display:flex;}
-.avatars span{
-  width:34px;height:34px;border-radius:50%;
-  border:2px solid var(--bg);
-  margin-left:-10px;
-  background:linear-gradient(135deg,var(--lavender),var(--lavender-deep));
-  display:inline-block;
-}
-.avatars span:first-child{margin-left:0;background:linear-gradient(135deg,#f8c8d8,#e88aab);}
-.avatars span:nth-child(2){background:linear-gradient(135deg,#c9a0dc,#9b72cf);}
-.avatars span:nth-child(3){background:linear-gradient(135deg,#fbcfe8,#c9a0dc);}
-.avatars span:nth-child(4){background:linear-gradient(135deg,#a78bfa,#7a52b0);}
-.proof-text{font-size:.92rem;color:var(--muted);}
-.proof-text strong{color:var(--ink);}
-.stars{color:#f0b429;letter-spacing:1px;font-size:.95rem;}
 
-/* Opt-in card */
+h1{
+  font-size:clamp(2.4rem,5vw,3.8rem);
+  margin-bottom:18px;
+}
+
+.lede{
+  font-size:1.1rem;
+  color:var(--ink-soft);
+  margin-bottom:22px;
+}
+
 .optin{
-  background:var(--white);
-  border-radius:28px;
-  padding:38px 32px;
+  background:#fff;
+  border-radius:24px;
+  padding:34px;
   box-shadow:var(--shadow-lg);
   border:1px solid var(--line);
-  position:relative;
   text-align:center;
 }
-.optin::before{
-  content:"FREE";
-  position:absolute;
-  top:-14px;right:24px;
+
+.optin h3{font-size:1.6rem;margin-bottom:8px;}
+.optin p{color:var(--muted);margin-bottom:18px;}
+
+.cta{
+  width:100%;
+  padding:16px;
   background:var(--ink);
-  color:var(--lavender);
-  font-family:'Karla',sans-serif;
-  font-size:.7rem;
-  font-weight:700;
-  letter-spacing:.15em;
-  padding:6px 12px;
-  border-radius:6px;
-}
-.cover{
-  width:170px;
-  height:auto;
-  display:block;
-  margin:0 auto 22px;
-  border-radius:14px;
-  box-shadow:
-    0 25px 50px -12px rgba(122,82,176,.45),
-    0 10px 20px rgba(0,0,0,.08);
-  transform: perspective(900px) rotateY(-12deg) rotateZ(-3deg);
-  transition: transform .4s ease;
-  background: none;
-  border: none;
-}
-.cover:hover{
-  transform: perspective(900px) rotateY(0deg) rotateZ(0deg) scale(1.05);
-}
-.optin h3{font-size:1.7rem;margin-bottom:8px;}
-.optin p.sub{font-size:.95rem;color:var(--muted);margin-bottom:22px;}
-.field{width:100%;padding:15px 18px;border:1.5px solid var(--line);border-radius:12px;font-family:inherit;font-size:1rem;background:var(--bg);color:var(--ink);margin-bottom:12px;}
-.cta{width:100%;background:var(--ink);color:#fff;border:none;padding:16px 22px;border-radius:12px;font-weight:700;cursor:pointer;}
-.trust{display:flex;justify-content:center;gap:14px;margin-top:14px;font-size:.74rem;color:var(--muted);flex-wrap:wrap;}
-.trust span::before{content:"✓ ";color:var(--lavender-deep);}
-
-/* Section */
-.section{padding:70px 24px;}
-.container{max-width:1100px;margin:0 auto;}
-.section.alt{background:var(--cream);}
-.section-eyebrow{text-align:center;font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--lavender-dark);font-weight:700;margin-bottom:14px;}
-.section h2{text-align:center;font-size:clamp(2rem,3.8vw,2.8rem);margin-bottom:18px;}
-.section .sub{text-align:center;color:var(--ink-soft);max-width:640px;margin:0 auto 50px;}
-
-/* Problems */
-.problems{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
-.problem{background:#fff;padding:30px 26px;border-radius:18px;border:1px solid var(--line);}
-.problem-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:2.4rem;color:var(--lavender-deep);margin-bottom:12px;}
-.problem h3{font-size:1.35rem;margin-bottom:8px;}
-.problem p{color:var(--muted);font-size:.95rem;}
-
-/* Guide */
-.guide-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:18px;
-  max-width:900px;
-  margin:0 auto;
-}
-.guide-item{
-  background:#fff;
-  border-radius:16px;
-  padding:26px;
-  border:1px solid var(--line);
-  display:flex;
-  gap:16px;
-  align-items:flex-start;
-}
-.guide-icon{
-  flex-shrink:0;
-  width:44px;height:44px;
+  color:#fff;
+  border:none;
   border-radius:12px;
-  background:linear-gradient(135deg,var(--cream),var(--lavender));
-  display:grid;
-  place-items:center;
-  font-family:'Cormorant Garamond',serif;
-  font-style:italic;
   font-weight:700;
-  color:var(--ink);
+  cursor:pointer;
 }
-.guide-item h4{
+
+/* SECTION */
+.section{
+  padding:70px 24px;
+}
+.container{
+  max-width:1000px;
+  margin:0 auto;
+  text-align:center;
+}
+
+.section h2{
+  font-size:2.4rem;
+  margin-bottom:14px;
+}
+
+.sub{
+  color:var(--ink-soft);
+  max-width:650px;
+  margin:0 auto 40px;
+}
+
+/* PROBLEM */
+.problems{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+  text-align:left;
+}
+
+.problem{
+  background:#fff;
+  padding:24px;
+  border-radius:16px;
+  border:1px solid var(--line);
+}
+
+.problem h3{margin-bottom:8px;}
+
+/* WHAT'S INSIDE */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.item{
+  background:#fff;
+  padding:24px;
+  border-radius:16px;
+  border:1px solid var(--line);
+}
+
+.item h4{
   font-family:'Cormorant Garamond',serif;
   font-size:1.3rem;
-  font-weight:600;
-  margin-bottom:4px;
+  margin-bottom:8px;
 }
-.guide-item p{color:var(--muted);font-size:.92rem;}
 
-/* Footer */
-footer{
-  background:var(--ink);
-  color:#cdb8d8;
-  padding:50px 24px 30px;
+/* FINAL CTA */
+.final{
+  background:var(--cream);
   text-align:center;
+  padding:80px 24px;
 }
-footer .logo{color:#fff;}
-footer .logo span{color:var(--lavender);}
-footer p{font-size:.85rem;margin-top:14px;color:#a89bb0;max-width:560px;margin-left:auto;margin-right:auto;}
-footer .links{margin-top:22px;display:flex;justify-content:center;gap:18px;flex-wrap:wrap;}
-footer .links a{color:#cdb8d8;text-decoration:none;font-size:.82rem;}
-footer .copy{margin-top:26px;font-size:.75rem;color:#7a6a82;}
 
+.final h2{
+  font-size:2.6rem;
+  margin-bottom:16px;
+}
+
+footer{
+  text-align:center;
+  padding:40px 24px;
+  font-size:.85rem;
+  color:var(--muted);
+}
+
+/* MOBILE */
 @media(max-width:900px){
   .hero{grid-template-columns:1fr;}
-  .problems{grid-template-columns:1fr;}
-  .guide-grid{grid-template-columns:1fr;}
+  .problems,.grid{grid-template-columns:1fr;}
 }
 </style>
 </head>
-<body>
 
-<div class="announce">⚡ <strong>Free for a limited time</strong> — Instant download, no credit card</div>
+<body>
 
 <header class="nav">
   <div class="logo">Saasly<span>Hubs</span></div>
@@ -252,45 +192,46 @@ footer .copy{margin-top:26px;font-size:.75rem;color:#7a6a82;}
 
 <!-- HERO -->
 <section class="hero">
+
   <div>
-    <span class="eyebrow">Small business? Here's how to stop losing the leads you're already getting</span>
-    <h1>Turn your social traffic into <em>real email leads</em> — this weekend.</h1>
+    <h1>Turn your content into a simple email system that captures leads automatically</h1>
     <p class="lede">
-      Getting clicks but no customers? <strong>Most visitors leave your page and never come back.</strong>
+      Most creators get attention online — but lose it because there is no system to capture it.
+      This guide shows you how to fix that.
     </p>
   </div>
 
   <aside class="optin">
-    <img class="cover" src="https://raw.githubusercontent.com/saaslyhubs/webb/main/Turn-Your-Content-Into-Leads2.png" alt="Free guide — Turn your content into leads">
-    <h3>Get instant access</h3>
-    <p class="sub">Delivered in under 2 minutes.</p>
+    <h3>Free Guide</h3>
+    <p>Get instant access to the system</p>
+    
     <div class="ml-embedded" data-form="EZ0Ljf"></div>
-    <div class="trust">
-      <span>No spam</span><span>Free</span>
-    </div>
+
+    <p style="font-size:.75rem;margin-top:12px;color:var(--muted);">
+      No spam. Instant access.
+    </p>
   </aside>
+
 </section>
 
 <!-- PROBLEM -->
-<section class="section alt">
+<section class="section">
   <div class="container">
-    <div class="section-eyebrow">The Real Problem</div>
-    <h2>You don't have a traffic problem.</h2>
+    <h2>The real problem</h2>
+    <p class="sub">You don’t have a content problem — you have a system problem.</p>
+
     <div class="problems">
       <div class="problem">
-        <div class="problem-num">01</div>
-        <h3>No freebie</h3>
-        <p>No reason to give email.</p>
+        <h3>Traffic disappears</h3>
+        <p>People engage but never return.</p>
       </div>
       <div class="problem">
-        <div class="problem-num">02</div>
-        <h3>No landing page</h3>
-        <p>Homepage kills conversion.</p>
+        <h3>No capture system</h3>
+        <p>Visitors don’t become subscribers.</p>
       </div>
       <div class="problem">
-        <div class="problem-num">03</div>
         <h3>No follow-up</h3>
-        <p>You get forgotten fast.</p>
+        <p>Interest fades without automation.</p>
       </div>
     </div>
   </div>
@@ -299,69 +240,49 @@ footer .copy{margin-top:26px;font-size:.75rem;color:#7a6a82;}
 <!-- WHAT'S INSIDE -->
 <section class="section">
   <div class="container">
-    <div class="section-eyebrow">What's Inside</div>
-    <h2>A simple, copy-paste system you can build today.</h2>
-    <p class="sub">No fluff. Just what works.</p>
+    <h2>A simple funnel system</h2>
+    <p class="sub">Everything you need to turn attention into email subscribers.</p>
 
-    <div class="guide-grid">
-      <div class="guide-item">
-        <div class="guide-icon">①</div>
-        <div>
-          <h4>The Funnel Map</h4>
-          <p>See exactly where your leads are disappearing (and how to plug the leak)</p>
-        </div>
+    <div class="grid">
+      <div class="item">
+        <h4>Funnel Structure</h4>
+        <p>Clear map from content → lead → subscriber.</p>
       </div>
 
-      <div class="guide-item">
-        <div class="guide-icon">②</div>
-        <div>
-          <h4>3-Step System</h4>
-          <p>Go from clicks to email list to sales, one simple step at a time</p>
-        </div>
+      <div class="item">
+        <h4>Landing Page Setup</h4>
+        <p>Simple structure that converts visitors into emails.</p>
       </div>
 
-      <div class="guide-item">
-        <div class="guide-icon">③</div>
-        <div>
-          <h4>Quick Setup</h4>
-          <p>Build the whole system this weekend — no tech skills required</p>
-        </div>
-      </div>
-
-      <div class="guide-item">
-        <div class="guide-icon">④</div>
-        <div>
-          <h4>Traffic Bridge</h4>
-          <p>Turn social visitors into leads who actually remember you</p>
-        </div>
+      <div class="item">
+        <h4>Email Automation</h4>
+        <p>Basic follow-up system that builds trust automatically.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- FINAL CTA -->
+<section class="final">
+  <h2>Start building your system today</h2>
+  <p class="sub">It only takes one freebie and one simple funnel to begin.</p>
+
+  <div class="ml-embedded" data-form="EZ0Ljf"></div>
+</section>
+
 <footer>
-  <div class="logo">Saasly<span>Hubs</span></div>
-  <p>An independent research hub focused on CRM, marketing automation, and digital growth tools for small businesses.</p>
-
-  <div class="links">
-    <a href="privacy-policy.html">Privacy Policy</a>
-    <a href="terms-of-service.html">Terms of Service</a>
-    <a href="mailto:hello@saaslyhubs.com">hello@saaslyhubs.com</a>
-  </div>
-
-  <div class="copy">© 2026 SAASLYHUBS · Stockholm, Sweden</div>
+  © 2026 SaaslyHubs · Built for creators who want systems, not guesswork
 </footer>
 
-<!-- MailerLite Universal -->
+<!-- MailerLite -->
 <script>
-    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
-    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
-    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
-    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-    ml('account', '2222294');
+(function(w,d,e,u,f,l,n){
+w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);};
+l=d.createElement(e);l.async=1;l.src=u;
+n=d.getElementsByTagName(e)[0];n.parentNode.insertBefore(l,n);
+})(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+ml('account','2222294');
 </script>
-<!-- End MailerLite Universal -->
 
 </body>
 </html>

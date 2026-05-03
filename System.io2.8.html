@@ -3,12 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The 24-Hour Lead Machine — Free Guide for Small Businesses | SaaslyHubs</title>
-<meta name="description" content="Free guide: turn social traffic into email leads in 24 hours. The simple 3-step funnel small businesses use to stop losing visitors. Instant access.">
+<title>Stop Losing the Leads You're Already Getting — Free Guide for Small Businesses | SaaslyHubs</title>
+<meta name="description" content="Free guide: turn social traffic into real email leads this weekend. The simple 3-step funnel small businesses use to stop losing visitors forever. Instant access.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
-
 <style>
 :root{
   --bg:#fdf6f8;
@@ -66,7 +65,7 @@ h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:600;letter-spacing:-
 }
 .logo span{color:var(--lavender-deep);font-style:italic;}
 
-/* HERO */
+/* Hero */
 .hero{
   max-width:1180px;
   margin:0 auto;
@@ -77,9 +76,7 @@ h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:600;letter-spacing:-
   align-items:center;
 }
 .eyebrow{
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
+  display:inline-flex;align-items:center;gap:8px;
   background:var(--cream);
   color:var(--lavender-dark);
   padding:8px 16px;
@@ -103,8 +100,29 @@ h1 em{font-style:italic;color:var(--lavender-deep);}
   margin-bottom:28px;
   max-width:540px;
 }
+.lede strong{color:var(--ink);}
+.proof-row{
+  display:flex;align-items:center;gap:18px;
+  margin-bottom:30px;
+  flex-wrap:wrap;
+}
+.avatars{display:flex;}
+.avatars span{
+  width:34px;height:34px;border-radius:50%;
+  border:2px solid var(--bg);
+  margin-left:-10px;
+  background:linear-gradient(135deg,var(--lavender),var(--lavender-deep));
+  display:inline-block;
+}
+.avatars span:first-child{margin-left:0;background:linear-gradient(135deg,#f8c8d8,#e88aab);}
+.avatars span:nth-child(2){background:linear-gradient(135deg,#c9a0dc,#9b72cf);}
+.avatars span:nth-child(3){background:linear-gradient(135deg,#fbcfe8,#c9a0dc);}
+.avatars span:nth-child(4){background:linear-gradient(135deg,#a78bfa,#7a52b0);}
+.proof-text{font-size:.92rem;color:var(--muted);}
+.proof-text strong{color:var(--ink);}
+.stars{color:#f0b429;letter-spacing:1px;font-size:.95rem;}
 
-/* OPT-IN */
+/* Opt-in card */
 .optin{
   background:var(--white);
   border-radius:28px;
@@ -127,33 +145,103 @@ h1 em{font-style:italic;color:var(--lavender-deep);}
   padding:6px 12px;
   border-radius:6px;
 }
-
-/* MOCKUP IMAGE */
 .cover{
   width:170px;
-  height:230px;
+  height:auto;
+  display:block;
   margin:0 auto 22px;
-  border-radius:8px;
-  overflow:hidden;
+  border-radius:14px;
+  box-shadow:
+    0 25px 50px -12px rgba(122,82,176,.45),
+    0 10px 20px rgba(0,0,0,.08);
+  transform: perspective(900px) rotateY(-12deg) rotateZ(-3deg);
+  transition: transform .4s ease;
+  background: none;
+  border: none;
 }
-.cover img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
+.cover:hover{
+  transform: perspective(900px) rotateY(0deg) rotateZ(0deg) scale(1.05);
 }
-
 .optin h3{font-size:1.7rem;margin-bottom:8px;}
 .optin p.sub{font-size:.95rem;color:var(--muted);margin-bottom:22px;}
+.field{width:100%;padding:15px 18px;border:1.5px solid var(--line);border-radius:12px;font-family:inherit;font-size:1rem;background:var(--bg);color:var(--ink);margin-bottom:12px;}
+.cta{width:100%;background:var(--ink);color:#fff;border:none;padding:16px 22px;border-radius:12px;font-weight:700;cursor:pointer;}
+.trust{display:flex;justify-content:center;gap:14px;margin-top:14px;font-size:.74rem;color:var(--muted);flex-wrap:wrap;}
+.trust span::before{content:"✓ ";color:var(--lavender-deep);}
 
-/* MAILERLITE WRAPPER (ingen designändring) */
-.ml-embedded{
-  margin-top:10px;
+/* Section */
+.section{padding:70px 24px;}
+.container{max-width:1100px;margin:0 auto;}
+.section.alt{background:var(--cream);}
+.section-eyebrow{text-align:center;font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--lavender-dark);font-weight:700;margin-bottom:14px;}
+.section h2{text-align:center;font-size:clamp(2rem,3.8vw,2.8rem);margin-bottom:18px;}
+.section .sub{text-align:center;color:var(--ink-soft);max-width:640px;margin:0 auto 50px;}
+
+/* Problems */
+.problems{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.problem{background:#fff;padding:30px 26px;border-radius:18px;border:1px solid var(--line);}
+.problem-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:2.4rem;color:var(--lavender-deep);margin-bottom:12px;}
+.problem h3{font-size:1.35rem;margin-bottom:8px;}
+.problem p{color:var(--muted);font-size:.95rem;}
+
+/* Guide */
+.guide-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+  max-width:900px;
+  margin:0 auto;
 }
+.guide-item{
+  background:#fff;
+  border-radius:16px;
+  padding:26px;
+  border:1px solid var(--line);
+  display:flex;
+  gap:16px;
+  align-items:flex-start;
+}
+.guide-icon{
+  flex-shrink:0;
+  width:44px;height:44px;
+  border-radius:12px;
+  background:linear-gradient(135deg,var(--cream),var(--lavender));
+  display:grid;
+  place-items:center;
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;
+  font-weight:700;
+  color:var(--ink);
+}
+.guide-item h4{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.3rem;
+  font-weight:600;
+  margin-bottom:4px;
+}
+.guide-item p{color:var(--muted);font-size:.92rem;}
 
-/* resten av din design är oförändrad */
+/* Footer */
+footer{
+  background:var(--ink);
+  color:#cdb8d8;
+  padding:50px 24px 30px;
+  text-align:center;
+}
+footer .logo{color:#fff;}
+footer .logo span{color:var(--lavender);}
+footer p{font-size:.85rem;margin-top:14px;color:#a89bb0;max-width:560px;margin-left:auto;margin-right:auto;}
+footer .links{margin-top:22px;display:flex;justify-content:center;gap:18px;flex-wrap:wrap;}
+footer .links a{color:#cdb8d8;text-decoration:none;font-size:.82rem;}
+footer .copy{margin-top:26px;font-size:.75rem;color:#7a6a82;}
+
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;}
+  .problems{grid-template-columns:1fr;}
+  .guide-grid{grid-template-columns:1fr;}
+}
 </style>
 </head>
-
 <body>
 
 <div class="announce">⚡ <strong>Free for a limited time</strong> — Instant download, no credit card</div>
@@ -162,41 +250,118 @@ h1 em{font-style:italic;color:var(--lavender-deep);}
   <div class="logo">Saasly<span>Hubs</span></div>
 </header>
 
+<!-- HERO -->
 <section class="hero">
-
   <div>
-    <span class="eyebrow">Free guide for small businesses</span>
-    <h1>Turn your social traffic into <em>real email leads</em> — in 24 hours.</h1>
-    <p class="lede">Getting clicks but no customers? <strong>You're losing 97% of your visitors</strong>.</p>
+    <span class="eyebrow">Small business? Here's how to stop losing the leads you're already getting</span>
+    <h1>Turn your social traffic into <em>real email leads</em> — this weekend.</h1>
+    <p class="lede">
+      Getting clicks but no customers? <strong>Most visitors leave your page and never come back.</strong>
+    </p>
   </div>
 
   <aside class="optin">
-
-    <!-- MOCKUP -->
-    <div class="cover">
-      <img src="TurnYourContenttoleads.png" alt="Guide mockup">
-    </div>
-
+    <img class="cover" src="https://raw.githubusercontent.com/saaslyhubs/webb/main/Turn-Your-Content-Into-Leads2.png" alt="Free guide — Turn your content into leads">
     <h3>Get instant access</h3>
     <p class="sub">Delivered in under 2 minutes.</p>
-
-    <!-- MAILERLITE FORM -->
-    <div class="ml-embedded" data-form="NNV6qP"></div>
-
+    <div class="ml-embedded" data-form="EZ0Ljf"></div>
+    <div class="trust">
+      <span>No spam</span><span>Free</span>
+    </div>
   </aside>
-
 </section>
 
-<!-- MAILERLITE SCRIPT -->
-<script>
-(function(w,d,e,u,f,l,n){
-  w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);};
-  l=d.createElement(e);l.async=1;l.src=u;
-  n=d.getElementsByTagName(e)[0];n.parentNode.insertBefore(l,n);
-})(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+<!-- PROBLEM -->
+<section class="section alt">
+  <div class="container">
+    <div class="section-eyebrow">The Real Problem</div>
+    <h2>You don't have a traffic problem.</h2>
+    <div class="problems">
+      <div class="problem">
+        <div class="problem-num">01</div>
+        <h3>No freebie</h3>
+        <p>No reason to give email.</p>
+      </div>
+      <div class="problem">
+        <div class="problem-num">02</div>
+        <h3>No landing page</h3>
+        <p>Homepage kills conversion.</p>
+      </div>
+      <div class="problem">
+        <div class="problem-num">03</div>
+        <h3>No follow-up</h3>
+        <p>You get forgotten fast.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-ml('account', '2222294');
+<!-- WHAT'S INSIDE -->
+<section class="section">
+  <div class="container">
+    <div class="section-eyebrow">What's Inside</div>
+    <h2>A simple, copy-paste system you can build today.</h2>
+    <p class="sub">No fluff. Just what works.</p>
+
+    <div class="guide-grid">
+      <div class="guide-item">
+        <div class="guide-icon">①</div>
+        <div>
+          <h4>The Funnel Map</h4>
+          <p>See exactly where your leads are disappearing (and how to plug the leak)</p>
+        </div>
+      </div>
+
+      <div class="guide-item">
+        <div class="guide-icon">②</div>
+        <div>
+          <h4>3-Step System</h4>
+          <p>Go from clicks to email list to sales, one simple step at a time</p>
+        </div>
+      </div>
+
+      <div class="guide-item">
+        <div class="guide-icon">③</div>
+        <div>
+          <h4>Quick Setup</h4>
+          <p>Build the whole system this weekend — no tech skills required</p>
+        </div>
+      </div>
+
+      <div class="guide-item">
+        <div class="guide-icon">④</div>
+        <div>
+          <h4>Traffic Bridge</h4>
+          <p>Turn social visitors into leads who actually remember you</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="logo">Saasly<span>Hubs</span></div>
+  <p>An independent research hub focused on CRM, marketing automation, and digital growth tools for small businesses.</p>
+
+  <div class="links">
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="terms-of-service.html">Terms of Service</a>
+    <a href="mailto:hello@saaslyhubs.com">hello@saaslyhubs.com</a>
+  </div>
+
+  <div class="copy">© 2026 SAASLYHUBS · Stockholm, Sweden</div>
+</footer>
+
+<!-- MailerLite Universal -->
+<script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '2222294');
 </script>
+<!-- End MailerLite Universal -->
 
 </body>
 </html>

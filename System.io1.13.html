@@ -1,239 +1,364 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Free Lead Automation Guide | SaaslyHubs</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Online Business System</title>
 
 <style>
-:root { 
-    --primary: #065f46; 
-    --dark: #0f172a; 
-    --blue: #007bff; 
-    --slate: #64748b;
-    --bg: #f8fafc;
+:root{
+  --bg:#0e0f13;
+  --card:#171923;
+  --muted:#a7a7b3;
+  --text:#ffffff;
+  --accent:#7c5cff;
+  --good:#2dd881;
+  --bad:#ff4d4d;
 }
-* { box-sizing: border-box; margin:0; padding:0; }
 
+*{box-sizing:border-box}
 body{
-    font-family:'Inter',sans-serif;
-    line-height:1.6;
-    color:var(--dark);
-    background:var(--bg);
+  margin:0;
+  font-family: Arial, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
 }
 
-.logo-bar{
-    background:#fff;
-    padding:20px;
-    text-align:center;
-    border-bottom:1px solid #e2e8f0;
-}
-.logo-text{font-weight:800;font-size:1.5rem;text-transform:uppercase;}
-.logo-hubs{color:var(--blue);}
-
-.main-wrapper{
-    max-width:1100px;
-    margin:60px auto 100px;
-    padding:0 20px;
-    display:grid;
-    grid-template-columns:1.2fr .8fr;
-    gap:60px;
+.container{
+  width:min(1050px, 92%);
+  margin:auto;
+  padding:60px 0;
 }
 
-.badge{
-    background:rgba(16,185,129,.1);
-    color:#10b981;
-    padding:8px 16px;
-    border-radius:50px;
-    font-size:.85rem;
-    font-weight:600;
-    display:inline-block;
-    margin-bottom:20px;
+/* HERO */
+.hero{
+  text-align:center;
+  padding:90px 20px 40px;
 }
 
-h1{
-    font-size:clamp(2.3rem,5vw,3.4rem);
-    line-height:1.05;
-    margin-bottom:18px;
-    font-weight:800;
+.hero h1{
+  font-size:44px;
+  line-height:1.1;
+  letter-spacing:-1px;
 }
 
-.hero-p{font-size:1.25rem;font-weight:600;margin-bottom:15px;}
-
-.why-text{
-    font-size:1.05rem;
-    color:var(--slate);
-    margin-bottom:35px;
-    border-left:3px solid var(--blue);
-    padding-left:18px;
+.hero p{
+  color:var(--muted);
+  max-width:700px;
+  margin:15px auto;
 }
 
-.highlight-box{
-    background:#fff;
-    padding:30px;
-    border-radius:16px;
-    border-left:5px solid var(--primary);
-    box-shadow:0 10px 25px rgba(0,0,0,.05);
+.chips{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:20px;
 }
 
-.feature-list{list-style:none;margin-top:15px;}
-.feature-list li{
-    margin-bottom:12px;
-    padding-left:25px;
-    position:relative;
-}
-.feature-list li::before{
-    content:"→";
-    position:absolute;
-    left:0;
-    color:var(--primary);
-    font-weight:bold;
+.chip{
+  background:var(--card);
+  padding:8px 14px;
+  border-radius:999px;
+  font-size:13px;
+  color:var(--muted);
 }
 
-.optin-card{
-    background:#fff;
-    padding:40px 30px;
-    border-radius:24px;
-    box-shadow:0 30px 60px -15px rgba(0,0,0,.15);
-    border:1px solid #e2e8f0;
-    text-align:center;
-    position:sticky;
-    top:40px;
+/* CTA BUTTON */
+.btn{
+  display:inline-block;
+  background:var(--accent);
+  color:white;
+  padding:14px 22px;
+  border-radius:10px;
+  text-decoration:none;
+  margin-top:20px;
+  font-weight:bold;
 }
 
-.mockup-img{width:180px;margin-bottom:20px;}
+.btn:hover{opacity:.9}
 
-.wait-note{font-size:.75rem;color:var(--slate);margin-top:12px;}
-
-.bottom-info{
-    max-width:1100px;
-    margin:0 auto 60px;
-    padding:0 20px;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:30px;
+/* SECTIONS */
+.card{
+  background:var(--card);
+  padding:26px;
+  border-radius:16px;
+  margin:20px 0;
 }
 
-.info-box{
-    background:#fff;
-    border:1px solid #e2e8f0;
-    border-radius:14px;
-    padding:22px;
-    font-size:.9rem;
-}
-.info-box p{color:var(--slate);}
-
-footer{text-align:center;padding:60px 20px;border-top:1px solid #e2e8f0;}
-
-.legal-btns{margin-bottom:20px;display:flex;justify-content:center;gap:15px;}
-.legal-btn{
-    background:#f1f5f9;
-    color:#64748b;
-    font-size:.7rem;
-    text-decoration:none;
-    padding:6px 12px;
-    border-radius:6px;
-    font-weight:600;
-    border:1px solid #e2e8f0;
+/* SPLIT */
+.split{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
 }
 
-@media(max-width:900px){
-    .main-wrapper{grid-template-columns:1fr;}
-    .bottom-info{grid-template-columns:1fr;}
+@media(max-width:768px){
+  .split{grid-template-columns:1fr}
+  .hero h1{font-size:34px}
 }
+
+/* SYSTEM STEPS */
+.steps{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:12px;
+  text-align:center;
+}
+
+.step{
+  background:#1d2030;
+  padding:18px;
+  border-radius:12px;
+}
+
+.step span{
+  display:block;
+  font-size:22px;
+  margin-bottom:6px;
+}
+
+/* MOCKUP BLOCK */
+.mockup{
+  background:linear-gradient(135deg,#2a2d44,#14151c);
+  border:1px solid #2a2d3d;
+  padding:30px;
+  border-radius:16px;
+  text-align:center;
+}
+
+/* PROBLEM SHIFT */
+.bad{color:var(--bad)}
+.good{color:var(--good)}
+
+.compare{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+
+.compare div{
+  padding:18px;
+  border-radius:12px;
+  background:#12131a;
+}
+
+/* LOOP */
+.loop{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.loop div{
+  background:#12131a;
+  padding:14px;
+  border-radius:12px;
+}
+
+/* CHECKLIST */
+.checklist div{
+  background:#12131a;
+  padding:12px 14px;
+  border-radius:10px;
+  margin:8px 0;
+}
+
+.checklist div::before{
+  content:"✓ ";
+  color:var(--good);
+}
+
+/* CTA BOX */
+.cta{
+  background:white;
+  color:black;
+  padding:40px;
+  border-radius:18px;
+  text-align:center;
+  margin:40px 0;
+}
+
+.cta p{
+  color:#333;
+}
+
+.cta .btn{
+  background:black;
+  color:white;
+}
+
+/* FLOATING CTA */
+.sticky-cta{
+  position:sticky;
+  bottom:0;
+  background:#11131a;
+  padding:14px;
+  text-align:center;
+  border-top:1px solid #222;
+}
+
+/* FINAL */
+.final{
+  text-align:center;
+  padding:70px 20px;
+  color:var(--muted);
+}
+
+.small{
+  font-size:13px;
+  color:var(--muted);
+}
+
 </style>
 </head>
 
 <body>
 
-<div class="logo-bar">
-<span class="logo-text">SAASLY<span class="logo-hubs">HUBS</span></span>
-</div>
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <h1>Why Your Online Business Never Gets Off the Ground</h1>
+    <p>Most people post for months and make $0. Here's why — and the system that actually fixes it.</p>
 
-<main class="main-wrapper">
+    <div class="chips">
+      <div class="chip">5 min read</div>
+      <div class="chip">27-page guide</div>
+      <div class="chip">Free tools only</div>
+    </div>
 
-<div>
-<span class="badge">Free Guide For Small Businesses</span>
-<h1>Put your lead generation on autopilot this week</h1>
-<p class="hero-p">Let interested visitors become real opportunities automatically.</p>
-
-<p class="why-text">
-Every day, people discover your business, visit your website, and show interest,  then leave without becoming customers.
-Without a follow-up system, those visitors are lost before you can convert them.
-A simple automated system turns visitors into leads you can follow up with and convert over time.
-</p>
-
-<div class="highlight-box">
-<strong>Inside the Free Blueprint:</strong>
-<ul class="feature-list">
-<li><b>The 24h lead capture plan</b> – Start collecting emails in one afternoon</li>
-<li><b>The 1 Campaign setup</b> – The only automation you need to start</li>
-<li><b>5 Done for you emails</b> – Welcome, Problem, Story, Case Study, Offer</li>
-<li><b>The simple funnel setup</b> – No tech skills required</li>
-</ul>
-</div>
-</div>
-
-<div class="optin-card">
-<img src="24-Hour Lead Capture System.png" class="mockup-img">
-<h3>Download the Free Guide</h3>
-<p style="color:var(--slate);font-size:.95rem;margin-bottom:15px;">
-
-</p>
-
-<!-- Embedded form -->
-<div class="ml-embedded" data-form="dFuE2d"></div>
-
-<!-- Affiliate disclosure -->
-<p style="font-size:.7rem;color:#cbd5e1;margin-top:4px;font-style:italic;">
-Some links in this guide may be affiliate links; I only recommend tools I trust.
-</p>
-
-<p class="wait-note">Check your inbox in 2 minutes for your access link.</p>
-</div>
-
-</main>
-
-<section class="bottom-info">
-<div class="info-box">
-<h4>About SaaslyHubs</h4>
-<p>SaaslyHubs is an independent research hub focused on CRM, marketing automation and digital growth tools.</p>
-</div>
-
-<div class="info-box">
-<h4>Contact</h4>
-<p>hello@saaslyhubs.com<br>Stockholm, Sweden</p>
-</div>
+    <a class="btn" href="#">Get the Starter Kit</a>
+  </div>
 </section>
 
-<footer>
-<div class="legal-btns">
-<a href="privacy.html" class="legal-btn">Privacy Policy</a>
-<a href="terms.html" class="legal-btn">Terms of Service</a>
+<!-- PAIN -->
+<section class="container">
+  <div class="card">
+    <p>Most people aren't failing because they don't work hard enough.</p>
+    <p>They're building on borrowed land — platforms they don't control.</p>
+  </div>
+
+  <div class="card compare">
+    <div>
+      <h3 class="bad">Wrong belief</h3>
+      <p>I need more traffic</p>
+    </div>
+    <div>
+      <h3 class="good">Reality</h3>
+      <p>You need a system</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Worth sitting with</h3>
+    <p>Building content without a system means nothing is captured. Attention disappears instantly.</p>
+  </div>
+</section>
+
+<!-- SYSTEM -->
+<section class="container">
+  <div class="card">
+    <h2>The system that actually works</h2>
+
+    <div class="steps">
+      <div class="step"><span>01</span>Traffic</div>
+      <div class="step"><span>02</span>Landing page</div>
+      <div class="step"><span>03</span>Email list</div>
+      <div class="step"><span>04</span>Offer</div>
+    </div>
+  </div>
+
+  <div class="card mockup">
+    <h3>Simple system. Predictable outcome.</h3>
+    <p>Someone discovers you → joins list → receives offer → buys</p>
+  </div>
+</section>
+
+<!-- EMAIL INSIGHT -->
+<section class="container">
+  <div class="card split">
+    <div>
+      <h2>300 emails</h2>
+      <p class="small">real subscribers</p>
+    </div>
+    <div>
+      <p>is worth more than 10,000 passive followers you can't reach reliably.</p>
+    </div>
+  </div>
+</section>
+
+<!-- LOOP -->
+<section class="container">
+  <div class="card">
+    <h3>The hidden failure loop</h3>
+
+    <div class="loop">
+      <div>Watch tutorials</div>
+      <div>Rebuild landing page</div>
+      <div>Never launch</div>
+    </div>
+  </div>
+</section>
+
+<!-- REQUIREMENTS -->
+<section class="container">
+  <div class="card">
+    <h3>What you actually need</h3>
+
+    <div class="checklist">
+      <div>Landing page that collects emails</div>
+      <div>A freebie worth signing up for</div>
+      <div>One product that solves one problem</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="container">
+  <div class="cta">
+    <h2>Online Business Starter Kit</h2>
+    <p>27 pages · step-by-step system · built for beginners</p>
+    <a class="btn" href="#">Get instant access</a>
+  </div>
+</section>
+
+<!-- FIT FILTER -->
+<section class="container">
+  <div class="card split">
+    <div>
+      <h3>If yes</h3>
+      <p>Posting but no sales</p>
+      <p>Want structure</p>
+      <p>Starting from zero</p>
+    </div>
+    <div>
+      <h3>If no</h3>
+      <p>Expect fast results</p>
+      <p>Won't build setup</p>
+      <p>Not consistent</p>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="container">
+  <div class="card mockup">
+    <h2>Stop guessing. Start building.</h2>
+    <p>One system. One funnel. One clear path.</p>
+    <a class="btn" href="#">Get the Starter Kit</a>
+  </div>
+</section>
+
+<!-- STICKY CTA -->
+<div class="sticky-cta">
+  <a class="btn" href="#">Get Starter Kit</a>
 </div>
 
-<p style="color:#94a3b8;font-size:.85rem;font-weight:600;">© 2026 SAASLYHUBS</p>
-
-<p style="font-size:.7rem;color:#cbd5e1;max-width:500px;margin:15px auto;font-style:italic;">
-Affiliate Disclosure: Some links may be affiliate links. I may earn a commission at no extra cost to you.
-</p>
-</footer>
-
-<!-- MailerLite Universal -->
-<script>
-    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
-    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
-    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
-    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-    ml('account', '2222294');
-</script>
-<!-- End MailerLite Universal -->
-
-</body>
-</html>
-<!-- End MailerLite Universal -->
+<!-- FOOTER -->
+<div class="final">
+  Start small. Build something that runs without you.
+</div>
 
 </body>
 </html>

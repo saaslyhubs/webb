@@ -1,364 +1,580 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Online Business System</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Your Online Business Never Gets Off The Ground</title>
+    <style>
+        :root {
+            --bg-color: #fdfbf7;
+            --header-bg: #1e1b1a;
+            --text-dark: #1e1b1a;
+            --text-muted: #5e5754;
+            --accent-purple: #6b5ca8;
+            --accent-sage: #8fa89b;
+            --box-light-bg: #f5efe6;
+            --box-dark-bg: #1a1817;
+            --font-serif: 'Playfair Display', Georgia, serif;
+            --font-sans: 'Montserrat', sans-serif;
+        }
 
-<style>
-:root{
-  --bg:#0e0f13;
-  --card:#171923;
-  --muted:#a7a7b3;
-  --text:#ffffff;
-  --accent:#7c5cff;
-  --good:#2dd881;
-  --bad:#ff4d4d;
-}
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
 
-*{box-sizing:border-box}
-body{
-  margin:0;
-  font-family: Arial, sans-serif;
-  background:var(--bg);
-  color:var(--text);
-  line-height:1.6;
-}
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-.container{
-  width:min(1050px, 92%);
-  margin:auto;
-  padding:60px 0;
-}
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-dark);
+            font-family: var(--font-sans);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
 
-/* HERO */
-.hero{
-  text-align:center;
-  padding:90px 20px 40px;
-}
+        /* Header section */
+        header {
+            background-color: var(--header-bg);
+            color: #ffffff;
+            text-align: center;
+            padding: 5rem 2rem;
+        }
 
-.hero h1{
-  font-size:44px;
-  line-height:1.1;
-  letter-spacing:-1px;
-}
+        .site-tag {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent-sage);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
 
-.hero p{
-  color:var(--muted);
-  max-width:700px;
-  margin:15px auto;
-}
+        header h1 {
+            font-family: var(--font-serif);
+            font-size: 3rem;
+            font-weight: 400;
+            max-width: 800px;
+            margin: 0 auto 1.5rem auto;
+            line-height: 1.2;
+        }
 
-.chips{
-  display:flex;
-  justify-content:center;
-  gap:10px;
-  flex-wrap:wrap;
-  margin-top:20px;
-}
+        header h1 em {
+            font-style: italic;
+        }
 
-.chip{
-  background:var(--card);
-  padding:8px 14px;
-  border-radius:999px;
-  font-size:13px;
-  color:var(--muted);
-}
+        header p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 2.5rem auto;
+            color: #ccc2bc;
+            font-weight: 300;
+        }
 
-/* CTA BUTTON */
-.btn{
-  display:inline-block;
-  background:var(--accent);
-  color:white;
-  padding:14px 22px;
-  border-radius:10px;
-  text-decoration:none;
-  margin-top:20px;
-  font-weight:bold;
-}
+        .meta-tags {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
 
-.btn:hover{opacity:.9}
+        .tag {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 0.4rem 1rem;
+            border: 1px solid #4a4340;
+            border-radius: 20px;
+            color: #ccc2bc;
+            font-weight: 600;
+        }
 
-/* SECTIONS */
-.card{
-  background:var(--card);
-  padding:26px;
-  border-radius:16px;
-  margin:20px 0;
-}
+        /* Main content layout */
+        main {
+            max-width: 680px;
+            margin: 4rem auto;
+            padding: 0 1.5rem;
+        }
 
-/* SPLIT */
-.split{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:20px;
-}
+        p {
+            font-size: 1.05rem;
+            color: var(--text-dark);
+            margin-bottom: 1.8rem;
+            font-weight: 300;
+        }
 
-@media(max-width:768px){
-  .split{grid-template-columns:1fr}
-  .hero h1{font-size:34px}
-}
+        strong {
+            font-weight: 600;
+        }
 
-/* SYSTEM STEPS */
-.steps{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:12px;
-  text-align:center;
-}
+        h2 {
+            font-family: var(--font-serif);
+            font-size: 1.8rem;
+            margin: 3.5rem 0 1.5rem 0;
+            font-weight: 400;
+            line-height: 1.3;
+        }
 
-.step{
-  background:#1d2030;
-  padding:18px;
-  border-radius:12px;
-}
+        /* Callout Boxes */
+        .callout-quote {
+            background-color: var(--box-light-bg);
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2.5rem 0;
+            text-align: center;
+        }
 
-.step span{
-  display:block;
-  font-size:22px;
-  margin-bottom:6px;
-}
+        .callout-quote p {
+            font-family: var(--font-serif);
+            font-style: italic;
+            font-size: 1.2rem;
+            margin-bottom: 0;
+            color: var(--text-dark);
+        }
 
-/* MOCKUP BLOCK */
-.mockup{
-  background:linear-gradient(135deg,#2a2d44,#14151c);
-  border:1px solid #2a2d3d;
-  padding:30px;
-  border-radius:16px;
-  text-align:center;
-}
+        .worth-sitting-with {
+            border: 1px solid #e0d5c1;
+            padding: 1.5rem;
+            border-radius: 6px;
+            margin: 2.5rem 0;
+        }
 
-/* PROBLEM SHIFT */
-.bad{color:var(--bad)}
-.good{color:var(--good)}
+        .worth-sitting-with span {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--text-muted);
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
 
-.compare{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:12px;
-}
+        .worth-sitting-with p {
+            font-size: 0.95rem;
+            margin-bottom: 0;
+            color: var(--text-muted);
+        }
 
-.compare div{
-  padding:18px;
-  border-radius:12px;
-  background:#12131a;
-}
+        /* Step and Blueprint lists */
+        .system-list, .requirements-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
 
-/* LOOP */
-.loop{
-  display:flex;
-  flex-direction:column;
-  gap:10px;
-}
+        .list-card {
+            background: #ffffff;
+            border: 1px solid #ede8df;
+            padding: 1.2rem 1.5rem;
+            border-radius: 8px;
+            display: flex;
+            align-items: flex-start;
+            gap: 1.2rem;
+        }
 
-.loop div{
-  background:#12131a;
-  padding:14px;
-  border-radius:12px;
-}
+        .card-num {
+            background-color: #f0edf7;
+            color: var(--accent-purple);
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+        }
 
-/* CHECKLIST */
-.checklist div{
-  background:#12131a;
-  padding:12px 14px;
-  border-radius:10px;
-  margin:8px 0;
-}
+        .card-check {
+            color: var(--accent-sage);
+            font-weight: bold;
+        }
 
-.checklist div::before{
-  content:"✓ ";
-  color:var(--good);
-}
+        .card-content strong {
+            display: block;
+            font-size: 1rem;
+            margin-bottom: 0.2rem;
+        }
 
-/* CTA BOX */
-.cta{
-  background:white;
-  color:black;
-  padding:40px;
-  border-radius:18px;
-  text-align:center;
-  margin:40px 0;
-}
+        .card-content p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 0;
+        }
 
-.cta p{
-  color:#333;
-}
+        /* Soft Bridge styling */
+        .funnel-bridge {
+            text-align: center;
+            margin: 4rem 0 2rem 0;
+            padding: 0 1rem;
+        }
+        
+        .funnel-bridge p {
+            font-family: var(--font-serif);
+            font-size: 1.2rem;
+            color: var(--text-dark);
+            font-style: italic;
+        }
 
-.cta .btn{
-  background:black;
-  color:white;
-}
+        /* Dark Product Offer Box */
+        .product-sales-box {
+            background-color: var(--box-dark-bg);
+            color: #ffffff;
+            border-radius: 12px;
+            padding: 3.5rem 2.5rem;
+            margin: 3rem 0;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
 
-/* FLOATING CTA */
-.sticky-cta{
-  position:sticky;
-  bottom:0;
-  background:#11131a;
-  padding:14px;
-  text-align:center;
-  border-top:1px solid #222;
-}
+        .box-sub {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #a39995;
+            display: block;
+            margin-bottom: 1rem;
+        }
 
-/* FINAL */
-.final{
-  text-align:center;
-  padding:70px 20px;
-  color:var(--muted);
-}
+        .product-sales-box h2 {
+            font-size: 2.2rem;
+            margin: 0 0 1rem 0;
+            color: #ffffff;
+        }
 
-.small{
-  font-size:13px;
-  color:var(--muted);
-}
+        .product-p {
+            color: #ccc2bc;
+            font-size: 0.95rem;
+            max-width: 500px;
+            margin: 0 auto 2.5rem auto;
+        }
 
-</style>
+        .product-specs {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            border-top: 1px solid #332d2b;
+            border-bottom: 1px solid #332d2b;
+            padding: 1.5rem 0;
+            margin-bottom: 2.5rem;
+        }
+
+        .spec-item strong {
+            display: block;
+            font-size: 1.2rem;
+            font-family: var(--font-sans);
+            color: #ffffff;
+        }
+
+        .spec-item span {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #a39995;
+        }
+
+        .product-bullets {
+            text-align: left;
+            max-width: 540px;
+            margin: 0 auto 3rem auto;
+            list-style: none;
+        }
+
+        .product-bullets li {
+            font-size: 0.9rem;
+            color: #e6e0dc;
+            margin-bottom: 0.8rem;
+            position: relative;
+            padding-left: 1.5rem;
+            font-weight: 300;
+        }
+
+        .product-bullets li::before {
+            content: "•";
+            color: var(--accent-purple);
+            font-size: 1.2rem;
+            position: absolute;
+            left: 0;
+            top: -2px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-purple);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 1rem 2.5rem;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            transition: background 0.2s ease;
+            width: 100%;
+            max-width: 400px;
+            margin-bottom: 1rem;
+        }
+
+        .cta-button:hover {
+            background-color: #574991;
+        }
+
+        .box-footnote {
+            font-size: 0.75rem;
+            color: #8c807c;
+            display: block;
+        }
+
+        /* Is this for you section */
+        .split-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin: 2rem 0 4rem 0;
+        }
+
+        @media (max-width: 600px) {
+            .split-grid {
+                grid-template-columns: 1fr;
+            }
+            .product-specs {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+        }
+
+        .grid-box {
+            background: #ffffff;
+            border: 1px solid #ede8df;
+            padding: 1.8rem;
+            border-radius: 8px;
+        }
+
+        .grid-box h3 {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.2rem;
+        }
+
+        .grid-box.positive h3 { color: var(--accent-sage); }
+        .grid-box.negative h3 { color: #c47c7c; }
+
+        .grid-box ul {
+            list-style: none;
+        }
+
+        .grid-box li {
+            font-size: 0.85rem;
+            margin-bottom: 0.8rem;
+            position: relative;
+            padding-left: 1.2rem;
+            color: var(--text-muted);
+        }
+
+        .grid-box.positive li::before { content: "✓"; position: absolute; left: 0; color: var(--accent-sage); }
+        .grid-box.negative li::before { content: "✕"; position: absolute; left: 0; color: #c47c7c; }
+
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            border-top: 1px solid #ede8df;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+    </style>
 </head>
-
 <body>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="container">
-    <h1>Why Your Online Business Never Gets Off the Ground</h1>
-    <p>Most people post for months and make $0. Here's why — and the system that actually fixes it.</p>
+    <header>
+        <div class="site-tag">Online Business — SaaslyHubs</div>
+        <h1>Why Your Online Business <em>Never Gets Off the Ground</em></h1>
+        <p>Most people post for months and make $0. Here's the honest reason why — and the system that actually changes it.</p>
+        <div class="meta-tags">
+            <div class="tag">Strategy Guide</div>
+            <div class="tag">27-Page Step-By-Step Blueprint</div>
+            <div class="tag">Free Tools Only</div>
+        </div>
+    </header>
 
-    <div class="chips">
-      <div class="chip">5 min read</div>
-      <div class="chip">27-page guide</div>
-      <div class="chip">Free tools only</div>
-    </div>
+    <main>
+        <p>I want to be honest with you about something.</p>
+        <p>Most people who start an online business aren't failing because they aren't working hard enough. They're posting. They're showing up. They're trying. But nothing is converting, and after a few months of this — it's exhausting.</p>
+        <p>The problem usually isn't their effort. It's that they're building on <strong>borrowed land</strong>. Spending all their energy growing on platforms they don't control, building audiences they don't own, and hoping the algorithm stays on their side.</p>
+        <p>Then one day it doesn't. And everything goes quiet.</p>
 
-    <a class="btn" href="#">Get the Starter Kit</a>
-  </div>
-</section>
+        <div class="callout-quote">
+            <p>Your sales start long before you make your first offer. The people who actually make money built a system underneath their content — not just the content itself.</p>
+        </div>
 
-<!-- PAIN -->
-<section class="container">
-  <div class="card">
-    <p>Most people aren't failing because they don't work hard enough.</p>
-    <p>They're building on borrowed land — platforms they don't control.</p>
-  </div>
+        <p>That's what this guide is about. No hacks, no overnight success stories. Just the honest closure of what's actually working, and what piece is probably missing from your business right now.</p>
 
-  <div class="card compare">
-    <div>
-      <h3 class="bad">Wrong belief</h3>
-      <p>I need more traffic</p>
-    </div>
-    <div>
-      <h3 class="good">Reality</h3>
-      <p>You need a system</p>
-    </div>
-  </div>
+        <h2>It's probably not a traffic problem</h2>
+        <p>Here's something I hear a lot: <em>"I'm getting views, but nobody is buying."</em> Sound familiar?</p>
+        <p>If you've been posting consistently, getting saves, maybe even some followers — but making zero sales — the issue is almost certainly not reach. <strong>It's that there's no system catching all that attention and turning it into something.</strong></p>
+        <p>That system is called a Funnel. It's just the path someone walks from discovering you, to trusting you enough to buy. When the path is clean, people follow it naturally. When it's missing or broken, they scroll past and forget you existed five minutes later.</p>
+        <p>Most beginners build this backward. They create content, hope it leads somewhere, and wonder why the views don't translate. The ones who figure it out earlier — they build the path first, then drive people down it.</p>
 
-  <div class="card">
-    <h3>Worth sitting with</h3>
-    <p>Building content without a system means nothing is captured. Attention disappears instantly.</p>
-  </div>
-</section>
+        <div class="worth-sitting-with">
+            <span>Worth sitting with</span>
+            <p>Building the system feels like extra work when making content. But it's the only thing that makes the content actually work for you.</p>
+        </div>
 
-<!-- SYSTEM -->
-<section class="container">
-  <div class="card">
-    <h2>The system that actually works</h2>
+        <h2>What the system actually looks like</h2>
+        <p>Building a simple ecosystem is easier than it sounds. Four pieces, connected:</p>
 
-    <div class="steps">
-      <div class="step"><span>01</span>Traffic</div>
-      <div class="step"><span>02</span>Landing page</div>
-      <div class="step"><span>03</span>Email list</div>
-      <div class="step"><span>04</span>Offer</div>
-    </div>
-  </div>
+        <div class="system-list">
+            <div class="list-card">
+                <div class="card-num">01</div>
+                <div class="card-content">
+                    <strong>Traffic</strong>
+                    <p>Content on Pinterest or TikTok that gets the right person curious enough to click your bio.</p>
+                </div>
+            </div>
+            <div class="list-card">
+                <div class="card-num">02</div>
+                <div class="card-content">
+                    <strong>Landing Page</strong>
+                    <p>A simple page that gives them something useful in exchange for their email address.</p>
+                </div>
+            </div>
+            <div class="list-card">
+                <div class="card-num">03</div>
+                <div class="card-content">
+                    <strong>Email List</strong>
+                    <p>The only audience you actually own. Not rented, not at the mercy of an algorithm update.</p>
+                </div>
+            </div>
+            <div class="list-card">
+                <div class="card-num">04</div>
+                <div class="card-content">
+                    <strong>Offer</strong>
+                    <p>A product that solves a real problem for a real person. That's genuinely all you need to start.</p>
+                </div>
+            </div>
+        </div>
 
-  <div class="card mockup">
-    <h3>Simple system. Predictable outcome.</h3>
-    <p>Someone discovers you → joins list → receives offer → buys</p>
-  </div>
-</section>
+        <p>When these are connected, someone can find you on a Tuesday afternoon and buy from you by Wednesday morning — without you doing a single thing manually. The system handles it. You just keep creating.</p>
 
-<!-- EMAIL INSIGHT -->
-<section class="container">
-  <div class="card split">
-    <div>
-      <h2>300 emails</h2>
-      <p class="small">real subscribers</p>
-    </div>
-    <div>
-      <p>is worth more than 10,000 passive followers you can't reach reliably.</p>
-    </div>
-  </div>
-</section>
+        <h2>Why the email list matters more than your follower count</h2>
+        <p>I know everyone says this, but it's worth actually thinking about for a second.</p>
+        <p>Your followers on any platform — TikTok, Instagram, Pinterest — those aren't yours. They're the platform's. If your account gets shadowbanned, the algorithm shifts, or the app loses popularity, that audience is gone. You have no way to reach them.</p>
 
-<!-- LOOP -->
-<section class="container">
-  <div class="card">
-    <h3>The hidden failure loop</h3>
+        <div class="callout-quote" style="background-color: #f1eff7; text-align: left;">
+            <p style="font-family: var(--font-sans); font-style: normal; font-size: 1rem; color: var(--text-dark); font-weight: 600; margin-bottom: 0.5rem;">Your email list is the one thing that's actually yours.</p>
+            <p style="font-size: 0.95rem; margin-bottom: 0; color: var(--text-muted);">A list of 200 people who genuinely wanted to hear from you is worth more than 10,000 passive followers who barely remember following you. When you have something to say or something to sell, you can reach them directly. No algorithm in the way.</p>
+        </div>
 
-    <div class="loop">
-      <div>Watch tutorials</div>
-      <div>Rebuild landing page</div>
-      <div>Never launch</div>
-    </div>
-  </div>
-</section>
+        <h2>The thing that's quietly killing most beginner businesses</h2>
+        <p>It's not laziness. It's not bad content. It's the fact that building this stuff from scratch — by yourself, with no roadmap — takes forever.</p>
+        <p>You end up spending three weeks watching tutorials, switching between tools, building a landing page, hating it, starting over. The tech feels overwhelming. You're not sure if your Freebie is good enough. You keep tweaking things instead of launching them.</p>
+        <p>And while you're stuck in that loop, nothing is actually running. No list is growing. No system is working. You're just preparing to start eventually, maybe, get started.</p>
+        <p>The people who move fastest are almost always the ones who followed something that was already figured out — and skipped the months of trial and error.</p>
 
-<!-- REQUIREMENTS -->
-<section class="container">
-  <div class="card">
-    <h3>What you actually need</h3>
+        <h2>What you actually need to get going</h2>
+        <p>No website. No big following. No experience. Here's the real short list:</p>
 
-    <div class="checklist">
-      <div>Landing page that collects emails</div>
-      <div>A freebie worth signing up for</div>
-      <div>One product that solves one problem</div>
-    </div>
-  </div>
-</section>
+        <div class="requirements-list">
+            <div class="list-card">
+                <div class="card-check">✓</div>
+                <div class="card-content">
+                    <strong>A landing page that collects emails</strong>
+                    <p>Ones to build in a few focused hours, not weeks of learning.</p>
+                </div>
+            </div>
+            <div class="list-card">
+                <div class="card-check">✓</div>
+                <div class="card-content">
+                    <strong>A freebie worth signing up for</strong>
+                    <p>Something genuinely useful that gives people a reason to hand over their email.</p>
+                </div>
+            </div>
+            <div class="list-card">
+                <div class="card-check">✓</div>
+                <div class="card-content">
+                    <strong>One product that solves one problem</strong>
+                    <p>Not a whole store engine. Just one thing. You can build on it later.</p>
+                </div>
+            </div>
+        </div>
 
-<!-- CTA -->
-<section class="container">
-  <div class="cta">
-    <h2>Online Business Starter Kit</h2>
-    <p>27 pages · step-by-step system · built for beginners</p>
-    <a class="btn" href="#">Get instant access</a>
-  </div>
-</section>
+        <p>That's the foundation. Get those three things in place, and you have something real. Something that runs whether you post today or not.</p>
 
-<!-- FIT FILTER -->
-<section class="container">
-  <div class="card split">
-    <div>
-      <h3>If yes</h3>
-      <p>Posting but no sales</p>
-      <p>Want structure</p>
-      <p>Starting from zero</p>
-    </div>
-    <div>
-      <h3>If no</h3>
-      <p>Expect fast results</p>
-      <p>Won't build setup</p>
-      <p>Not consistent</p>
-    </div>
-  </div>
-</section>
+        <!-- Soft Bridge Segment -->
+        <div class="funnel-bridge">
+            <p>You can take the framework above and spend the next few weeks setting it up yourself by trial and error. Or, you can skip the tech confusion entirely and copy a pre-built system that works.</p>
+        </div>
 
-<!-- FINAL CTA -->
-<section class="container">
-  <div class="card mockup">
-    <h2>Stop guessing. Start building.</h2>
-    <p>One system. One funnel. One clear path.</p>
-    <a class="btn" href="#">Get the Starter Kit</a>
-  </div>
-</section>
+        <!-- Strategic Dark Box Offer -->
+        <div class="product-sales-box">
+            <span class="box-sub">If you want to skip the hard part</span>
+            <h2>Online Business Starter Kit</h2>
+            <p class="product-p">Everything I just described, laid out step-by-step across 27 pages. Built for people who are starting from zero and want to do this right the first time.</p>
+            
+            <div class="product-specs">
+                <div class="spec-item">
+                    <strong>27</strong>
+                    <span>Pages</span>
+                </div>
+                <div class="spec-item">
+                    <strong>4</strong>
+                    <span>Chapters</span>
+                </div>
+                <div class="spec-item">
+                    <strong>$0</strong>
+                    <span>Tools Needed</span>
+                </div>
+                <div class="spec-item">
+                    <strong>$47</strong>
+                    <span>One-Time</span>
+                </div>
+            </div>
 
-<!-- STICKY CTA -->
-<div class="sticky-cta">
-  <a class="btn" href="#">Get Starter Kit</a>
-</div>
+            <ul class="product-bullets">
+                <li>Full walkthrough for building your first funnel with free tools — no tech background needed.</li>
+                <li>Includes 1-Click Pre-Built Funnel Templates (Ready to import instantly into your free Systeme.io account).</li>
+                <li>A ready-made Freebie template you can personalize in about 10 minutes.</li>
+                <li>A go-live checklist so you don't miss anything before sending traffic.</li>
+                <li>5 beginner-friendly product ideas, with pricing guidance for each.</li>
+                <li>A content strategy for Pinterest and TikTok that drives real traffic.</li>
+            </ul>
 
-<!-- FOOTER -->
-<div class="final">
-  Start small. Build something that runs without you.
-</div>
+            <a href="DINFUNNELLÄNKHÄR" class="cta-button">Buy the Starter Kit Now ➔</a>
+            <span class="box-footnote">Instant digital download after purchase • Works for complete beginners</span>
+        </div>
+
+        <h2>Is this for you?</h2>
+        <div class="split-grid">
+            <div class="grid-box positive">
+                <h3>It's probably if...</h3>
+                <ul>
+                    <li>You've been posting without seeing sales.</li>
+                    <li>You want to build something that doesn't depend entirely on the algorithm.</li>
+                    <li>You're starting from scratch and want a clear path.</li>
+                    <li>You're tired of figuring this out alone.</li>
+                </ul>
+            </div>
+            <div class="grid-box negative">
+                <h3>It's probably not if...</h3>
+                <ul>
+                    <li>You're expecting overnight results.</li>
+                    <li>You're not willing to put in the setup work.</li>
+                    <li>You won't commit to showing up consistently for at least a month.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="worth-sitting-with">
+            <span>One last honest thing</span>
+            <p>The kit clears away the confusion, the guesswork, and the wasted hours of figuring things out the hard way. But it doesn't take away the work. If you're willing to put in the time and just need something solid so follow — this is built exactly for you.</p>
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="DINFUNNELLÄNKHÄR" class="cta-button">Get the Starter Kit for $47 —</a>
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.5rem;">Start small. Grow slow. Build something that lasts.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 SaaslyHubs. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>

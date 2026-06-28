@@ -662,6 +662,14 @@ footer {
 
 <footer>
   <p>&copy; 2026 SaaslyHubs &nbsp;&nbsp;·&nbsp;&nbsp; All rights reserved</p>
+<footer>
+      <div>SaaslyHubs</div>
+      <div class="legal">
+        <a href="https://www.saaslyhubs.com/terms-of-service" target="_blank" rel="noopener">Terms of Service</a>
+        <a href="https://www.saaslyhubs.com/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a>
+      </div>
+      <div class="copy">© 2026 SaaslyHubs. All rights reserved.</div>
+    </footer>
 </footer>
 
 </body>

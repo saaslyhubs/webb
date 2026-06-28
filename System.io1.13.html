@@ -200,6 +200,33 @@
             margin-bottom: 0;
         }
 
+        /* Fast-Track CTA Box */
+        .early-out-cta {
+            background-color: #f0edf7;
+            padding: 1.2rem 1.5rem;
+            border-radius: 6px;
+            margin: 2.5rem 0;
+            border-left: 4px solid var(--accent-purple);
+        }
+
+        .early-out-cta p {
+            margin-bottom: 0;
+            font-size: 0.95rem;
+            color: var(--text-dark);
+        }
+
+        .early-out-cta a {
+            color: var(--accent-purple);
+            font-weight: 600;
+            text-decoration: none;
+            border-bottom: 1px solid var(--accent-purple);
+            transition: opacity 0.2s;
+        }
+
+        .early-out-cta a:hover {
+            opacity: 0.8;
+        }
+
         /* Soft Bridge styling */
         .funnel-bridge {
             text-align: center;
@@ -245,6 +272,37 @@
             font-size: 0.95rem;
             max-width: 500px;
             margin: 0 auto 2.5rem auto;
+        }
+
+        /* Mockup Gallery Styling */
+        .mockup-gallery {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin: 3.5rem 0;
+            padding: 0 1rem;
+        }
+
+        .mockup-img {
+            width: 30%;
+            max-width: 160px;
+            height: auto;
+            border-radius: 6px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+            border: 1px solid #4a4340;
+            transition: transform 0.3s ease;
+        }
+
+        .mockup-img:nth-child(2) {
+            transform: translateY(-15px);
+            z-index: 2;
+            position: relative;
+        }
+
+        .mockup-img:hover {
+            transform: translateY(-20px) scale(1.05);
+            z-index: 3;
         }
 
         .product-specs {
@@ -337,6 +395,12 @@
             .product-specs {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 1.5rem;
+            }
+            .mockup-gallery {
+                gap: 10px;
+            }
+            .mockup-img:nth-child(2) {
+                transform: translateY(-10px);
             }
         }
 
@@ -453,6 +517,14 @@
 
         <p>When these are connected, someone can find you on a Tuesday afternoon and buy from you by Wednesday morning — without you doing a single thing manually. The system handles it. You just keep creating.</p>
 
+        <!-- Fast-Track CTA för de som redan är varma -->
+        <div class="early-out-cta">
+            <p>
+                <strong>Ready to skip the trial and error?</strong> 
+                <a href="HÄR-ÄR-DIN-GUMROAD-LÄNK" target="_blank" rel="noopener noreferrer">Click here to copy my exact pre-built system right now ➔</a>
+            </p>
+        </div>
+
         <h2>Why the email list matters more than your follower count</h2>
         <p>I know everyone says this, but it's worth actually thinking about for a second.</p>
         <p>Your followers on any platform — TikTok, Instagram, Pinterest — those aren't yours. They're the platform's. If your account gets shadowbanned, the algorithm shifts, or the app loses popularity, that audience is gone. You have no way to reach them.</p>
@@ -502,12 +574,19 @@
             <p>You can take the framework above and spend the next few weeks setting it up yourself by trial and error. Or, you can skip the tech confusion entirely and copy a pre-built system that works.</p>
         </div>
 
-        <!-- Strategic Dark Box Offer -->
+        <!-- Strategic Dark Box Offer with Mockups & Gumroad -->
         <div class="product-sales-box">
             <span class="box-sub">If you want to skip the hard part</span>
             <h2>Online Business Starter Kit</h2>
             <p class="product-p">Everything I just described, laid out step-by-step across 27 pages. Built for people who are starting from zero and want to do this right the first time.</p>
             
+            <!-- Visuell Mockup sektion -->
+            <div class="mockup-gallery">
+                <img src="1.jpg" alt="Starter Kit Cover" class="mockup-img">
+                <img src="4.jpg" alt="Inside the Guide - Step 1" class="mockup-img">
+                <img src="7.jpg" alt="Inside the Guide - Step 2" class="mockup-img">
+            </div>
+
             <div class="product-specs">
                 <div class="spec-item">
                     <strong>27</strong>
@@ -536,7 +615,7 @@
                 <li>A content strategy for Pinterest and TikTok that drives real traffic.</li>
             </ul>
 
-            <a href="DINFUNNELLÄNKHÄR" class="cta-button">Buy the Starter Kit Now ➔</a>
+            <a href="HÄR-ÄR-DIN-GUMROAD-LÄNK" target="_blank" rel="noopener noreferrer" class="cta-button">Get it securely on Gumroad ➔</a>
             <span class="box-footnote">Instant digital download after purchase • Works for complete beginners</span>
         </div>
 
@@ -563,11 +642,11 @@
 
         <div class="worth-sitting-with">
             <span>One last honest thing</span>
-            <p>The kit clears away the confusion, the guesswork, and the wasted hours of figuring things out the hard way. But it doesn't take away the work. If you're willing to put in the time and just need something solid so follow — this is built exactly for you.</p>
+            <p>The kit clears away the confusion, the guesswork, and the wasted hours of figuring things out the hard way. But it doesn't take away the work. If you're willing to put in the time and just need something solid to follow — this is built exactly for you.</p>
         </div>
 
         <div style="text-align: center; margin-top: 3rem;">
-            <a href="DINFUNNELLÄNKHÄR" class="cta-button">Get the Starter Kit for $47 —</a>
+            <a href="HÄR-ÄR-DIN-GUMROAD-LÄNK" target="_blank" rel="noopener noreferrer" class="cta-button">Get the Starter Kit for $47 —</a>
             <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.5rem;">Start small. Grow slow. Build something that lasts.</p>
         </div>
     </main>

@@ -4,17 +4,17 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<title>Pinterest-style Landing Page Guide</title>
+<title>Landing Page Guide</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
 <style>
 :root{
-    --bg:#f7f1e8;        /* warm beige */
+    --bg:#f7f1e8;
     --card:#ffffff;
     --text:#1f1f1f;
     --muted:#6b5f52;
-    --accent:#b08d57;    /* soft gold */
+    --accent:#b08d57;
     --border:#eadfce;
 }
 
@@ -28,82 +28,68 @@ body{
     line-height:1.75;
 }
 
-/* main container */
 .container{
-    max-width:780px;
+    max-width:820px;
     margin:0 auto;
-    padding:70px 22px;
+    padding:90px 22px;
 }
 
-/* headline style = Pinterest editorial */
+/* typografi */
 h1{
     font-family:"Playfair Display", serif;
     font-size:44px;
     line-height:1.15;
-    margin-bottom:14px;
-    letter-spacing:-0.02em;
+    margin-bottom:18px;
 }
 
-/* section headers */
 h2{
     font-family:"Playfair Display", serif;
     font-size:26px;
-    margin-top:48px;
+    margin-top:70px;
 }
 
-/* paragraph */
-p{
-    font-size:16px;
-    color:var(--text);
-    margin:14px 0;
-}
-
-/* muted intro text */
-.muted{
-    color:var(--muted);
-}
-
-/* card blocks (Pinterest feel) */
+/* cards */
 .card{
     background:var(--card);
     border:1px solid var(--border);
-    padding:22px;
+    padding:26px;
     border-radius:14px;
-    margin:22px 0;
+    margin:26px 0;
     box-shadow:0 8px 20px rgba(0,0,0,0.04);
+
+    /* scroll pacing base state */
+    opacity:0;
+    transform:translateY(18px);
+    transition:all 0.8s ease;
+}
+
+/* when visible */
+.card.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* paragraphs spacing = slower reading */
+p{
+    font-size:16px;
+    margin:18px 0;
 }
 
 /* CTA */
 .cta{
     display:inline-block;
-    margin-top:18px;
+    margin-top:16px;
     padding:12px 18px;
     background:var(--accent);
-    color:white;
+    color:#fff;
     text-decoration:none;
-    font-weight:600;
     border-radius:10px;
-    letter-spacing:0.03em;
+    font-weight:600;
 }
 
-.cta:hover{
-    opacity:0.92;
-}
-
-/* divider */
-.divider{
-    height:1px;
-    background:var(--border);
-    margin:42px 0;
-}
-
-/* list styling */
-ul{
-    padding-left:18px;
-}
-
-li{
-    margin:10px 0;
+/* extra vertical rhythm */
+.card p:last-child{
+    margin-bottom:0;
 }
 </style>
 </head>
@@ -114,52 +100,56 @@ li{
 
     <h1>How to Build a Landing Page for Free (That Actually Converts)</h1>
 
-    <p class="muted">
-        Most people overcomplicate landing pages. This is a simplified structure focused on conversion, not decoration.
-    </p>
-
     <div class="card">
-        <p>
-            If you are trying to launch a digital product or build an email list, you need one thing:
-            a landing page that removes friction and guides action.
-        </p>
+        <p>If you are trying to launch a digital product or build an email list, you already know you need a landing page. But if you’ve spent any time researching your options, you’ve probably hit a wall of frustration.</p>
+        <p>Shopify wants a monthly subscription before you’ve even made your first sale. WordPress requires you to buy hosting, install a theme, and wrestle with a dozen different plugins just to make a button work.</p>
+        <p>You don’t need a massive, complicated website. You need a simple, high-converting system.</p>
+        <p>In this guide, I will show you exactly how to build a landing page for free without the tech overwhelm, using a framework that actually turns visitors into subscribers.</p>
     </div>
 
-    <h2>Why Most Free Builders Fail</h2>
-
-    <p>
-        Free tools often prioritize templates over clarity. The result is visual noise, not conversions.
-    </p>
+    <h2>Why Most "Free" Landing Page Builders Fail You</h2>
 
     <div class="card">
-        <p>
-            Visitors decide in seconds. If the page feels cluttered or generic, they leave immediately.
-        </p>
+        <p>Most free builders give you a blank canvas or push you toward loud, cluttered templates filled with stock photos, unnecessary icons, and confusing layouts.</p>
+        <p>When traffic lands on your page—especially from Pinterest—they decide in seconds. If your page is slow or generic, they leave.</p>
+        <p>To get conversions, you need to strip away noise.</p>
     </div>
 
-    <h2>The “Neutral Editorial” Framework</h2>
-
-    <ul>
-        <li>Warm beige background instead of cold grey</li>
-        <li>Editorial typography (serif headlines + clean body text)</li>
-        <li>Single-column layout with strong spacing</li>
-        <li>Minimal visual elements, focus on text</li>
-    </ul>
-
-    <h2>Recommended Tool</h2>
+    <h2>The "Neutral Tech" Framework</h2>
 
     <div class="card">
-        <p>
-            A practical option is <strong>Systeme.io</strong>. It allows funnels, landing pages, and email collection
-            without upfront cost.
-        </p>
+        <p>A strictly minimalist, typographic approach performs better than visual-heavy design.</p>
+        <p><strong>Key principle:</strong> clarity over decoration.</p>
+        <p>No images, no clutter, single-column layout, strong whitespace.</p>
+        <p>CTAs should be direct and command-driven, not generic buttons.</p>
+    </div>
 
-        <a class="cta" href="LÄGG-DIN-AFFILIATE-LÄNK-HÄR">
-            Get started free
-        </a>
+    <h2>Tool Recommendation</h2>
+
+    <div class="card">
+        <p><strong>Systeme.io</strong> is a practical option for building funnels and landing pages for free.</p>
+        <p>It supports email collection and full funnel setup without upfront cost.</p>
+        <a class="cta" href="#">SEND ME THE BLUEPRINT</a>
     </div>
 
 </div>
+
+<script>
+/* scroll pacing: reveal cards one by one */
+const cards = document.querySelectorAll('.card');
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add('show');
+        }
+    });
+}, {
+    threshold: 0.15
+});
+
+cards.forEach(card => observer.observe(card));
+</script>
 
 </body>
 </html>

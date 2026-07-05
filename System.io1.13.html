@@ -1,116 +1,90 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-<title>How to Build a Landing Page for Free</title>
+<title>How to Build a Landing Page for Free | SaaslyHubs</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
 <style>
-:root{
-    --bg1:#f7f1e8;
-    --bg2:#fbf7f2;
-    --card:#ffffffcc;
-    --text:#1f1f1f;
-    --muted:#6b5f52;
-    --accent:#a88455;
-    --border:#eadfce;
-}
-
-/* base */
-*{box-sizing:border-box;}
-
-body{
+  body{
     margin:0;
     font-family: Inter, sans-serif;
-    color:var(--text);
-    line-height:1.8;
+    background:#F7F8FC;
+    color:#1A1B23;
+    line-height:1.7;
+  }
 
-    /* soft gradient instead of flat color */
-    background:linear-gradient(180deg,var(--bg1),var(--bg2));
-}
-
-/* container */
-.container{
+  .container{
     max-width:820px;
     margin:0 auto;
-    padding:100px 22px;
-}
+    padding:80px 24px;
+  }
 
-/* headline */
-h1{
-    font-family:"Playfair Display", serif;
-    font-size:46px;
-    line-height:1.1;
-    margin-bottom:20px;
-    letter-spacing:-0.02em;
-}
+  h1{
+    font-family: "Playfair Display", serif;
+    font-size:52px;
+    line-height:1.2;
+    margin-bottom:16px;
+    letter-spacing:-0.5px;
+  }
 
-/* section headers */
-h2{
-    font-family:"Playfair Display", serif;
-    font-size:28px;
-    margin:90px 0 20px;
-}
+  .subtitle{
+    font-size:18px;
+    color:#5B5F73;
+    margin-bottom:48px;
+  }
 
-/* paragraphs = slower reading rhythm */
-p{
-    font-size:16px;
-    margin:20px 0;
-    color:var(--text);
-}
+  .card{
+    background:#fff;
+    border:1px solid #E6E8F2;
+    border-radius:14px;
+    padding:28px;
+    margin:32px 0;
+  }
 
-/* FLOATING editorial sections (NOT boxed UI) */
-.section{
-    padding:28px 30px;
-    margin:30px 0 70px;
+  .accent{
+    border-left:4px solid #6D5BFF;
+    padding-left:16px;
+  }
 
-    background:var(--card);
-    border:1px solid var(--border);
-    border-radius:18px;
+  h2{
+    font-size:22px;
+    margin-top:40px;
+  }
 
-    /* softer, editorial shadow */
-    box-shadow:0 18px 45px rgba(0,0,0,0.06);
+  p{
+    margin:14px 0;
+  }
 
-    backdrop-filter: blur(6px);
+  .cta{
+    margin-top:60px;
+    padding:32px;
+    background:#F3F4FF;
+    border-radius:16px;
+    text-align:center;
+  }
 
-    /* scroll pacing base state */
-    opacity:0;
-    transform:translateY(24px);
-    transition:all 0.9s ease;
-}
-
-/* reveal state */
-.section.show{
-    opacity:1;
-    transform:translateY(0);
-}
-
-/* CTA */
-.cta{
+  .btn{
     display:inline-block;
-    margin-top:20px;
-    padding:14px 20px;
-    background:var(--accent);
+    margin-top:16px;
+    padding:14px 22px;
+    background:#6D5BFF;
     color:#fff;
+    border-radius:10px;
     text-decoration:none;
-    border-radius:12px;
     font-weight:600;
-    letter-spacing:0.02em;
+  }
 
-    box-shadow:0 10px 25px rgba(168,132,85,0.25);
-}
+  .btn:hover{
+    background:#8A7BFF;
+  }
 
-.cta:hover{
-    transform:translateY(-2px);
-}
-
-/* subtle divider spacing rhythm */
-.spacer{
-    height:40px;
-}
+  .muted{
+    color:#5B5F73;
+  }
 </style>
 </head>
 
@@ -118,74 +92,24 @@ p{
 
 <div class="container">
 
-    <h1>How to Build a Landing Page for Free (That Actually Converts)</h1>
+  <h1>How to build a landing page for free</h1>
+  <div class="subtitle">A minimalist system for conversion-focused pages and structured funnels.</div>
 
-    <div class="section">
-        <p>If you are trying to launch a digital product or build an email list, you already know you need a landing page. But if you’ve spent any time researching your options, you’ve probably hit a wall of frustration.</p>
+  <div class="card accent">
+    Rule: if your headline could sit on any other landing page in any other niche, rewrite it. 2. The 1-Column Layout No sidebars. No navigation menu. No unrelated images. No links to your blog, your social profiles, or your "About" page. Here's why: every link is an exit. A landing page with a menu bar is a landing page giving people permission to leave before converting. The visitor should have exactly two options: Give you their email, or Close the tab That's it. No third option. No "browse around first." This feels aggressive to beginners — it isn't. It's just decision architecture. You're not trying to be a website. You're trying to be a single transaction. 3. The Call to Action (CTA) "Learn More" and "Submit" are conversion killers. They're vague, they carry no value proposition, and they ask the visitor to trust a button that tells them nothing. Replace vague verbs with specific outcomes: "Send me the template" "Get instant access" "Built with Systeme.io" A specific CTA restates the value at the exact moment of decision. The visitor already knows what they're getting because the button just told them again. That's not a small copywriting tweak — it's often the single highest-leverage change you can make on a page. The Tool That Builds the System Here's the part most beginners get wrong: they try to assemble this structure using four or five different tools. A page builder for the landing page. A separate email service provider. A checkout tool. Some Zapier automation gluing it all together. Something always breaks. Systeme.io removes that problem entirely. It's a single platform built to run exactly the structure outlined above: The minimalist landing page you just designed, built with drag-and-drop — no code required The email capture connected natively, with no third-party integration needed The automated email sequence that follows up after someone opts in The sales page and checkout, if you're selling a digital product, in the same dashboard You're not stitching software together. You're not paying for five subscriptions that each do one job badly. The landing page, the list, and the automation all sit inside one system — which means fewer failure points and faster setup. For someone building their first funnel, this matters more than it sounds like it should. The technical overhead is usually what kills momentum, not lack of ideas. Stop Guessing. Start Building. You now have the actual blueprint: a clear headline, a single-column layout, a specific CTA, and a system that connects all three without technical friction. Most people never build this because they treat it as a "someday" project — they'll get to the funnel once they have more time, more traffic, more content. That's backwards. The structure comes first. Traffic without structure is wasted traffic. Set this up today, not next month.
+  </div>
 
-        <p>Shopify wants a monthly subscription before you’ve even made your first sale. WordPress requires you to buy hosting, install a theme, and wrestle with a dozen different plugins just to make a button work.</p>
+  <h2>Build the system</h2>
+  <p class="muted">
+    Stop delaying execution. Structure matters more than traffic at the beginning stage.
+  </p>
 
-        <p>You don’t need a massive, complicated website. You need a simple, high-converting system.</p>
-
-        <p>In this guide, I will show you exactly how to build a landing page for free without the tech overwhelm, using a framework that actually turns visitors into subscribers.</p>
-    </div>
-
-    <h2>Why Most "Free" Landing Page Builders Fail You</h2>
-
-    <div class="section">
-        <p>Most free builders give you a blank canvas or push you toward loud, cluttered templates filled with stock photos, unnecessary icons, and confusing layouts.</p>
-
-        <p>When traffic lands on your page—especially if they clicked over from a highly visual platform like Pinterest—they make a decision in milliseconds. If your page is slow, cluttered, or looks like a generic template from 2015, they will bounce.</p>
-
-        <p>To get high conversions, you need to strip away the noise.</p>
-    </div>
-
-    <h2>The "Neutral Tech" Framework: Why Less is Always More</h2>
-
-    <div class="section">
-        <p>To build a page that actually works, we rely on a strictly minimalist, typographic approach. We call it the "Neutral Tech" aesthetic.</p>
-
-        <p><strong>A Clinical, Cool Color Palette:</strong> Ditch the warm lifestyle tones. Use very light, cold grey or blue-grey backgrounds (like HEX #F4F5F7).</p>
-
-        <p><strong>Zero Distractions:</strong> No lifestyle images, no illustrations, no icons.</p>
-
-        <p><strong>The Single-Column Layout:</strong> Center all content with strong whitespace.</p>
-
-        <p><strong>Text-Based Calls to Action:</strong> Use command-driven text like SEND ME THE BLUEPRINT.</p>
-
-        <p>When you build a landing page with this framework, you position your offer as premium by default.</p>
-    </div>
-
-    <h2>The Best Tool to Build a Landing Page for Free in 2026</h2>
-
-    <div class="section">
-
-        <p>You don't need a heavy CMS like WordPress. The best platform right now is Systeme.io.</p>
-
-        <p>It allows funnels, landing pages, and email collection without upfront cost.</p>
-
-        <a class="cta" href="LÄGG-DIN-AFFILIATE-LÄNK-HÄR">
-            SEND ME THE BLUEPRINT
-        </a>
-    </div>
+  <div class="cta">
+    <div><strong>Ready to implement the system?</strong></div>
+    <a class="btn" href="#">Build with Systeme.io</a>
+  </div>
 
 </div>
-
-<script>
-const sections = document.querySelectorAll('.section');
-
-const observer = new IntersectionObserver((entries)=>{
-    entries.forEach(entry=>{
-        if(entry.isIntersecting){
-            entry.target.classList.add('show');
-        }
-    });
-},{
-    threshold:0.18
-});
-
-sections.forEach(s => observer.observe(s));
-</script>
 
 </body>
 </html>

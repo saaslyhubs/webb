@@ -3,151 +3,166 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
 <title>SaaslyHubs Blog</title>
 
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Source+Serif+Pro:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
 <style>
 :root{
-  --bg:#faf7f4;
-  --text:#2b241f;
-  --muted:#6b5e56;
-  --accent:#c4697a;
+  --bg:#fff8f4;
   --card:#ffffff;
+  --text:#1f1b1a;
+  --muted:#6b5f5b;
+  --accent:#8b6cff;
+  --soft:#efe7ff;
   --border:rgba(0,0,0,0.06);
 }
 
 *{box-sizing:border-box}
+
 body{
   margin:0;
-  font-family:'Source Serif Pro', serif;
+  font-family:Inter, sans-serif;
   background:var(--bg);
   color:var(--text);
-  line-height:1.75;
+  line-height:1.7;
 }
 
-h1,h2,h3{font-family:'DM Sans',sans-serif; letter-spacing:-0.02em}
-
-main{
-  max-width:760px;
+/* layout */
+.container{
+  max-width:780px;
   margin:0 auto;
-  padding:60px 20px;
+  padding:70px 20px;
 }
 
-/* HERO */
-.hero{
-  position:relative;
-  height:70vh;
-  overflow:hidden;
+/* typography */
+h1,h2,h3{
+  font-family:"Playfair Display", serif;
+  letter-spacing:-0.02em;
 }
 
-.hero img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
-
-.hero-overlay{
-  position:absolute;
-  inset:0;
-  background:linear-gradient(to bottom, rgba(255,255,255,0.1), rgba(250,247,244,0.9));
-}
-
-.hero-content{
-  position:absolute;
-  bottom:40px;
-  left:50%;
-  transform:translateX(-50%);
-  width:100%;
-  max-width:760px;
-  padding:0 20px;
-}
-
-.hero h1{
-  font-size:54px;
-  line-height:1.05;
-  margin:0;
-}
-
-.tag{
-  font-size:12px;
-  letter-spacing:2px;
-  text-transform:uppercase;
-  color:var(--accent);
-  font-weight:700;
-}
-
-/* CARDS */
-.card{
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:18px;
-  padding:28px;
-  margin:40px 0;
-  box-shadow:0 10px 30px rgba(0,0,0,0.04);
-}
-
-/* TEXT */
-p{font-size:18px;color:var(--muted)}
-h2{font-size:34px;margin-top:60px}
+h1{font-size:52px; line-height:1.05}
+h2{font-size:34px; margin-top:60px}
 h3{font-size:22px}
 
-/* CTA */
-.cta{
-  background:linear-gradient(135deg,#fff,#fff5f7);
+p{
+  color:var(--muted);
+  font-size:18px;
+}
+
+/* hero */
+.hero{
+  display:grid;
+  grid-template-columns:1.2fr 1fr;
+  gap:40px;
+  align-items:center;
+  padding:80px 20px;
+  max-width:1100px;
+  margin:0 auto;
+}
+
+.badge{
+  font-size:12px;
+  letter-spacing:2px;
+  color:var(--accent);
+  font-weight:700;
+  text-transform:uppercase;
+}
+
+.hero-card{
+  background:var(--card);
   border:1px solid var(--border);
-  border-radius:26px;
-  padding:50px;
-  text-align:center;
-  margin:80px 0;
+  border-radius:20px;
+  padding:24px;
+  box-shadow:0 20px 60px rgba(0,0,0,0.06);
+}
+
+.hero-card input{
+  width:100%;
+  padding:12px;
+  border-radius:10px;
+  border:1px solid var(--border);
+  margin-top:10px;
 }
 
 .btn{
   display:inline-block;
-  margin-top:20px;
-  padding:14px 28px;
-  background:var(--accent);
-  color:#fff;
+  margin-top:12px;
+  padding:12px 18px;
   border-radius:999px;
+  background:var(--accent);
+  color:white;
   text-decoration:none;
-  font-weight:700;
-  transition:0.2s;
+  font-weight:600;
+  text-align:center;
 }
-.btn:hover{transform:translateY(-2px)}
 
-/* IMAGES */
-img{
-  max-width:100%;
+/* cards */
+.card{
+  background:var(--card);
+  border:1px solid var(--border);
   border-radius:18px;
-  margin:20px 0;
+  padding:26px;
+  margin:24px 0;
 }
 
-/* CALL OUT */
+/* grid */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+}
+
+/* callout */
 .callout{
+  background:var(--soft);
   border-left:4px solid var(--accent);
-  background:rgba(196,105,122,0.06);
-  padding:18px 20px;
+  padding:16px 18px;
   border-radius:12px;
-  margin:20px 0;
+}
+
+/* CTA */
+.cta{
+  text-align:center;
+  margin:90px 0;
+  padding:60px;
+  background:linear-gradient(135deg,#fff,#f6f1ff);
+  border:1px solid var(--border);
+  border-radius:26px;
 }
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
-<div class="hero">
-  <img src="https://images.pexels.com/photos/8534161/pexels-photo-8534161.jpeg" />
-  <div class="hero-overlay"></div>
+<!-- HERO (matchar din bildstil) -->
+<section class="hero">
 
-  <div class="hero-content">
-    <div class="tag">LANDING PAGES · CONVERSION</div>
-    <h1>Landing Page Design for Email List Growth: The Minimalist Blueprint That Actually Converts</h1>
-    <p><strong>SaaslyHubs</strong> · 7 min read</p>
+  <div>
+    <div class="badge">FREE GUIDE</div>
+    <h1>Your content deserves to build your <em style="color:var(--accent)">email list</em></h1>
+
+    <p>
+      Most content posts every day but lose their audience the moment they click away. This free guide shows you the simple system that captures them automatically.
+    </p>
+
+    <div class="callout">
+      Systeme.io is the system that connects everything in this guide — landing pages, email capture and automation — so you don’t need multiple tools.
+    </div>
   </div>
-</div>
 
-<main>
+  <div class="hero-card">
+    <strong>Get the free guide</strong>
+    <p>Enter your email to get instant access</p>
+
+    <input placeholder="Email" />
+    <a class="btn" href="#">Get the guide</a>
+  </div>
+
+</section>
+
+<main class="container">
 
 <p><strong>Most landing pages fail for one reason: they try to do too much.</strong></p>
 
@@ -157,7 +172,6 @@ img{
 
 <p>Fix the structure first. Traffic is a multiplier — it multiplies whatever conversion rate you already have. If that rate is low, more traffic just means more people leaving faster.</p>
 
-<div class="card">
 <h2>Visualize the Funnel Before You Build It</h2>
 
 <p>Before you open any page builder, map the path visually. What does the visitor see first? What's the one action you want them to take? Where do they go after?</p>
@@ -166,43 +180,32 @@ img{
 If you can't sketch it in five boxes, you don't have a system yet — you have a page.
 </div>
 
-<img src="https://images.pexels.com/photos/6193082/pexels-photo-6193082.jpeg"/>
-
 <p>This step gets skipped constantly, and it's the reason so many landing pages have three CTAs, a nav menu, and a testimonials section fighting for attention.</p>
-</div>
 
 <h2>The 3 Critical Elements of a Minimalist Landing Page</h2>
 
-<p>Strip a converting landing page down and you're left with exactly three components. Not five, not ten. Three.</p>
+<p>Strip a converting landing page down and you're left with exactly three components.</p>
+
+<div class="grid">
 
 <div class="card">
 <h3>1. The Headline</h3>
-
 <p>The headline is not a place to be clever. It's a place to be specific.</p>
-
 <div class="callout">
-Bad: "Unlock Your Potential"<br><br>
-Good: "Get the 7-Day Email Sequence Template That Turns Cold Leads Into Buyers"
+Bad: Unlock Your Potential<br>
+Good: Get the 7-Day Email Sequence Template That Turns Cold Leads Into Buyers
 </div>
-
-<p>Fluff doesn't build trust — specificity does.</p>
 </div>
 
 <div class="card">
 <h3>2. The 1-Column Layout</h3>
-
 <p>No sidebars. No navigation menu. Every link is an exit.</p>
-
-<div class="callout">
-Give you their email — or close the tab.
-</div>
+<div class="callout">Give you their email — or close the tab.</div>
 </div>
 
 <div class="card">
 <h3>3. The Call to Action</h3>
-
-<p>Replace vague verbs with specific outcomes:</p>
-
+<p>Replace vague verbs with specific outcomes.</p>
 <div class="callout">
 Send me the template<br>
 Get instant access<br>
@@ -210,19 +213,21 @@ Built with Systeme.io
 </div>
 </div>
 
+</div>
+
 <h2>The Tool That Builds the System</h2>
 
 <div class="card">
-<p>Systeme.io removes the complexity of stitching tools together. Everything sits in one system: landing page, email capture, automation, and checkout.</p>
-
-<img src="https://images.pexels.com/photos/5380201/pexels-photo-5380201.jpeg"/>
+<p>
+Systeme.io removes the complexity of stitching tools together. Everything sits in one system: landing page, email capture, automation, checkout.
+</p>
 </div>
 
 <h2>Stop Guessing. Start Building.</h2>
 
 <div class="cta">
 <h2>Stop Guessing. Start Building.</h2>
-<p>You now have the blueprint for a converting landing page system.</p>
+<p>You now have the actual blueprint for a converting system.</p>
 <a class="btn" href="#">Create Your Free Systeme.io Account →</a>
 </div>
 

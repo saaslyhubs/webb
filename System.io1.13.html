@@ -4,92 +4,112 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<title>Landing Page Guide</title>
+<title>How to Build a Landing Page for Free</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
 <style>
 :root{
-    --bg:#f7f1e8;
-    --card:#ffffff;
+    --bg1:#f7f1e8;
+    --bg2:#fbf7f2;
+    --card:#ffffffcc;
     --text:#1f1f1f;
     --muted:#6b5f52;
-    --accent:#b08d57;
+    --accent:#a88455;
     --border:#eadfce;
 }
 
+/* base */
 *{box-sizing:border-box;}
 
 body{
     margin:0;
     font-family: Inter, sans-serif;
-    background:var(--bg);
     color:var(--text);
-    line-height:1.75;
+    line-height:1.8;
+
+    /* soft gradient instead of flat color */
+    background:linear-gradient(180deg,var(--bg1),var(--bg2));
 }
 
+/* container */
 .container{
     max-width:820px;
     margin:0 auto;
-    padding:90px 22px;
+    padding:100px 22px;
 }
 
-/* typografi */
+/* headline */
 h1{
     font-family:"Playfair Display", serif;
-    font-size:44px;
-    line-height:1.15;
-    margin-bottom:18px;
+    font-size:46px;
+    line-height:1.1;
+    margin-bottom:20px;
+    letter-spacing:-0.02em;
 }
 
+/* section headers */
 h2{
     font-family:"Playfair Display", serif;
-    font-size:26px;
-    margin-top:70px;
+    font-size:28px;
+    margin:90px 0 20px;
 }
 
-/* cards */
-.card{
+/* paragraphs = slower reading rhythm */
+p{
+    font-size:16px;
+    margin:20px 0;
+    color:var(--text);
+}
+
+/* FLOATING editorial sections (NOT boxed UI) */
+.section{
+    padding:28px 30px;
+    margin:30px 0 70px;
+
     background:var(--card);
     border:1px solid var(--border);
-    padding:26px;
-    border-radius:14px;
-    margin:26px 0;
-    box-shadow:0 8px 20px rgba(0,0,0,0.04);
+    border-radius:18px;
+
+    /* softer, editorial shadow */
+    box-shadow:0 18px 45px rgba(0,0,0,0.06);
+
+    backdrop-filter: blur(6px);
 
     /* scroll pacing base state */
     opacity:0;
-    transform:translateY(18px);
-    transition:all 0.8s ease;
+    transform:translateY(24px);
+    transition:all 0.9s ease;
 }
 
-/* when visible */
-.card.show{
+/* reveal state */
+.section.show{
     opacity:1;
     transform:translateY(0);
-}
-
-/* paragraphs spacing = slower reading */
-p{
-    font-size:16px;
-    margin:18px 0;
 }
 
 /* CTA */
 .cta{
     display:inline-block;
-    margin-top:16px;
-    padding:12px 18px;
+    margin-top:20px;
+    padding:14px 20px;
     background:var(--accent);
     color:#fff;
     text-decoration:none;
-    border-radius:10px;
+    border-radius:12px;
     font-weight:600;
+    letter-spacing:0.02em;
+
+    box-shadow:0 10px 25px rgba(168,132,85,0.25);
 }
 
-/* extra vertical rhythm */
-.card p:last-child{
-    margin-bottom:0;
+.cta:hover{
+    transform:translateY(-2px);
+}
+
+/* subtle divider spacing rhythm */
+.spacer{
+    height:40px;
 }
 </style>
 </head>
@@ -100,55 +120,71 @@ p{
 
     <h1>How to Build a Landing Page for Free (That Actually Converts)</h1>
 
-    <div class="card">
+    <div class="section">
         <p>If you are trying to launch a digital product or build an email list, you already know you need a landing page. But if you’ve spent any time researching your options, you’ve probably hit a wall of frustration.</p>
+
         <p>Shopify wants a monthly subscription before you’ve even made your first sale. WordPress requires you to buy hosting, install a theme, and wrestle with a dozen different plugins just to make a button work.</p>
+
         <p>You don’t need a massive, complicated website. You need a simple, high-converting system.</p>
+
         <p>In this guide, I will show you exactly how to build a landing page for free without the tech overwhelm, using a framework that actually turns visitors into subscribers.</p>
     </div>
 
     <h2>Why Most "Free" Landing Page Builders Fail You</h2>
 
-    <div class="card">
+    <div class="section">
         <p>Most free builders give you a blank canvas or push you toward loud, cluttered templates filled with stock photos, unnecessary icons, and confusing layouts.</p>
-        <p>When traffic lands on your page—especially from Pinterest—they decide in seconds. If your page is slow or generic, they leave.</p>
-        <p>To get conversions, you need to strip away noise.</p>
+
+        <p>When traffic lands on your page—especially if they clicked over from a highly visual platform like Pinterest—they make a decision in milliseconds. If your page is slow, cluttered, or looks like a generic template from 2015, they will bounce.</p>
+
+        <p>To get high conversions, you need to strip away the noise.</p>
     </div>
 
-    <h2>The "Neutral Tech" Framework</h2>
+    <h2>The "Neutral Tech" Framework: Why Less is Always More</h2>
 
-    <div class="card">
-        <p>A strictly minimalist, typographic approach performs better than visual-heavy design.</p>
-        <p><strong>Key principle:</strong> clarity over decoration.</p>
-        <p>No images, no clutter, single-column layout, strong whitespace.</p>
-        <p>CTAs should be direct and command-driven, not generic buttons.</p>
+    <div class="section">
+        <p>To build a page that actually works, we rely on a strictly minimalist, typographic approach. We call it the "Neutral Tech" aesthetic.</p>
+
+        <p><strong>A Clinical, Cool Color Palette:</strong> Ditch the warm lifestyle tones. Use very light, cold grey or blue-grey backgrounds (like HEX #F4F5F7).</p>
+
+        <p><strong>Zero Distractions:</strong> No lifestyle images, no illustrations, no icons.</p>
+
+        <p><strong>The Single-Column Layout:</strong> Center all content with strong whitespace.</p>
+
+        <p><strong>Text-Based Calls to Action:</strong> Use command-driven text like SEND ME THE BLUEPRINT.</p>
+
+        <p>When you build a landing page with this framework, you position your offer as premium by default.</p>
     </div>
 
-    <h2>Tool Recommendation</h2>
+    <h2>The Best Tool to Build a Landing Page for Free in 2026</h2>
 
-    <div class="card">
-        <p><strong>Systeme.io</strong> is a practical option for building funnels and landing pages for free.</p>
-        <p>It supports email collection and full funnel setup without upfront cost.</p>
-        <a class="cta" href="#">SEND ME THE BLUEPRINT</a>
+    <div class="section">
+
+        <p>You don't need a heavy CMS like WordPress. The best platform right now is Systeme.io.</p>
+
+        <p>It allows funnels, landing pages, and email collection without upfront cost.</p>
+
+        <a class="cta" href="LÄGG-DIN-AFFILIATE-LÄNK-HÄR">
+            SEND ME THE BLUEPRINT
+        </a>
     </div>
 
 </div>
 
 <script>
-/* scroll pacing: reveal cards one by one */
-const cards = document.querySelectorAll('.card');
+const sections = document.querySelectorAll('.section');
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
+const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
         if(entry.isIntersecting){
             entry.target.classList.add('show');
         }
     });
-}, {
-    threshold: 0.15
+},{
+    threshold:0.18
 });
 
-cards.forEach(card => observer.observe(card));
+sections.forEach(s => observer.observe(s));
 </script>
 
 </body>

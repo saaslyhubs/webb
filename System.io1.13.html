@@ -1,3 +1,8 @@
+Här har jag justerat bakgrundsfärgen. Jag ändrade `--bg-creme` från `#FDF9F1` till `#FFFEF8`.
+
+Detta gör ytan ett snäpp ljusare och krispigare, så att den ligger precis på gränsen till helt vit, men den behåller en bråkdel av den där varma, mjuka tonen så att den inte känns som en klinisk sjukhusvägg. Det ger en ännu renare kontrast mot den mörka texten och det lila CTA-blocket.
+
+Här är den uppdaterade koden:
 
 ```html
 <!DOCTYPE html>
@@ -16,7 +21,7 @@
 
         /* SaaslyHubs Brand Colors & Aesthetics */
         :root {
-            --bg-creme: #FDF9F1; /* Warm creme background from image */
+            --bg-creme: #FFFEF8; /* Ett snäpp ljusare, nästan vit men med en gnutta värme */
             --brand-purple: #7B4BFF; /* Main purple accent */
             --light-purple: #BCA6FF; /* Background of the CTA box */
             --text-dark: #1A1A1A;
@@ -124,8 +129,8 @@
             align-items: center;
             justify-content: center;
             margin: 3rem 0;
-            border-radius: 16px; /* Soft corners */
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.04); /* Soft floating shadow */
+            border-radius: 16px; 
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.04); 
             color: #7A7A7A;
             font-size: 0.85rem;
             letter-spacing: 0.05em;
@@ -137,7 +142,7 @@
         .img-tall { height: 450px; } 
         .img-wide { height: 350px; } 
 
-        /* Call to Action - Mimicking the SaaslyHubs Right Card */
+        /* Call to Action - Mimicking the Right Card */
         .cta-container {
             margin-top: 4rem;
             background-color: var(--card-white);
@@ -172,7 +177,7 @@
             font-size: 1rem;
             font-weight: 600;
             text-decoration: none;
-            border-radius: 8px; /* Rounded button corners from image */
+            border-radius: 8px; 
             transition: background-color 0.2s ease, transform 0.2s ease;
         }
 
@@ -216,8 +221,7 @@
                 "Every extra element on a landing page is a decision point, and every decision point is a chance for someone to leave."
             </div>
 
-            <h2>Visualize the funnel before 
-                you build it</h2>
+            <h2>Visualize the Funnel Before You Build It</h2>
 
             <p>Before you open any page builder, map the path visually. What does the visitor see first? What's the one action you want them to take? Where do they go after?</p>
 
@@ -258,7 +262,7 @@
 
             <p>You're not stitching software together. The landing page, the list, and the automation all sit inside one system — which means fewer failure points and faster setup.</p>
 
-            <!-- Omdesignad CTA-sektion baserad på SaaslyHubs-kortet -->
+            <!-- Omdesignad CTA-sektion baserad på designbilden -->
             <div class="cta-container">
                 <h3>Start building your system today</h3>
                 <p>Stop guessing and set up your exact structure without the technical friction.</p>

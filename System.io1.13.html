@@ -1,237 +1,165 @@
 <!doctype html>
-<html lang="sv">
+<html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<title>SaaslyHubs Blog</title>
+<title>Pinterest-style Landing Page Guide</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
 <style>
 :root{
-  --bg:#fff8f4;
-  --card:#ffffff;
-  --text:#1f1b1a;
-  --muted:#6b5f5b;
-  --accent:#8b6cff;
-  --soft:#efe7ff;
-  --border:rgba(0,0,0,0.06);
+    --bg:#f7f1e8;        /* warm beige */
+    --card:#ffffff;
+    --text:#1f1f1f;
+    --muted:#6b5f52;
+    --accent:#b08d57;    /* soft gold */
+    --border:#eadfce;
 }
 
-*{box-sizing:border-box}
+*{box-sizing:border-box;}
 
 body{
-  margin:0;
-  font-family:Inter, sans-serif;
-  background:var(--bg);
-  color:var(--text);
-  line-height:1.7;
+    margin:0;
+    font-family: Inter, sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.75;
 }
 
-/* layout */
+/* main container */
 .container{
-  max-width:780px;
-  margin:0 auto;
-  padding:70px 20px;
+    max-width:780px;
+    margin:0 auto;
+    padding:70px 22px;
 }
 
-/* typography */
-h1,h2,h3{
-  font-family:"Playfair Display", serif;
-  letter-spacing:-0.02em;
+/* headline style = Pinterest editorial */
+h1{
+    font-family:"Playfair Display", serif;
+    font-size:44px;
+    line-height:1.15;
+    margin-bottom:14px;
+    letter-spacing:-0.02em;
 }
 
-h1{font-size:52px; line-height:1.05}
-h2{font-size:34px; margin-top:60px}
-h3{font-size:22px}
+/* section headers */
+h2{
+    font-family:"Playfair Display", serif;
+    font-size:26px;
+    margin-top:48px;
+}
 
+/* paragraph */
 p{
-  color:var(--muted);
-  font-size:18px;
+    font-size:16px;
+    color:var(--text);
+    margin:14px 0;
 }
 
-/* hero */
-.hero{
-  display:grid;
-  grid-template-columns:1.2fr 1fr;
-  gap:40px;
-  align-items:center;
-  padding:80px 20px;
-  max-width:1100px;
-  margin:0 auto;
+/* muted intro text */
+.muted{
+    color:var(--muted);
 }
 
-.badge{
-  font-size:12px;
-  letter-spacing:2px;
-  color:var(--accent);
-  font-weight:700;
-  text-transform:uppercase;
-}
-
-.hero-card{
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:20px;
-  padding:24px;
-  box-shadow:0 20px 60px rgba(0,0,0,0.06);
-}
-
-.hero-card input{
-  width:100%;
-  padding:12px;
-  border-radius:10px;
-  border:1px solid var(--border);
-  margin-top:10px;
-}
-
-.btn{
-  display:inline-block;
-  margin-top:12px;
-  padding:12px 18px;
-  border-radius:999px;
-  background:var(--accent);
-  color:white;
-  text-decoration:none;
-  font-weight:600;
-  text-align:center;
-}
-
-/* cards */
+/* card blocks (Pinterest feel) */
 .card{
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:18px;
-  padding:26px;
-  margin:24px 0;
-}
-
-/* grid */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:18px;
-}
-
-/* callout */
-.callout{
-  background:var(--soft);
-  border-left:4px solid var(--accent);
-  padding:16px 18px;
-  border-radius:12px;
+    background:var(--card);
+    border:1px solid var(--border);
+    padding:22px;
+    border-radius:14px;
+    margin:22px 0;
+    box-shadow:0 8px 20px rgba(0,0,0,0.04);
 }
 
 /* CTA */
 .cta{
-  text-align:center;
-  margin:90px 0;
-  padding:60px;
-  background:linear-gradient(135deg,#fff,#f6f1ff);
-  border:1px solid var(--border);
-  border-radius:26px;
+    display:inline-block;
+    margin-top:18px;
+    padding:12px 18px;
+    background:var(--accent);
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    border-radius:10px;
+    letter-spacing:0.03em;
+}
+
+.cta:hover{
+    opacity:0.92;
+}
+
+/* divider */
+.divider{
+    height:1px;
+    background:var(--border);
+    margin:42px 0;
+}
+
+/* list styling */
+ul{
+    padding-left:18px;
+}
+
+li{
+    margin:10px 0;
 }
 </style>
 </head>
 
 <body>
 
-<!-- HERO (matchar din bildstil) -->
-<section class="hero">
+<div class="container">
 
-  <div>
-    <div class="badge">FREE GUIDE</div>
-    <h1>Your content deserves to build your <em style="color:var(--accent)">email list</em></h1>
+    <h1>How to Build a Landing Page for Free (That Actually Converts)</h1>
 
-    <p>
-      Most content posts every day but lose their audience the moment they click away. This free guide shows you the simple system that captures them automatically.
+    <p class="muted">
+        Most people overcomplicate landing pages. This is a simplified structure focused on conversion, not decoration.
     </p>
 
-    <div class="callout">
-      Systeme.io is the system that connects everything in this guide — landing pages, email capture and automation — so you don’t need multiple tools.
+    <div class="card">
+        <p>
+            If you are trying to launch a digital product or build an email list, you need one thing:
+            a landing page that removes friction and guides action.
+        </p>
     </div>
-  </div>
 
-  <div class="hero-card">
-    <strong>Get the free guide</strong>
-    <p>Enter your email to get instant access</p>
+    <h2>Why Most Free Builders Fail</h2>
 
-    <input placeholder="Email" />
-    <a class="btn" href="#">Get the guide</a>
-  </div>
+    <p>
+        Free tools often prioritize templates over clarity. The result is visual noise, not conversions.
+    </p>
 
-</section>
+    <div class="card">
+        <p>
+            Visitors decide in seconds. If the page feels cluttered or generic, they leave immediately.
+        </p>
+    </div>
 
-<main class="container">
+    <h2>The “Neutral Editorial” Framework</h2>
 
-<p><strong>Most landing pages fail for one reason: they try to do too much.</strong></p>
+    <ul>
+        <li>Warm beige background instead of cold grey</li>
+        <li>Editorial typography (serif headlines + clean body text)</li>
+        <li>Single-column layout with strong spacing</li>
+        <li>Minimal visual elements, focus on text</li>
+    </ul>
 
-<p>You don't need more traffic. You need a tighter structure. A page with 500 visitors and a clean, single-purpose layout will outperform a page with 5,000 visitors and three competing calls to action every time.</p>
+    <h2>Recommended Tool</h2>
 
-<p>The problem isn't your ads. It's not your niche. It's the page itself — cluttered, distracting, and asking the visitor to make too many decisions at once. Every extra element on a landing page is a decision point, and every decision point is a chance for someone to leave without giving you their email.</p>
+    <div class="card">
+        <p>
+            A practical option is <strong>Systeme.io</strong>. It allows funnels, landing pages, and email collection
+            without upfront cost.
+        </p>
 
-<p>Fix the structure first. Traffic is a multiplier — it multiplies whatever conversion rate you already have. If that rate is low, more traffic just means more people leaving faster.</p>
-
-<h2>Visualize the Funnel Before You Build It</h2>
-
-<p>Before you open any page builder, map the path visually. What does the visitor see first? What's the one action you want them to take? Where do they go after?</p>
-
-<div class="callout">
-If you can't sketch it in five boxes, you don't have a system yet — you have a page.
-</div>
-
-<p>This step gets skipped constantly, and it's the reason so many landing pages have three CTAs, a nav menu, and a testimonials section fighting for attention.</p>
-
-<h2>The 3 Critical Elements of a Minimalist Landing Page</h2>
-
-<p>Strip a converting landing page down and you're left with exactly three components.</p>
-
-<div class="grid">
-
-<div class="card">
-<h3>1. The Headline</h3>
-<p>The headline is not a place to be clever. It's a place to be specific.</p>
-<div class="callout">
-Bad: Unlock Your Potential<br>
-Good: Get the 7-Day Email Sequence Template That Turns Cold Leads Into Buyers
-</div>
-</div>
-
-<div class="card">
-<h3>2. The 1-Column Layout</h3>
-<p>No sidebars. No navigation menu. Every link is an exit.</p>
-<div class="callout">Give you their email — or close the tab.</div>
-</div>
-
-<div class="card">
-<h3>3. The Call to Action</h3>
-<p>Replace vague verbs with specific outcomes.</p>
-<div class="callout">
-Send me the template<br>
-Get instant access<br>
-Built with Systeme.io
-</div>
-</div>
+        <a class="cta" href="LÄGG-DIN-AFFILIATE-LÄNK-HÄR">
+            Get started free
+        </a>
+    </div>
 
 </div>
-
-<h2>The Tool That Builds the System</h2>
-
-<div class="card">
-<p>
-Systeme.io removes the complexity of stitching tools together. Everything sits in one system: landing page, email capture, automation, checkout.
-</p>
-</div>
-
-<h2>Stop Guessing. Start Building.</h2>
-
-<div class="cta">
-<h2>Stop Guessing. Start Building.</h2>
-<p>You now have the actual blueprint for a converting system.</p>
-<a class="btn" href="#">Create Your Free Systeme.io Account →</a>
-</div>
-
-</main>
 
 </body>
 </html>
